@@ -1,0 +1,10 @@
+This is a `pyproject.toml` file for a Python project called "aw-watcher-afk". 
+
+- The file includes metadata such as the project name, version, description, authors, and license.
+- It specifies a script called "aw-watcher-afk" that will run the main function from the `aw_watcher_afk` module.
+- It lists the project dependencies, which include Python version 3.8 up to, but not including, 3.13, as well as other dependencies such as `aw-client`, `pyobjc-framework-Quartz`, and `pynput`.
+- It specifies a locked version for `python-xlib` on the Linux platform due to a known issue causing CPU stalls.
+- It includes dev dependencies such as `mypy`, `macholib`, and `pyinstaller`.
+- The build system configuration specifies the required dependencies and build backend for the project.
+
+Overall, this file provides essential project configuration and dependency information for the "aw-watcher-afk" Python project.

@@ -1,0 +1,9 @@
+This code snippet is an `__init__.py` file for the `storages` module in the `aw_datastore` package of the ActivityWatch project. 
+
+Here's a breakdown of what this code does:
+1. It imports the `logging` module as `_logging`.
+2. It creates a logger object named `logger` using `__name__` as the logger name.
+3. It imports specific storage classes from the `storages` package including `AbstractStorage`, `MemoryStorage`, `PeeweeStorage`, and `SqliteStorage`.
+4. It defines `__all__` list containing the names of the classes that should be imported when importing the `storages` module.
+
+Overall, this code sets up the module for the `aw_datastore` package, making specific storage classes available for import when the `storages` module is imported.

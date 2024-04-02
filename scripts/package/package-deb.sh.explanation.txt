@@ -1,0 +1,18 @@
+This script is used to package the ActivityWatch application into a .deb package for Debian-based systems. Here is a breakdown of what the script does:
+
+1. It obtains the version number of the application by running the `getversion.sh` script.
+2. It creates a directory with the package name using the obtained version number.
+3. Installs necessary package tools like `sed`, `jdupes`, and `wget`.
+4. If the package directory already exists, it removes it.
+5. Creates necessary directories for the .deb package structure (DEBIAN, opt, etc.).
+6. Copies the control file for the .deb package and replaces the placeholder with the actual version number.
+7. Verifies the content of the control file.
+8. Copies the contents of the `dist/activitywatch/` directory to the `opt` directory in the package.
+9. Hard links duplicated libraries using `jdupes`.
+10. Changes ownership of the package directory to root.
+11. Modifies the .desktop file to point to the correct executable path.
+12. Copies the .desktop file to the autostart directory and the applications directory.
+13. Builds the .deb package using `dpkg-deb`.
+14. Moves the generated .deb package to the `dist` directory with the proper naming.
+
+Overall, this script automates the process of creating a .deb package for the ActivityWatch application with the correct version number and directory structure.

@@ -1,0 +1,20 @@
+This Makefile is used to build, test, and package the `aw-server` and `aw-sync` components of the ActivityWatch project. Here is a breakdown of the different sections of the Makefile:
+
+1. The `all` target is the default target that builds both `aw-server` and `aw-sync`.
+2. The `build` target builds `aw-server` and `aw-sync` in release mode by default. The `cargoflag` and `targetdir` variables are used to determine the build mode.
+3. The `aw-server` target builds the `aw-server` binary using `cargo build`.
+4. The `aw-sync` target builds the `aw-sync` binary using `cargo build`.
+5. The `aw-webui` target builds the web user interface for ActivityWatch. It checks if `SKIP_WEBUI` is set to true before building.
+6. The `android` target is used to compile the project for Android.
+7. The `test` target runs the tests for the project using `cargo test`.
+8. The `fix` target formats the code using `cargo fmt` and runs clippy to fix any issues.
+9. The `set-version` target sets the version in the `Cargo.toml` file based on the tag name if building a release.
+10. The `test-coverage-grcov` target runs tests with coverage using `grcov`.
+11. The `coverage-tarpaulin-html` target generates HTML coverage report using `cargo tarpaulin`.
+12. The `coverage-grcov-html` and `coverage-grcov-lcov` targets generate HTML and LCOV coverage reports using `grcov`.
+13. The `coverage` target generates HTML coverage report using `tarpaulin`.
+14. The `package` target prepares the project for packaging by copying binaries and service files to the `dist` directory.
+15. The `install` target installs the binaries and service files to the system.
+16. The `clean` target cleans up the project build artifacts using `cargo clean`.
+
+Overall, this Makefile provides a set of targets to build, test, package, and install the ActivityWatch components.

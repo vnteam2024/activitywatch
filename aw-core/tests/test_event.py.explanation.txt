@@ -1,0 +1,13 @@
+This code is a test module for the Event class in the `aw_core.models` module of the ActivityWatch project. The code contains several test functions that test various aspects of the Event class.
+
+Here's an explanation of each test function:
+
+1. `test_create`: This function tests the creation of Event objects using different input parameters. It creates Event objects with a timestamp, duration, and data attributes. It also creates an Event object with a timestamp in a valid format string.
+
+2. `test_json_serialization`: This function tests the JSON serialization and deserialization of Event objects. It creates an Event object, serializes it to JSON using the `to_json_str()` method, and then deserializes the JSON back into a new Event object. It asserts that the original and deserialized Event objects are equal.
+
+3. `test_set_invalid_duration`: This function tests setting an invalid duration for an Event object. It creates an Event object and then tries to set a duration attribute with a string value, which should raise a TypeError.
+
+4. `test_sort`: This function tests sorting a list of Event objects based on their timestamps. It creates two Event objects with timestamps set to the current time and the current time plus one second. It then sorts the list of Event objects and asserts that the sorting is correct.
+
+These test functions help ensure that the Event class in the ActivityWatch project behaves correctly and handles input data appropriately.

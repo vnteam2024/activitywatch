@@ -1,0 +1,23 @@
+This code is a bash script that fetches the latest release version based on the current commit in a Git repository. Here is an explanation of the script:
+
+1. Regular Expressions (RE):
+   - RE_STABLE: Regular expression to match stable release versions in the format "vX.X.X".
+   - RE_INCL_PRERELEASE: Regular expression to match both stable and pre-release versions in the format "vX.X.X[a|b|rc]X".
+
+2. Check if "STABLE_ONLY" variable is set:
+   - If "STABLE_ONLY" is set to "true", then only stable releases will be considered for the latest release.
+
+3. Get all tags in the repository sorted by creation date:
+   - The script uses `git for-each-ref` command to get all tags in the repository.
+
+4. Check if the current commit is a tag:
+   - If the current commit is a tag, filter out that specific tag from the list of all tags.
+
+5. Find the latest release version:
+   - The script uses `grep` command with the specified regular expression (RE) to filter out the latest release version from the list of tags.
+   - It then uses `tail -n1` to get the latest release version from the filtered list.
+
+6. Print the latest release version:
+   - The script prints the latest release version found based on the current commit and the specified conditions.
+
+Overall, the script is designed to determine the latest release version based on the current commit in a Git repository, considering whether to include stable-only or both stable and pre-release versions.

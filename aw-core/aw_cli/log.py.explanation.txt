@@ -1,0 +1,7 @@
+This code defines two functions related to handling log files:
+
+1. `print_log()`: This function takes in a `Path` object representing a log file, an optional `since` parameter to filter logs after a specific date, and an optional `level` parameter to filter logs by level. It reads the contents of the log file, filters the logs based on the `since` date and `level` if provided, and then prints the filtered logs.
+
+2. `find_oldest_log()`: This function takes in a `Path` object representing a directory containing log files and an optional `testing` parameter. It searches for log files that end with ".log" and filters based on whether the log file name contains "testing" if the `testing` parameter is set. It then returns the oldest log file found based on the modification time (`st_mtime`).
+
+Overall, these functions provide utility for reading and filtering log files based on specified criteria. The code utilizes the `Path` class from the `pathlib` module for handling file paths and `datetime` class for date operations. It also defines a list `LOGLEVELS` containing various log levels for filtering logs based on the level parameter.

@@ -1,0 +1,5 @@
+This code calculates the number of seconds since the last input event (e.g. mouse movement, keystroke) on a macOS system using the Quartz.CoreGraphics library. 
+
+The `seconds_since_last_input()` function calls the `CGEventSourceSecondsSinceLastEventType` function from the Quartz.CoreGraphics library, passing in the event source state `kCGEventSourceStateHIDSystemState` and the event type `kCGAnyInputEventType`.
+
+In the `if __name__ == "__main__":` block, the code enters a loop that repeatedly calls the `seconds_since_last_input()` function every second and prints the result. This allows the code to continuously monitor and display the time since the last input event occurred on the macOS system.

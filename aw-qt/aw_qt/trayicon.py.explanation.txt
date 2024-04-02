@@ -1,0 +1,13 @@
+This code defines a PyQt6 tray icon application for the ActivityWatch project. The TrayIcon class represents a system tray icon that provides a menu with options to interact with ActivityWatch functionalities. 
+
+The code performs the following main tasks:
+1. Imports necessary modules from PyQt6, logging, signal, os, subprocess, webbrowser, typing, and pathlib.
+2. Defines functions for opening URLs, directories, and dialogs.
+3. Defines the TrayIcon class that inherits from QSystemTrayIcon and represents the tray icon application.
+4. Initializes the tray icon and sets up the context menu with various actions, such as opening the dashboard, API browser, and modules menu.
+5. Handles activation events like double-click to open the web UI.
+6. Adds support for checking module status, rebuilding the modules menu, and handling unexpected module exits.
+7. Defines an exit function to handle cleanup actions and stop all services before quitting the application.
+8. Defines a run function to create and run the tray icon application, setting up necessary paths and signal handling.
+
+Overall, the code sets up a system tray icon application for ActivityWatch that allows users to interact with the software, open the web UI, manage modules, and gracefully exit the application.

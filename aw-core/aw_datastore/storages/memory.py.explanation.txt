@@ -1,0 +1,33 @@
+This code defines a `MemoryStorage` class that implements an in-memory storage mechanism for storing data. It is primarily used for testing purposes. 
+
+Here is an explanation of the important parts of the code:
+
+1. The `MemoryStorage` class extends `AbstractStorage` and implements methods for storing and retrieving data in memory.
+
+2. The class has a `_metadata` dictionary to store metadata about each bucket and a `db` dictionary to store events in different buckets.
+
+3. The `create_bucket` method is used to create a new bucket with the specified details like `bucket_id`, `type_id`, `client`, `hostname`, `created`, `name`, and `data`.
+
+4. The `update_bucket` method allows updating the details of an existing bucket like `type_id`, `client`, `hostname`, `name`, and `data`.
+
+5. The `delete_bucket` method deletes a bucket and its corresponding metadata.
+
+6. The `buckets` method returns a dictionary of all buckets with their metadata.
+
+7. The `get_event` method retrieves a specific event from a bucket.
+
+8. The `get_events` method retrieves a list of events from a bucket based on specified criteria like limit, start time, and end time.
+
+9. The `get_eventcount` method returns the count of events in a bucket based on start and end times.
+
+10. The `get_metadata` method retrieves metadata for a specific bucket.
+
+11. The `insert_one` method inserts a new event into a bucket.
+
+12. The `delete` method deletes a specific event from a bucket.
+
+13. The `replace` method replaces an existing event in a bucket with a new event.
+
+14. The `replace_last` method replaces the last inserted event in a bucket with a new event.
+
+Overall, this code provides a basic in-memory storage implementation for storing and retrieving events in different buckets. It is mainly used for testing purposes and events stored in memory will not persist when the server is shut down.

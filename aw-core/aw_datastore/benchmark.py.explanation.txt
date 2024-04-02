@@ -1,0 +1,15 @@
+This code is a benchmarking script written in Python that benchmarks different storage methods for storing and retrieving events. Here is an overview of what the code does:
+
+1. Imports necessary modules and packages, including `sys`, `datetime`, `timedelta`, `timezone`, `contextmanager`, and various modules from the `aw_core` and `aw_datastore` packages.
+
+2. Defines a function `create_test_events(n)` that generates a list of `Event` objects with timestamps one second apart.
+
+3. Defines a context manager `temporary_bucket(ds)` that creates a temporary bucket for testing purposes and deletes it after the context manager block is executed.
+
+4. Defines a function `benchmark(storage: Callable[..., AbstractStorage])` that benchmarks the given storage method by performing operations like inserting, replacing, and retrieving events.
+
+5. The benchmark function creates different types of events (single, replace, bulk, final) using the `create_test_events()` function, then measures the time taken for various operations like single event insertion, bulk insertion, replacing events, and retrieving events.
+
+6. The script iterates over all available storage methods obtained from `get_storage_methods()` and benchmarks each storage method using the `benchmark()` function. The script can be run from the command line, and specific storage methods can be selected as arguments.
+
+In summary, this script is used to test the performance of different storage methods for storing events in the ActivityWatch application. It measures the time taken for various operations to assess the efficiency of each storage method.

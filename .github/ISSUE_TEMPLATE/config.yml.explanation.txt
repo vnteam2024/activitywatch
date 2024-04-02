@@ -1,0 +1,9 @@
+This configuration file is for defining the issue templates for the ActivityWatch project on GitHub. It includes links to different channels for different purposes:
+
+1. Feature requests: Link to the forum where users can request and vote on features.
+2. Support: Link to the forum where users can ask for help.
+3. Discussion (on forum): Link to the forum for general discussions about ActivityWatch.
+4. Discussion (on GitHub Discussions): Link to the GitHub Discussions for discussions (testing) but the forum is still preferred.
+5. Chat with us on Discord: Link to the Discord server for chatting with the project team.
+
+These links provide users with different channels to engage with the project for various purposes like requesting features, seeking support, discussing topics, or chatting with the project team.

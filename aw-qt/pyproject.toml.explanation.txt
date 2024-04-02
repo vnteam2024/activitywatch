@@ -1,0 +1,31 @@
+This is a configuration file in TOML format for a Python project using Poetry, a dependency management tool. 
+
+Here is a breakdown of the key sections in the file:
+
+1. **Project Information**:
+   - `name`, `version`, `description`, `authors`, and `license` provide basic information about the project.
+   - `include` specifies a file named `resources.py` to be included in the build process.
+
+2. **Packages**:
+   - Specifies the packages to be included in the project. In this case, the package `aw_qt` is included.
+
+3. **Scripts**:
+   - Defines a script named `aw-qt` which runs the `main` function in the `aw_qt` package.
+
+4. **Dependencies**:
+   - Lists the dependencies required for the project, including Python version, `aw-core`, `pyobjc-framework-Cocoa`, `click`, and others.
+   - Also includes a workaround for the issue with `importlib-metadata`.
+
+5. **PyQt Dependencies**:
+   - Specifies the dependencies for PyQt6.
+
+6. **Development Dependencies**:
+   - Lists additional dependencies for development such as `mypy`, `flake8`, `pyinstaller`, and `types-click`.
+
+7. **Mypy Configuration**:
+   - Configures Mypy with the Python version and specifies to ignore missing imports and errors in the `*.resources` module.
+
+8. **Build System**:
+   - Defines the build system requirements and backend for the project.
+
+Overall, the file provides detailed information about the project, its dependencies, and configuration settings for building and development.

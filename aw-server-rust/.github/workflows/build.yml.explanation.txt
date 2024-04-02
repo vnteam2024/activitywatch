@@ -1,0 +1,11 @@
+This is a GitHub Actions workflow file for building and testing a Rust project called `aw-server-rust`. 
+
+The workflow has three main jobs:
+
+1. `build`: This job runs on different operating systems (Ubuntu, Windows, macOS) and builds the project using Cargo. It also runs tests and uploads the binary artifacts to GitHub.
+2. `build-android`: This job specifically builds the Android version of the project. It sets up Rust, caches the cargo build, builds the Android version using `make android`, and uploads the Android binary artifact to GitHub.
+3. `build-coverage-tarpaulin`: This job is for code coverage using Tarpaulin. It runs on Ubuntu, sets up Rust, uses Tarpaulin to generate code coverage information, and uploads the coverage report to codecov.io.
+
+There is also a commented out section for another code coverage method `build-coverage-grcov` using grcov, but it is not currently being used.
+
+Overall, this workflow is set up to build the project on different operating systems, test it, and generate code coverage reports.

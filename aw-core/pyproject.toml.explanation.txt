@@ -1,0 +1,15 @@
+This is a configuration file in TOML format for the Python project "aw-core" using Poetry as the dependency manager. 
+
+- The project name is "aw-core" with version 0.5.16.
+- The description explains that it is the core library for ActivityWatch.
+- Authors are listed as Erik Bjäreholt and Johan Bjäreholt with their email addresses.
+- The license is MPL-2.0.
+- Various project links are provided for the homepage, repository, and documentation.
+- Packages are specified to include "aw_core", "aw_datastore", "aw_transform", and "aw_query".
+- A script named "aw-cli" is defined which points to the main function in "aw_cli.__main__".
+- Dependencies are listed for Python 3.8, jsonschema, peewee, platformdirs, iso8601, rfc3339-validator, strict-rfc3339, tomlkit, deprecation, and timeslot.
+- Development dependencies include pytest, pytest-cov, mypy, pylint, black, ruff, pyupgrade, and TakeTheTime.
+- The tool "ruff" is configured to ignore specific linting errors.
+- The build-system section specifies the requirements and backend for building the project.
+
+Overall, this file provides all the necessary information and configurations for managing the dependencies, scripts, and development of the "aw-core" project.

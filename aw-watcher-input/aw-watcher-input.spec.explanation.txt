@@ -1,0 +1,7 @@
+This code is a spec file for PyInstaller, a tool used to convert Python scripts into standalone executables. In this spec file, the name of the application is set to "aw-watcher-input".
+
+The Analysis class is used to specify the entry point of the application (in this case, the `__main__.py` file), as well as any additional dependencies that need to be included. In this case, the hidden imports include various modules related to Xlib and pynput.
+
+The PYZ and EXE classes are used to create the executable file, with options for encryption, debugging, stripping, and compression. The COLLECT class is used to collect all the necessary files for the application, including binaries, zipfiles, and datas, and package them into the final executable.
+
+Overall, this spec file defines how the PyInstaller tool should package the Python script into a standalone executable for the "aw-watcher-input" application.

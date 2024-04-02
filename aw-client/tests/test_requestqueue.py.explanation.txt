@@ -1,0 +1,11 @@
+This code is a test module for the request queue functionality in the activitywatch project. The RequestQueue class handles sending HTTP requests to an API endpoint. 
+
+The code includes two test functions:
+1. test_basic(): This test function creates a MockClient instance and a RequestQueue instance using the MockClient. It then starts the request queue, adds a request to the queue, and stops it after 1 second.
+2. test_complex(): This test function is similar to test_basic() but with a different lambda function passed to _try_connect, which will return False. This is meant to test a scenario where the connection attempt fails.
+
+The MockClient class is used to mock the behavior of the actual API client so that the tests can run without actually making API requests. The MockClient provides methods such as get_buckets, create_bucket, and _post that simulate API calls without actually executing them.
+
+The tests use sleep() to introduce delays and simulate network communication. The print statements and logging are used for debugging purposes to show the flow of execution and when certain methods are called.
+
+Overall, these tests verify the functionality of the RequestQueue class in handling and sending requests to an API endpoint.

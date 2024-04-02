@@ -1,0 +1,15 @@
+This code is a configuration file for PyInstaller, a tool used to convert Python programs into standalone executables. 
+
+Here's a breakdown of what each part of the code does:
+
+1. `block_cipher = None`: This variable is used to specify a block cipher for encrypting the executable. In this case, it is set to None.
+
+2. `a = Analysis(...)`: This line of code sets up the analysis for PyInstaller, specifying the main Python script `main.py`, hidden imports, and other configurations.
+
+3. `pyz = PYZ(...)`: This line creates a PYZ archive containing the Python script and any additional data needed for the executable.
+
+4. `exe = EXE(...)`: This line creates an executable using the PYZ archive, specifying the name of the executable, whether to strip debugging information, and whether to use UPX compression.
+
+5. `coll = COLLECT(...)`: This line collects all the necessary files and data needed for the executable and packages them into a final executable.
+
+Overall, this configuration file is used to define the settings and parameters for converting the Python script `main.py` into a standalone executable named `aw-notify`.

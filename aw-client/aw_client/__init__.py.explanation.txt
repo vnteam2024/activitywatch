@@ -1,0 +1,3 @@
+This code snippet imports the `ActivityWatchClient` class from the `client` module within the `aw_client` package and makes it accessible outside of the package by including it in the `__all__` list. This allows any module that imports the `aw_client` package to access the `ActivityWatchClient` class directly by importing it from the package.
+
+In summary, the code is making the `ActivityWatchClient` class available for use outside of the package by adding it to the package's public interface.

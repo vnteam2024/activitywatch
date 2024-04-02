@@ -1,0 +1,15 @@
+This code provides functions for filtering and manipulating event data based on time periods. Here is an explanation of the key functions:
+
+1. `_get_event_period(event: Event) -> Timeslot`: This function extracts the time period (start time and end time) of an event and returns it as a `Timeslot`.
+
+2. `_replace_event_period(event: Event, period: Timeslot) -> Event`: This function replaces the time period of an event with a new time period specified by the `Timeslot` object.
+
+3. `_intersecting_eventpairs(events1: List[Event], events2: List[Event]) -> Iterable[Tuple[Event, Event, Timeslot]]`: This generator function yields pairs of events from two event lists along with the time period of intersection between the events.
+
+4. `filter_period_intersect(events: List[Event], filterevents: List[Event]) -> List[Event]`: This function filters events based on their time periods intersecting with events from a filter list. It removes events or parts of events where no intersection occurs.
+
+5. `period_union(events1: List[Event], events2: List[Event]) -> List[Event]`: This function combines two event lists into a new list with non-overlapping time periods. It modifies the time periods of events to ensure they cover the union of time periods from both lists.
+
+6. `union(events1: List[Event], events2: List[Event]) -> List[Event]`: This function concatenates and sorts the union of two event lists while removing duplicates. It merges events from both lists based on their timestamps and durations.
+
+These functions provide useful capabilities for managing and manipulating event data based on time periods, such as filtering out overlapping events, combining non-overlapping time periods, and merging event lists.

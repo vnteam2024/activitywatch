@@ -1,0 +1,7 @@
+This script is used to test the continuity of events recorded by the ActivityWatch AFK watcher. It takes the bucket ID as a command line argument and then retrieves the events associated with that bucket from the ActivityWatch client. It then iterates through the events, calculates the time gap between consecutive events, and checks if this gap is within an acceptable range (less than 1 second).
+
+If the time gap between events is greater than 1 second, it prints a warning message indicating that the time difference is higher than expected. It also checks for consecutive events with the same label and prints a warning if such events are found.
+
+At the end of the script, it calculates the percentage of wrong events (events with time differences greater than 1 second) relative to the total number of events and prints this percentage.
+
+This script helps in verifying the accuracy and continuity of events recorded by the ActivityWatch AFK watcher.

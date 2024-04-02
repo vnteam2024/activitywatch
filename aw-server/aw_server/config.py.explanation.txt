@@ -1,0 +1,7 @@
+This code defines the default configuration settings for the AW Server. 
+
+1. The `default_config` variable contains a TOML formatted string that specifies the default configuration settings for the server. This includes the host, port, storage method, and CORS origins.
+
+2. The `config` variable loads the configuration settings using the `load_config_toml` function from the `aw_core.config` module. It loads the configuration from a file named "aw-server.toml" and falls back to the default settings defined in the `default_config` variable if the file is not found.
+
+Overall, this code is setting up the default configuration for the AW Server and allowing for custom configurations to be loaded from a TOML file.

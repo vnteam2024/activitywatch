@@ -1,0 +1,5 @@
+This GitHub Actions workflow is named "Publish to WinGet" and is triggered when a release is created with a type of "released". The workflow runs on a Windows environment and consists of a single job named "publish".
+
+The job uses a GitHub Actions action called "vedantmgoyal2009/winget-releaser@v2" to publish the software package identified by "ActivityWatch.ActivityWatch" to the Windows Package Manager (WinGet). It requires a GitHub token stored in the repository secrets with the name GH_TOKEN_WINGET_AUTOUPDATE, which is passed to the action for authentication purposes. The fork-user parameter is set to ActivityWatchBot, which specifies the user account that the repository should be forked from.
+
+Overall, this workflow automates the process of publishing a software package to the WinGet repository when a release is created.

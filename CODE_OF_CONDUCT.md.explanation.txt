@@ -1,0 +1,7 @@
+The code above is the Contributor Covenant Code of Conduct, which outlines the standards of behavior expected from contributors and maintainers in a project. It emphasizes creating a harassment-free and inclusive environment for all participants, regardless of their background or characteristics.
+
+The code states that contributors should use welcoming and inclusive language, be respectful of differing viewpoints, accept constructive criticism gracefully, focus on the community's best interest, and show empathy towards others. It also lists examples of unacceptable behavior, such as using sexualized language, trolling, harassment, or publishing private information without permission.
+
+Project maintainers are responsible for enforcing the Code of Conduct and addressing any instances of unacceptable behavior. They have the authority to remove or reject contributions that violate the Code of Conduct and to take appropriate corrective action. The code also outlines the process for reporting incidents and the enforcement policies that will be followed.
+
+Overall, the Code of Conduct aims to ensure a positive and respectful community environment and provides guidelines for appropriate behavior and enforcement. It is adapted from the Contributor Covenant version 1.4.

@@ -1,0 +1,15 @@
+This Python script is the main entry point for the aw-qt module of ActivityWatch. The script defines a `main` function that serves as the main function for the `aw-qt` command line tool. Here's an overview of what the script does:
+
+1. Imports necessary modules and functions.
+2. Defines a `main` function using the `click` library to define a command-line interface for the `aw-qt` tool.
+3. Starts the logging for the application.
+4. Handles platform-specific functionality like sending syslog messages on macOS.
+5. Creates a process group for the application.
+6. Initializes the `AwQtSettings` and `Manager` instances.
+7. Handles autostarting of modules based on the command-line arguments and configuration settings.
+8. Depending on the options provided, either starts the tray icon GUI, runs an interactive command-line interface, or simply waits for signals to quit.
+9. Cleans up and stops all services before exiting the script.
+
+The `_interactive_cli` function allows users to interact with the manager through a simple command-line interface by entering commands like `start`, `stop`, and `status`.
+
+Overall, this script sets up the necessary components for the aw-qt module, including managing services, interacting with the user through a GUI or CLI, and handling the lifecycle of the application.

@@ -1,0 +1,7 @@
+This GitHub Actions workflow file is used to automate the build process for the ActivityWatch project. The file defines a workflow named "Build" that runs on specific events such as pushes to the master branch, tags starting with "v", and pull requests to the master branch.
+
+The workflow consists of a job named "build" that runs on different operating systems (Ubuntu 20.04, Windows, macOS 12) and different versions of Python and Node.js. It sets up environment variables, installs dependencies, sets up Python, Node.js, and Rust environments, caches dependencies, installs APT dependencies on Linux, builds the project, runs tests, packages the project, notarizes the macOS package, and uploads artifacts.
+
+Additionally, the workflow includes a job named "release-notes" that generates release notes for tagged releases, and a job named "release" that creates a GitHub release with the build artifacts and release notes.
+
+Overall, this workflow automates the build, testing, packaging, and release process for the ActivityWatch project on multiple platforms and for different versions of dependencies.

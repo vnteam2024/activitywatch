@@ -1,0 +1,25 @@
+This Makefile is used to automate common tasks related to building, testing, benchmarking, type checking, linting, and formatting the code in the `aw-core` directory of the ActivityWatch project.
+
+1. `build`: Installs the project dependencies using Poetry.
+
+2. `test`: Runs tests using pytest with coverage enabled for multiple components of the project.
+
+3. `.coverage`: Dependency for the `coverage_html` target, generated when running the `test` target.
+
+4. `coverage_html`: Generates an HTML coverage report using the coverage tool.
+
+5. `benchmark`: Runs the benchmarking script for the data store component.
+
+6. `typecheck`: Runs mypy type checking with certain options and paths specified.
+
+7. `typecheck-strict`: Runs mypy type checking with stricter options and paths specified, with a message if there are no failing steps.
+
+8. `lint`: Runs linters such as ruff on the project files.
+
+9. `lint-fix`: Fixes linting issues using tools like pyupgrade and ruff.
+
+10. `format`: Formats the Python files using the black formatter.
+
+11. `clean`: Removes build artifacts and cached files.
+
+Overall, this Makefile helps in maintaining code quality, ensuring tests are run, and automating common development tasks in the ActivityWatch project.

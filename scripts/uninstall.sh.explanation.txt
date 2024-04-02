@@ -1,0 +1,10 @@
+This script is a Bash script that uninstalls all modules related to ActivityWatcher that have been installed using pip3. 
+
+Here's a breakdown of what the script does:
+
+1. It uses the `pip3 list` command to list all packages installed using pip3.
+2. It uses the `grep` command to filter out only the packages that start with 'aw-'.
+3. It uses a loop to iterate over each module found in step 2.
+4. For each module, it uses the `pip3 uninstall -y` command to uninstall the module without prompting the user for confirmation.
+
+Overall, this script automates the process of uninstalling all ActivityWatcher modules that were previously installed using pip3.

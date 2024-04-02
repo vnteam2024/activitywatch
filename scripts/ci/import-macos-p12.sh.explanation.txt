@@ -1,0 +1,13 @@
+This shell script sets up a secure way to import a macOS .p12 certificate into the macOS keychain during a CI/CD pipeline. The script performs the following steps:
+
+1. Sets the `-e` option for the shell script to exit immediately if a command fails.
+2. Assigns the environment variables `KEY_CHAIN` and `CERTIFICATE_P12`.
+3. Decodes the Base64 encoded `CERTIFICATE_MACOS_P12_BASE64` environment variable value into a file named `aw_certificate.p12`.
+4. Creates a new keychain named `build.keychain`.
+5. Sets the newly created keychain as the default keychain.
+6. Unlocks the keychain with the password `travis`.
+7. Imports the decoded .p12 certificate file into the keychain using the provided password `CERTIFICATE_MACOS_P12_PASSWORD`.
+8. Sets the keychain key partition list for secure access.
+9. Removes any .p12 certificate files after importing.
+
+Overall, this script securely imports a macOS .p12 certificate into the macOS keychain for code signing purposes in a CI/CD pipeline.

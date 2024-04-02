@@ -1,0 +1,5 @@
+The code above defines two decorators: `deprecated` and `restart_on_exception`.
+
+1. The `deprecated` decorator is used to mark functions as deprecated, meaning that they should not be used anymore. When a function decorated with `deprecated` is called, a warning will be emitted. The `deprecated` decorator takes the function to be deprecated as an argument and returns a new function that emits a deprecation warning when the function is called.
+
+2. The `restart_on_exception` decorator is used to restart a function if it crashes due to a specified exception. It takes the function to be decorated, a delay in seconds before restarting the function, and an exception type as arguments. When the decorated function encounters the specified exception, it will log an error, wait for the specified delay, and then restart the function. This is useful for handling unexpected errors and ensuring that a function continues to run even if it encounters exceptions.

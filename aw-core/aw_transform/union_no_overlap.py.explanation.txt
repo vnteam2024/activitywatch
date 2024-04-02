@@ -1,0 +1,21 @@
+This Python script provides a function `union_no_overlap` that merges two lists of events while removing any overlapping events. The function takes two lists of events `events1` and `events2` as input and returns a new list `events_union` that contains events from both lists without any overlap.
+
+Here is a breakdown of how the function works:
+
+1. A deep copy of both input event lists `events1` and `events2` is created to avoid modifying the original lists.
+2. A new list `events_union` is initialized to store the merged events without overlap.
+3. Two index variables `e1_i` and `e2_i` are initialized to keep track of the current position while iterating over the two event lists.
+4. A while loop is used to iterate through both event lists until the end of either list is reached.
+5. For each pair of events `e1` and `e2` at indices `e1_i` and `e2_i`, their time slots (timestamps and duration) are compared using the `Timeslot` class to check for intersection.
+6. If there is an intersection between `e1` and `e2`, the function handles the overlap:
+   - If `e1` starts before or at the same time as `e2`, `e1` is added to the `events_union` list and its duration is adjusted.
+   - If `e2` starts before `e1`, `e2` is split up into two events to avoid overlap and the second part is kept for further processing.
+7. If there is no intersection between `e1` and `e2`, the function adds the event that starts earlier to the `events_union` list and increments the respective index.
+8. After processing all events, any remaining events from both input lists are added to the `events_union` list.
+9. The function finally returns the merged list `events_union`.
+
+Additionally, the `_split_event` function is defined to split an event at a specific datetime point to handle overlapping events in the `union_no_overlap` function.
+
+The script also includes a test function `test_split_event` to verify the `_split_event` function's correctness.
+
+Overall, the `union_no_overlap` function effectively merges two event lists, removing any overlap between events to create a new list of non-overlapping events.

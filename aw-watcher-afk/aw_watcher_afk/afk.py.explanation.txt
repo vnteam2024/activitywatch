@@ -1,0 +1,22 @@
+This code is a Python script that monitors user activity to determine if the user is away from the computer (AFK - Away From Keyboard). It imports different modules based on the platform (Windows, MacOS, Linux) to get the time since the last user input.
+
+Here's an explanation of the key components in the code:
+
+1. **Settings Class**: 
+   - Initializes the timeout and poll_time settings for the AFKWatcher.
+   
+2. **AFKWatcher Class**: 
+   - Initializes the AFKWatcher with settings and the ActivityWatchClient.
+   - Defines a method `ping` to send a heartbeat event with the AFK status to the ActivityWatchClient.
+   - Contains a `run` method to start the AFK checking loop.
+
+3. **heartbeat_loop Method**:
+   - Continuously checks the time since the last input to determine if the user is AFK or not.
+   - Sends heartbeat events with the AFK status to the ActivityWatchClient.
+   - Handles states where the user becomes AFK, is no longer AFK, and sends regular heartbeats if no state change occurs.
+
+4. **Other Components**: 
+   - The script determines the platform (Windows, MacOS, Linux) to import the appropriate modules for determining the time since the last input.
+   - It uses the ActivityWatchClient to send heartbeat events with AFK status data.
+
+Overall, this script monitors user activity and reports the AFK status to the ActivityWatch service.

@@ -1,0 +1,15 @@
+This Makefile is used for building, testing, packaging, and cleaning the aw-watcher-window project, which is part of the ActivityWatch project.
+
+1. `build`: Installs the project dependencies using Poetry. If the current operating system is macOS, it also calls the `build-swift` target to compile the `macos.swift` file using the Swift compiler.
+
+2. `build-swift`: Compiles the `macos.swift` file using the Swift compiler, creating an executable `aw-watcher-window-macos` in the `aw_watcher_window` directory.
+
+3. `test`: Runs the `aw-watcher-window --help` command to provide help information for the aw-watcher-window module.
+
+4. `typecheck`: Runs the `mypy` type checker on the `aw_watcher_window` directory, ignoring missing imports.
+
+5. `package`: Uses PyInstaller to create a standalone executable from the `aw-watcher-window.spec` file. This executable is built in the `dist` directory.
+
+6. `clean`: Removes the build artifacts, cache files, and the `aw-watcher-window-macos` executable.
+
+Overall, this Makefile provides targets for building, testing, packaging, and cleaning the aw-watcher-window module of the ActivityWatch project.

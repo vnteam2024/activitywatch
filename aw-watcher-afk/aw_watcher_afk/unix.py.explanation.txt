@@ -1,0 +1,9 @@
+The code above defines a class `LastInputUnix` with a method `seconds_since_last_input()` that calculates the number of seconds since the last user input on a Unix-based system. The class initializes with a mouse listener and a keyboard listener to capture user input events.
+
+In the `seconds_since_last_input()` method, it checks for new input events from the mouse and keyboard listeners and updates the `last_activity` timestamp accordingly. It then calculates the time difference between the current time and the `last_activity` time to determine the number of seconds since the last user input.
+
+The global variable `_last_input_unix` is used to store an instance of `LastInputUnix` for reuse, ensuring that only one instance of `LastInputUnix` is created. The `seconds_since_last_input()` function checks if `_last_input_unix` is initialized and initializes it if not.
+
+The code also includes a block that continuously prints the number of seconds since the last user input using the `seconds_since_last_input()` function in a while loop with a sleep interval of 1 second.
+
+Overall, this code provides a way to monitor and track user activity based on keyboard and mouse input on a Unix-based system.

@@ -1,0 +1,14 @@
+This code defines a function `chunk_events_by_key` that takes a list of `Event` objects, a key (string), and optional `pulsetime` (float) as parameters and chunks adjacent events together which have the same value for the specified key. The original events are then stored in the `subevents` key of the new event.
+
+Here is a breakdown of how the function works:
+
+1. It initializes an empty list `chunked_events` to store the chunked events.
+2. It iterates over each event in the input `events` list.
+3. It checks if the specified key is present in the event's data. If not, it breaks out of the loop.
+4. It calculates the time difference (`timediff`) between the current event and the last event in the `events` list.
+5. If there are already chunked events and the last chunked event has the same key value as the current event and the time difference is less than `pulsetime`, it adds the current event to the `subevents` key of the last chunked event and updates the duration of the chunked event.
+6. If the above condition is not met, it creates a new event with the current event's timestamp, duration, and data containing the key, and adds the current event to the `subevents` key.
+7. The new chunked event is then added to the `chunked_events` list.
+8. After iterating over all events, the function returns the list of chunked events.
+
+Overall, this function takes a list of events, chunks events with the same key value, and stores them as subevents in a new event with the same key value.

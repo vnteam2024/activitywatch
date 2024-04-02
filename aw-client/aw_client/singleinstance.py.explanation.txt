@@ -1,0 +1,10 @@
+This code defines a `SingleInstance` class that is used to ensure that only one instance of a specific client application can be running at a time. This is achieved by creating a lock file when the application starts and then attempting to acquire a lock on that file.
+
+Here's a breakdown of how the code works:
+1. The `SingleInstance` class takes the `client_name` as an argument, which is used to create a lock file specific to that client.
+2. The `lockfile` is determined based on the cache directory and the client name.
+3. On Windows (`sys.platform == "win32"`), the code attempts to acquire a lock on the lock file using `os.open` with `os.O_CREAT | os.O_EXCL | os.O_RDWR` flags. If the file is already locked, it means another instance is running, and the current instance exits.
+4. On non-Windows systems, the code opens the lock file in write mode and attempts to acquire a lock using `fcntl.lockf` with `fcntl.LOCK_EX | fcntl.LOCK_NB` flags. If the lock cannot be acquired, it means another instance is running, and the current instance exits.
+5. The `__del__` method is used to release the lock and delete the lock file on Windows systems.
+
+Overall, this code helps in ensuring that only one instance of the client application can run at a time by using a locking mechanism on a specific lock file.

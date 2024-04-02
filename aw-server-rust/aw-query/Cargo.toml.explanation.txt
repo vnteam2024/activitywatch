@@ -1,0 +1,17 @@
+This is a `Cargo.toml` file for a Rust package named `aw-query`. 
+
+In the `[package]` section:
+- `name` specifies the name of the package as "aw-query".
+- `version` specifies the version number of the package as "0.1.0".
+- `authors` specifies the author of the package as "Johan Bjäreholt <johan@bjareho.lt>".
+- `edition` specifies the edition of Rust to be used as "2021".
+
+In the `[dependencies]` section:
+- Various dependencies are listed with their versions. For example, `serde`, `serde_json`, `chrono`, `plex`, `log`, `fancy-regex`, `aw-datastore`, `aw-models`, and `aw-transform`.
+- The dependencies are used for handling serialization/deserialization, date/time manipulation, logging, and more.
+
+In the `[dev-dependencies]` section:
+- The dev dependency `criterion` is listed with version "0.5.1". This is used for writing benchmarks.
+
+The `[[bench]]` section:
+- Specifies a benchmark named "benchmark" with `harness = false`. This means that the benchmark will not use the criterion harness.

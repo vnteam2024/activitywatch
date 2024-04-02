@@ -1,0 +1,15 @@
+This code defines a function `simplify_string` that takes a list of `Event` objects and a `key` parameter as input. The purpose of this function is to simplify and clean up the strings in the events based on certain rules. Here's an explanation of the key parts of the code:
+
+1. The function first makes a deep copy of the input list of events to avoid modifying the original list.
+
+2. It defines three regular expressions (`re_leadingdot`, `re_parensprefix`, and `re_fps`) that are used to match and remove specific patterns in the strings.
+
+3. The function then iterates over each event in the list and performs the following operations:
+   - It removes prefixes that are numbers within parenthesis from the string using the `re_parensprefix` regex pattern.
+   - If the `key` parameter is "title" and the event has a "app" key in its data, it further processes the string:
+     - It replaces the FPS display in the window title with "FPS: ..." using the `re_fps` regex pattern.
+     - It removes leading dots (e.g., ● or *) from the string for specific applications like VSCode or gedit using the `re_leadingdot` regex pattern.
+
+4. Finally, the function returns the modified list of events.
+
+Overall, the `simplify_string` function cleans up and simplifies the strings in the events by removing specific patterns and prefixes, making the data more readable and consistent.

@@ -1,0 +1,26 @@
+This code defines query functions for the ActivityWatch framework. Here are the main components of the code:
+
+1. **Import Statements**:
+    - Imports necessary modules and functions from external libraries.
+
+2. **Function Decorators**:
+    - Two decorators are defined: `q2_function` and `q2_typecheck`.
+    - `q2_function` is a decorator to register query functions and adds mock arguments for Datastore and TNamespace if they are not in the function signature.
+    - `q2_typecheck` is a decorator that typechecks the arguments using `_verify_variable_is_type`.
+
+3. **Declarations**:
+    - `functions` is a dictionary that stores registered query functions.
+
+4. **Query Functions**:
+    - Query functions are defined using the `q2_function` decorator.
+    - These functions interact with the datastore, query events, filter, merge, sort, summarize, and perform various operations on events.
+
+5. **Helper Functions**:
+    - Helper functions like `_verify_bucket_exists` and `_verify_variable_is_type` are used for validation and verification.
+
+6. **Explanation**:
+    - The code defines a set of query functions for the ActivityWatch framework that operate on events from a datastore.
+    - Functions are categorized based on their functionality such as querying events, filtering events, merging events, sorting events, summarizing events, etc.
+
+Overall, the code provides a structured way to define, register, and execute query functions
+for processing events in the ActivityWatch framework.

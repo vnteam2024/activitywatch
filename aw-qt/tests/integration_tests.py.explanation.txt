@@ -1,0 +1,15 @@
+This Python script is an integration test for the `aw-qt` module, which is part of the ActivityWatch project. The purpose of this script is to start the `aw-qt` module with specific arguments for testing and check if it runs without any issues.
+
+Here is a breakdown of the code:
+1. The script imports necessary modules including `subprocess`, `PIPE`, `sleep`, `sys`, and `contextmanager`.
+2. Two functions are defined:
+    a. `running_process(call: List[str])`: This is a context manager that starts a subprocess with the provided command and yields the process. It also kills the process after its usage.
+    b. `print_section(msg, title)`: This function is used to print a section with a given title and a message surrounded by equal signs.
+3. The `__name__ == "__main__"` block starts the main logic of the script.
+4. The `aw-qt` process is started as a subprocess with specified arguments (`--testing`, `--autostart-modules=none`).
+5. The script then sleeps for 5 seconds to allow the process to run.
+6. After the sleep, the exit code of the process is checked. The standard output and standard error streams of the process are captured and decoded as strings.
+7. If there is any output or error, it is printed inside a section with the respective stream's title.
+8. The script then exits with the same exit code as the `aw-qt` process.
+
+In summary, this script starts the `aw-qt` process for testing, captures its output and error streams, and prints them if any, providing a basic integration testing setup for the `aw-qt` module.

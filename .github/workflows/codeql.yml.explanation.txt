@@ -1,0 +1,17 @@
+This GitHub Actions workflow is configured to run CodeQL analysis on code in the repository. Here is an explanation of the key components:
+
+1. **Triggers**: The workflow is triggered on push events to the "master" branch, pull requests targeting the "master" branch, and on a specific scheduled time (Thursdays at 2:57 PM UTC).
+
+2. **Jobs**: The workflow contains a single job named "analyze" that runs on an Ubuntu-latest virtual environment.
+
+3. **Permissions**: The job specifies permissions for different types of accesses: read access for actions, read access for contents, and write access for security events.
+
+4. **Matrix Strategy**: The job uses a matrix strategy where the job will be run twice for each language specified in the matrix: python and javascript.
+
+5. **Steps**:
+   - **Checkout**: The codebase is checked out with the ability to fetch submodules recursively.
+   - **Initialize CodeQL**: CodeQL is initialized with the specified languages and queries related to security and quality.
+   - **Autobuild**: This step automatically builds the CodeQL database necessary for analysis.
+   - **Perform CodeQL Analysis**: CodeQL analysis is performed with the specified language from the matrix.
+
+This workflow sets up an environment to run CodeQL analysis on Python and JavaScript code in the repository whenever there is a push/pull request to the "master" branch or on a scheduled basis.

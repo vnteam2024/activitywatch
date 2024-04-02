@@ -1,0 +1,15 @@
+This is a GitHub Actions workflow defined in a YAML file that specifies how to build and test the aw-watcher-window project. The workflow has two jobs: "test" and "typecheck".
+
+1. The "test" job:
+- It runs on different operating systems (Ubuntu, Windows, macOS) with Python version 3.9.
+- It checks out the code, sets up Python, creates a virtual environment, installs dependencies, builds the project, runs tests, packages the project, tests the package, and uploads the package as an artifact.
+- The job uses the make command to build, test, and package the project.
+- The test job is triggered on push or pull requests to the master branch.
+
+2. The "typecheck" job:
+- It runs on the Ubuntu operating system with Python version 3.9.
+- It checks out the code, sets up Python, creates a virtual environment, installs dependencies, builds the project, and runs typechecking.
+- The job uses the make command to perform typechecking on the project.
+- The typecheck job is not triggered by specific events, so it needs to be manually triggered or scheduled to run.
+
+Overall, this workflow automates the building, testing, and typechecking of the aw-watcher-window project on different operating systems using GitHub Actions.

@@ -1,0 +1,13 @@
+This Python script defines functions for accessing JSON schema files located in a specific directory. Here is an explanation of the code:
+
+1. `_this_dir()`: This function returns the absolute path of the directory where the script is located.
+
+2. `_schema_dir()`: This function returns the absolute path of the directory containing JSON schema files. It is constructed by joining the parent directory of the directory where the script is located with the "aw_core/schemas" subdirectory.
+
+3. `get_json_schema(name: str) -> dict`: This function takes a `name` parameter (the name of the JSON schema file) and returns the JSON data loaded from that file. It opens the JSON schema file using the `open()` function and reads the data using `json.load()`.
+
+4. `if __name__ == "__main__":`: This block of code is executed only when the script is run directly (not imported as a module).
+
+5. `print(get_json_schema("event"))`: This line prints the JSON schema data for the "event" schema by calling the `get_json_schema()` function with the "event" argument.
+
+Overall, this script provides a way to access JSON schema files in a specific directory and load their contents as Python dictionaries for further processing.

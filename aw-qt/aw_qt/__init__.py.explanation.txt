@@ -1,0 +1,3 @@
+This code is importing the `main` function from the `main` module in the same package (`aw_qt`) and making it available for import when other modules import the `aw_qt` package. 
+
+The `__all__` variable is specifying that only the `main` function should be exported when other modules import the `aw_qt` package. This restricts what functions and classes are accessible when the package is imported, ensuring that only the specified functions are available.

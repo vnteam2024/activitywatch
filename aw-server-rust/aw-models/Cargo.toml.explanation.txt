@@ -1,0 +1,9 @@
+This is a Cargo.toml file for a Rust library called "aw-models". 
+
+In the [package] section, it specifies the name of the package, its version, authors, and edition of Rust being used.
+
+The [lib] section specifies the configuration for the library. It defines the name of the library as "aw_models", specifies that it is a library crate type, and points to the source file "src/lib.rs".
+
+The [dependencies] section lists the external crates that the library depends on. In this case, it depends on the crates chrono, log, serde, serde_json, and schemars. Each dependency specifies a version and may include additional features. For example, chrono is specified with the feature "serde" and schemars is specified with the feature "chrono".
+
+Overall, this Cargo.toml file sets up the configuration for the "aw-models" Rust library and specifies its dependencies.

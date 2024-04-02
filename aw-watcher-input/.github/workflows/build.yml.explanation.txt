@@ -1,0 +1,17 @@
+This is a GitHub Actions workflow file that defines a job named "Build" which runs when there is a push or pull request on the master branch. 
+
+The job has several steps:
+1. It checks out the repository using `actions/checkout@v2`.
+2. It sets up Python with the specified Python version using `actions/setup-python@v1`.
+3. It sets up Node.js with the specified version using `actions/setup-node@v1`.
+4. It creates a virtual environment using `python -m venv venv`.
+5. It installs dependencies using Poetry.
+6. It builds the visualization by installing necessary npm packages and running the build script in the visualization directory.
+7. It runs tests using the `make test` command.
+8. It packages the application using the `make package` command.
+9. It tests the package by running the built binary with the `--help` flag.
+10. It uploads the package artifact to GitHub using `actions/upload-artifact@v2`.
+
+The job uses a matrix strategy to run on different operating systems (Ubuntu, Windows, macOS) and with specific versions of Python and Node.js.
+
+This workflow is designed to automate the build process for the project and ensure that the application is tested and packaged correctly across different environments.

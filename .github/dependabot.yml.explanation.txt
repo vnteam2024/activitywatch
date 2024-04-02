@@ -1,0 +1,8 @@
+This `dependabot.yml` file is used to configure Dependabot's update schedule for dependencies in a GitHub repository. 
+
+- The `updates` section specifies the dependencies to be maintained and their update schedule.
+- The first entry is for maintaining dependencies for GitHub Actions. It specifies that Dependabot should check for updates monthly in the root directory of the repository.
+- The remaining two entries are currently commented out, but they show examples of how to maintain dependencies for submodule versions and dependencies managed by pip/poetry. These are set to be checked monthly as well.
+- The comments in the file indicate that updating submodule versions and pip/poetry dependencies manually may be easier due to potentially being "noisy".
+
+Overall, this file is used to automate the process of keeping dependencies up to date in the repository based on the specified schedule.

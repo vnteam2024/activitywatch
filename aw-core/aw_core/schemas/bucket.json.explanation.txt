@@ -1,0 +1,13 @@
+This is a JSON schema definition for a Bucket object used in ActivityWatch. 
+
+- The schema defines that a Bucket object must have the following required properties: "id", "type", "client", and "hostname".
+- The "id" property is a unique identifier for the bucket and is of type string.
+- The "name" property is a readable and renameable name for the bucket and is also of type string.
+- The "type" property is the event type and is of type string.
+- The "client" property is the name of the client that is reporting to the bucket and is of type string.
+- The "hostname" property is the hostname of the machine on which the client is running and is of type string.
+- The "created" property is the creation datetime of the bucket and is of type string with format "date-time".
+- The "data" property is an object that can hold additional data for the bucket.
+- The "events" property is an array of events associated with the bucket, where each event follows the schema defined in "#/definitions/Event".
+
+Overall, this schema provides the structure and validation rules for a Bucket object in the ActivityWatch application.

@@ -1,0 +1,14 @@
+This Python script defines functions to detect and set the version of the ActivityWatch server. Here is an explanation of the key components of the script:
+
+1. `detect_version_git()`, `detect_version_pkg()`, `detect_version_poetry()`: These functions try to detect the version of the ActivityWatch server using different methods:
+   - `detect_version_git()`: Tries to get the exact version tag from Git history or the latest tag with a commit identifier.
+   - `detect_version_pkg()`: Tries to get the version using importlib.metadata from the `aw-server` package.
+   - `detect_version_poetry()`: Tries to get the version from the `pyproject.toml` file using Poetry.
+
+2. `detect_version()`: Calls the detection functions in a specific order and returns the version detected by the first successful method. If all methods fail, it returns a default version string.
+
+3. `assign_static_version()`: Modifies the current script by updating the `__version__` variable with the detected version. This function reads the script, updates the version, and writes the modified script back to the file.
+
+4. The script also sets the `__version__` variable to a development version by calling `assign_static_version()` if the script is run as the main script. It also prints the detected version using different methods.
+
+Overall, the script is designed to dynamically detect and set the version of the ActivityWatch server based on Git tags, package metadata, or Poetry configuration, providing flexibility and accuracy in versioning.

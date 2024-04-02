@@ -1,0 +1,15 @@
+This is a `pyproject.toml` file for a Python project called "aw-watcher-input". 
+
+Here is an explanation of the key sections:
+
+1. `[tool.poetry]`: This section defines metadata about the project such as name, version, description, authors, license, and packages.
+
+2. `[tool.poetry.scripts]`: This section defines scripts that will be installed when the package is installed. In this case, it defines the "aw-watcher-input" script which points to the `main()` function in the `aw_watcher_input.main` module.
+
+3. `[tool.poetry.dependencies]`: This section lists the dependencies required by the project. It specifies that the project requires Python version 3.8 or later, the "aw-client" package version 0.5.13, and the "aw-watcher-afk" package from the GitHub repository "https://github.com/ActivityWatch/aw-watcher-afk.git".
+
+4. `[tool.poetry.dev-dependencies]`: This section lists dependencies that are only required for development purposes. In this case, it includes `pyinstaller`, `mypy`, and `black`.
+
+5. `[build-system]`: This section specifies the build system requirements. It requires poetry-core version 1.0.0 or later and specifies the build backend as "poetry.core.masonry.api".
+
+Overall, this file provides information about the project, its dependencies, and build system configuration.

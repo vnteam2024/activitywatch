@@ -1,0 +1,17 @@
+This script `suggest_categories.py` aims to help in creating categories for events by listing the most common words among uncategorized events, based on their duration.
+
+Here is a breakdown of the script:
+
+1. The script imports necessary modules and functions such as `Counter` from `collections`, `datetime` and `timezone` from `datetime`, `tabulate` for pretty printing tables, `Dict`, `List`, `Tuple`, `Any` from typing, `Event` from `aw_core`, `aw_client`, and `queries` from `aw_client`.
+
+2. The script defines a function `example_categories()` that returns a list of example categories along with their corresponding query parameters. The current example category specifies a regex pattern to match events related to ActivityWatch.
+
+3. The script defines a function `get_events(categories)` that retrieves AFK-filtered events, filtering only events that are categorized as "Uncategorized". It uses the ActivityWatch client to query for events based on the specified categories.
+
+4. The script defines a function `events2words(events)` that extracts words from the event data and yields them along with their duration. It normalizes the words by converting them to lowercase and filtering out words with less than 3 characters.
+
+5. The `main()` function of the script executes the main logic. It fetches events, extracts words from event data, and counts the duration of each word in the corpus. It then prints the top 50 most common words along with their durations.
+
+6. Finally, the script checks if it is being run as the main script using `if __name__ == "__main__":` and calls the `main()` function to start the execution.
+
+Overall, this script is designed to analyze uncategorized events, extract common words from their data, and provide suggestions for creating categories based on the most common words found in the events. It can be used to identify patterns in uncategorized events and assist in organizing them into meaningful categories.

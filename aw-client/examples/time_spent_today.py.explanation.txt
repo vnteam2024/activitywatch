@@ -1,0 +1,32 @@
+This code is a Python script that uses the ActivityWatch client library to calculate the total time spent on the computer today. Here is a breakdown of the code:
+
+1. Import necessary libraries:
+   - `datetime`: for working with dates and times
+   - `time`: for working with time objects
+   - `timedelta`: for representing durations of time
+   - `socket`: for getting the hostname of the computer
+   - `aw_client`: the ActivityWatch client library
+
+2. Define the main block:
+   - The main block is where the script starts execution.
+   - It first sets the `bucket_id` variable to the name of the AFK bucket for the current hostname.
+
+3. Calculate the start and end of the day:
+   - Create a `daystart` variable that represents the start of the current day (12:00 AM).
+   - Create a `dayend` variable that represents the end of the current day (12:00 AM of the next day).
+
+4. Create an `ActivityWatchClient` instance:
+   - Initialize an `ActivityWatchClient` object with the name "testclient".
+
+5. Retrieve events from the specified bucket for today:
+   - Use the `get_events` method of the `ActivityWatchClient` instance to retrieve all events from the AFK bucket for today (between `daystart` and `dayend`).
+   - Filter the events to include only those with a status of "not-afk" (active computer usage).
+
+6. Calculate the total duration of active computer usage:
+   - Sum up the durations of all filtered events using a list comprehension and `sum` function with `timedelta()` as the initial value.
+   - This gives us the total duration of active computer usage for the day.
+
+7. Print the total time spent on the computer today:
+   - Print the total duration in a human-readable format.
+
+Overall, this script retrieves activity events from an AFK bucket for the current day, filters out inactive periods, and calculates the total duration of active computer usage for the day.

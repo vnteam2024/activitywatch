@@ -1,0 +1,7 @@
+This GitHub Actions workflow file defines two jobs: "build" and "typecheck". 
+
+The "build" job is triggered on push or pull request events on the master branch. It runs on three different operating systems (Ubuntu, Windows, macOS) and uses Python version 3.9. The job first checks out the code, sets up Python, installs dependencies using Poetry, builds the project, runs tests, reports coverage using Codecov, and packages the project using PyInstaller.
+
+The "typecheck" job is triggered on the ubuntu-latest operating system only. It uses Python version 3.9 and also checks out the code, sets up Python, installs dependencies using Poetry, builds the project, and runs typechecking using the make typecheck command.
+
+Both jobs have environment variables RELEASE set to false and SKIP_WEBUI set to true. The jobs use a mixture of bash commands to set up the environment, install dependencies, run commands, and report coverage.

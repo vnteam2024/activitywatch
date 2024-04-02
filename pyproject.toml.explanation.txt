@@ -1,0 +1,15 @@
+This is a configuration file in TOML format for a Python project using Poetry as the dependency management tool. 
+
+Here is an explanation of the key sections in the configuration file:
+
+1. `[tool.poetry]`: Contains metadata about the project such as name, version, description, authors, and license.
+
+2. `[tool.poetry.dependencies]`: Specifies the dependencies required for the project. In this case, it specifies the Python version and the `urllib3` library version less than 2.
+
+3. `[tool.poetry.dev-dependencies]`: Specifies development dependencies required for the project, such as testing libraries like `pytest` and `mypy`.
+
+4. `pyinstaller` and `pyinstaller-hooks-contrib`: Specifies dependencies related to packaging the project using PyInstaller for distribution.
+
+5. `[build-system]`: Specifies the build system requirements for the project, including the version of Poetry required and the build backend.
+
+Overall, this file sets up the project dependencies, development requirements, and build system configuration for the Python project using Poetry.

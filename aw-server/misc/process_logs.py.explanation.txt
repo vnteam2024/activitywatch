@@ -1,0 +1,12 @@
+This Python script `process_logs.py` reads JSON logs from standard input, parses them using the `json.loads` function, and then prints out the logs in a human-readable format.
+
+1. The script uses a while loop to continuously read input from standard input.
+2. Each input line is assumed to be a JSON log message, which is parsed into a Python dictionary using `json.loads(input())`.
+3. The parsed JSON log message is then unpacked and formatted using Python's string formatting method to print out the log in a human-readable format.
+4. The format string `{asctime} [{levelname}] {message}` extracts the timestamp, log level, and message from the parsed log message dictionary using the keys `asctime`, `levelname`, and `message`.
+5. The processed log is then printed to standard output.
+
+To use this script:
+- Run the ActivityWatch server with the `--log-json` flag to output logs in JSON format.
+- Pipe the server output to this script by redirecting standard error to standard output (`2>&1`), and then running the script using Python (`python3 process_logs.py`).
+- The script will continuously read and process the incoming JSON log messages from the ActivityWatch server and print them in a human-readable format.

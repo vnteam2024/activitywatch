@@ -1,0 +1,15 @@
+This code defines the configuration and argument parsing for the aw-watcher-window module in the Activitywatch project.
+
+1. The `default_config` variable contains the default configuration settings in TOML format for the aw-watcher-window module. It includes options like `exclude_title`, `poll_time`, and `strategy_macos`.
+
+2. The `load_config()` function loads the configuration settings for the aw-watcher-window module using the `load_config_toml()` function from the aw_core.config module. It returns the configuration settings specific to the aw-watcher-window module.
+
+3. The `parse_args()` function defines the command-line arguments that can be passed to the aw-watcher-window module. It uses the `argparse.ArgumentParser()` to create a parser with different arguments like `--host`, `--port`, `--testing`, `--exclude-title`, `--verbose`, `--poll-time`, and `--strategy`.
+
+4. The function sets default values for some arguments based on the loaded configuration settings using the `load_config()` function.
+
+5. The `--strategy` argument is specific to macOS and allows the user to choose between different strategies (`jxa`, `applescript`, `swift`) for retrieving the active window on macOS.
+
+6. Finally, the function parses the arguments passed to the script using `parser.parse_args()` and returns the parsed arguments.
+
+Overall, this code is responsible for defining the configuration settings and parsing command-line arguments for the aw-watcher-window module in the Activitywatch project.

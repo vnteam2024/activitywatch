@@ -1,0 +1,28 @@
+This code defines a set of functions and classes for classifying and tagging events based on certain rules. Here is an explanation of each component:
+
+1. `Tag = str`: Tag is defined as a string type.
+
+2. `Category = List[str]`: Category is defined as a list of strings.
+
+3. `class Rule`: This class represents a rule for matching events. It has the following attributes:
+   - `regex`: Optional regular expression pattern for matching event data.
+   - `select_keys`: Optional list of keys to select from the event data for matching.
+   - `ignore_case`: Boolean flag indicating whether the matching should be case-insensitive.
+
+4. The `Rule` class has a constructor method `__init__` that initializes the attributes from a dictionary of rules.
+
+5. The `match` method in the `Rule` class checks if the event data matches the rule based on the regular expression pattern.
+
+6. The `categorize` function categorizes a list of events based on a list of categories and rules. It applies the rules to each event and assigns a category to each event.
+
+7. The `_categorize_one` function categorizes a single event based on the provided categories and rules. It picks the most specific category from the list of categories that match the event.
+
+8. The `tag` function tags a list of events based on a list of tags and rules. It applies the rules to each event and assigns tags to each event.
+
+9. The `_tag_one` function tags a single event based on the provided tags and rules. It assigns tags to the event based on the matching rules.
+
+10. The `_pick_category` function picks the most specific category from a list of categories. It uses the `_pick_deepest_cat` function to compare and select the deepest category.
+
+11. The `_pick_deepest_cat` function compares two categories and selects the one with the deeper hierarchy (more specific).
+
+Overall, this code provides a framework for classifying and tagging events based on specific rules and categories. It allows for flexible categorization and tagging of event data.

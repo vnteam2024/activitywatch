@@ -1,0 +1,15 @@
+This Makefile is used to automate various tasks related to building, testing, and packaging the aw-watcher-input project. Here is an explanation of each target:
+
+1. `build`: Installs project dependencies using Poetry. This target is used to set up the project for development or testing.
+
+2. `test`: Runs the `aw-watcher-input --help` command to verify that the watcher input tool at least starts. It also runs the `typecheck` target to perform static type checking using MyPy.
+
+3. `typecheck`: Runs MyPy on the source files in `src/aw_watcher_input` directory to check for type errors. Ignores missing imports during type checking.
+
+4. `build-vis`: This target is currently commented out. It appears to handle building the visualization component using Pug and Browserify.
+
+5. `package`: Creates a distributable package using PyInstaller based on the `aw-watcher-input.spec` file. It also includes the visualization distribution if the `visualization/dist` directory exists.
+
+6. `clean`: Removes build artifacts and temporary files, such as the `build` and `dist` directories and any `__pycache__` directories.
+
+Overall, this Makefile provides a convenient way to build, test, and package the aw-watcher-input project with various automation tasks.

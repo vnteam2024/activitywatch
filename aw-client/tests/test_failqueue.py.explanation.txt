@@ -1,0 +1,16 @@
+This code is a test script written in Python to test the functionality of the ActivityWatchClient library. It simulates a scenario where events are queued in a client and then attempted to be sent to a server, but the server is not running initially. 
+
+Here's a breakdown of the script:
+1. Import necessary modules and classes.
+2. Define a function `create_unique_event()` to create a new Event object with a unique label.
+3. Define a test function `test_failqueue()` that performs the following steps:
+   - Generate a random client name, bucket ID, and event type.
+   - Create an instance of the ActivityWatchClient in testing mode and create a bucket with queued events enabled.
+   - Create 3 unique events and send them to the client with a specific pulse time.
+   - Sleep for 1 second before attempting to send the events.
+   - Instruct the user to start the ActivityWatch server in testing mode.
+   - Create another instance of the client and connect to the server.
+   - Get the events from the server and compare them with the initially sent events to verify their correctness.
+4. The `__main__` block executes the test function `test_failqueue()` when the script is run directly.
+
+The script essentially tests the queueing and sending of events from a client to a server using the ActivityWatchClient library. It checks if the events sent to the server match the expected events.

@@ -1,0 +1,1 @@
+This code is the main entry point for the aw-client module in the ActivityWatch project. It imports the `cli` module from the `aw_client` package and then calls the `main()` function from the `cli` module. This allows the user to run the `aw-client` application from the command line, which is responsible for tracking and monitoring user activity.

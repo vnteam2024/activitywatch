@@ -1,0 +1,37 @@
+This code is a test suite for the various functions in the `aw_transform.py` file of the Activity Watch project. The functions being tested include data transformation functions like filtering, sorting, merging, categorizing, tagging, and union operations on event data.
+
+Here is an overview of the tests being conducted:
+
+1. `test_simplify_string()`: Tests the `simplify_string` function which simplifies strings in events data.
+
+2. `test_filter_keyval()`: Tests the `filter_keyvals` function which filters events based on specific key values.
+
+3. `test_filter_keyval_regex()`: Tests the `filter_keyvals_regex` function which filters events based on regular expressions of key values.
+
+4. `test_intersecting_eventpairs()`: Tests the `_intersecting_eventpairs` function which finds intersecting event pairs.
+
+5. `test_filter_period_intersect()`: Tests the `filter_period_intersect` function which filters events based on intersecting periods.
+
+6. `test_period_union()`: Tests the `period_union` function which unions events based on periods.
+
+7. `test_sort_by_timestamp()`: Tests the `sort_by_timestamp` function which sorts events based on timestamps.
+
+8. `test_sort_by_duration()`: Tests the `sort_by_duration` function which sorts events based on durations.
+
+9. `test_sum_durations()`: Tests the `sum_durations` function which sums the durations of events.
+
+10. `test_merge_events_by_keys_1()` and `test_merge_events_by_keys_2()`: Tests the `merge_events_by_keys` function which merges events based on specific keys.
+
+11. `test_chunk_events_by_key()`: Tests the `chunk_events_by_key` function which chunks events based on a specific key.
+
+12. `test_url_parse_event()`: Tests the `split_url_events` function which parses URL events into components.
+
+13. `test_union()`: Tests the `union` function which unions two event lists with duplicates.
+
+14. `test_categorize()`: Tests the `categorize` function which categorizes events based on rules.
+
+15. `test_tags()`: Tests the `tag` function which tags events based on rules.
+
+16. `test_union_no_overlap()`: Tests the `union_no_overlap` function which unions events without overlapping.
+
+Each test is a unit test that checks the functionality of a specific transform function in the `aw_transform.py` file. The tests ensure that the functions are working correctly and producing the expected results on the event data.

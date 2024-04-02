@@ -1,0 +1,21 @@
+This Makefile contains several targets for building, testing, typechecking, linting, formatting, and cleaning the aw-client package. Here is a brief explanation of each target:
+
+1. build: Installs the dependencies for the project using Poetry.
+
+2. test: Runs unit tests for the request queue module in the package.
+
+3. test-integration: Runs integration tests for the aw-client package.
+
+4. test-examples: Runs test cases for the example scripts in the package (load_dataframe.py and working_hours.py).
+
+5. typecheck: Runs type checking using MyPy.
+
+6. lint: Runs linting checks using Ruff.
+
+7. lint-fix: Runs linting checks and fixes any linting issues using Ruff and PyUpgrade.
+
+8. format: Formats the code using Black.
+
+9. clean: Removes build artifacts and cache files from the project.
+
+Each target can be executed by running `make <target>` in the terminal, where `<target>` is the name of the target (e.g., `make build`, `make test`, `make clean`).

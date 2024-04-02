@@ -1,0 +1,13 @@
+This GitHub Actions workflow is divided into two jobs: "lint" and "format".
+
+The "lint" job runs on pushes and pull requests to the master branch. It runs on an Ubuntu latest environment and includes the following steps:
+1. Use the `actions/checkout@v3` action to checkout the code repository.
+2. Use the `actions/setup-python@v4` action to set up Python on the runner.
+3. Use the `jpetrucciani/ruff-check@main` action to run linting checks.
+
+The "format" job also runs on an Ubuntu latest environment and includes the following steps:
+1. Use the `actions/checkout@v3` action to checkout the code repository.
+2. Use the `actions/setup-python@v4` action to set up Python on the runner.
+3. Use the `psf/black@stable` action to format the code using the `Black` code formatter.
+
+Overall, this workflow runs linting checks and code formatting on the codebase whenever there is a push or pull request to the master branch.

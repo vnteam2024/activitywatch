@@ -1,0 +1,21 @@
+This Makefile contains various targets for building, installing, testing, linting, type checking, packaging, and cleaning up the aw-qt application. Here is an explanation of each target:
+
+1. `build`: Installs the dependencies for the project using Poetry.
+
+2. `install`: Calls the `config-autostart.sh` script to configure autostart settings.
+
+3. `test`: Imports the `aw_qt` module to test if it can be imported successfully.
+
+4. `test-integration`: Runs integration tests using the `integration_tests.py` script with the `--no-modules` flag.
+
+5. `lint`: Runs Flake8 linter on the `aw_qt` module, ignoring specific errors and per-file ignores.
+
+6. `typecheck`: Runs MyPy type checker on the `aw_qt` module.
+
+7. `precommit`: Runs type checking, unit tests, and integration tests as a pre-commit check.
+
+8. `package`: Generates a package using PyInstaller based on the `aw-qt.spec` configuration file.
+
+9. `clean`: Removes build artifacts and cache files.
+
+There is also a commented-out target to generate a Python file `aw_qt/resources.py` from a Qt Resource file `aw_qt/resources.qrc`. This target is currently disabled.

@@ -1,0 +1,11 @@
+This code defines a `VersionException` custom exception class and two functions: `_version_info_tuple()` and `assert_version()`. 
+
+1. `_version_info_tuple()` function returns a tuple with three elements representing the major, minor, and micro versions of the current Python interpreter.
+2. `assert_version()` function checks if the current Python version is greater than the required version provided as a tuple parameter. If the current version is not greater than the required version, it raises a `VersionException` with an error message indicating that the Python version needs to be upgraded.
+
+The code also includes a logger instance to log debug messages.
+
+Note:
+- This code uses `sys.version_info` to get information about the Python interpreter version.
+- The `assert_version()` function takes an optional parameter `required_version` which defaults to `(3, 5)` indicating that at least Python 3.5 is required.
+- The `_version_info_tuple()` and `assert_version()` functions are marked with `# pragma: no cover` comments, which suggests that they are not covered by test cases.

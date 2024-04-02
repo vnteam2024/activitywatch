@@ -1,0 +1,8 @@
+This GitHub Actions workflow is named "Diagram" and is triggered by manual workflow_dispatch events and by pushing to the "diagram" branch.
+
+The workflow has one job called "update-diagram", which runs on an Ubuntu environment. It consists of three steps:
+1. Checkout code: uses the actions/checkout action to clone the repository and its submodules.
+2. Also checkout docs & website: manually clones the ActivityWatch docs and website repositories.
+3. Update diagram: uses the githubocto/repo-visualizer action to update a visualization of the repository. It includes parameters like the commit message, file colors for different file types, and excluded globs for files or directories that should not be included in the visualization.
+
+Overall, this workflow automates the process of updating and visualizing the repository's code structure.

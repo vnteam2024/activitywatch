@@ -1,0 +1,12 @@
+This script is a helper script designed to test the functionality of the `aw-sync` tool, which is part of the ActivityWatch server Rust implementation. 
+
+Here is a breakdown of what the script does:
+
+1. It determines the hostname of the machine by checking whether `hostnamectl` is available (Linux) or falling back to the `hostname` command (macOS).
+2. It sets the path to the configuration file for the ActivityWatch server `aw-server.toml` (assuming it is in the standard location `~/.config/activitywatch/aw-server/aw-server.toml`).
+3. It extracts the port number to be used for the server from the configuration file. If the configuration file does not exist, it defaults to port `5600`.
+4. It sets the synchronization directory path based on the hostname of the machine.
+5. It sets up arguments to be passed to the `aw-sync` command for basic synchronization (`AWSYNC_ARGS`) and advanced synchronization (`AWSYNC_ARGS_ADV`) with the specified synchronization directory.
+6. Finally, it runs the `aw-sync` command in release mode, specifying the `sync-advanced` mode with the `--mode push` option and specifying the buckets to sync (`aw-watcher-window_$HOSTNAME` and `aw-watcher-afk_$HOSTNAME`).
+
+In summary, this script sets up the necessary configuration and arguments to test the synchronization functionality of the ActivityWatch server by pushing window and AFK (Away From Keyboard) data from the machine to the server.

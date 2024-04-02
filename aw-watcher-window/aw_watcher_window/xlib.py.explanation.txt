@@ -1,0 +1,12 @@
+This code is a Python module that interacts with the X Window System using the Xlib library. The X Window System is a popular windowing system for Unix-like systems that provides a graphical user interface.
+
+Here's an overview of what the code does:
+
+1. It imports necessary modules from Xlib and defines some constants related to window properties.
+2. It creates a connection to the X server and gets the root screen.
+3. It defines functions to retrieve the current active window ID, get a window object based on the ID, and get the current window object.
+4. It defines functions to retrieve the name, class, and process ID (PID) of a window.
+5. The `get_window_name`, `get_window_class`, and `get_window_pid` functions use Xlib to retrieve the respective properties of a window.
+6. The code at the bottom of the file is for testing purposes. It continuously prints the name and class of the active window every second.
+
+Overall, this module allows you to interact with the X Window System to get information about windows, such as their names, classes, and PIDs. It can be used for activities like monitoring window focus, logging window usage, or tracking active applications.

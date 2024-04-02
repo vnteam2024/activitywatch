@@ -1,0 +1,5 @@
+This GitHub Actions workflow is set up to run on pushes and pull requests to the master branch. It defines a job called "build" that runs on different operating systems (Ubuntu, Windows, macOS) with Python version 3.8.
+
+The steps of the job include checking out the repository, setting up Python, installing dependencies using Poetry, building the project, running tests and type checks, and reporting coverage using Codecov.
+
+Overall, this workflow is used to automate the build and testing process for the project on different operating systems and ensure code quality and coverage.

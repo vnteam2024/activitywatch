@@ -1,0 +1,7 @@
+This script is a bash script that retrieves the version of the software from various sources. It first checks if there is a Travis CI tag (TRAVIS_TAG) or an AppVeyor tag (APPVEYOR_REPO_TAG_NAME) defined. If there is a tag in either of these environments, it sets the version to that tag.
+
+If there is no tag defined in the CI environment, it then checks the latest tag and appends the commit ID to form a development version. This is done using `git describe --tags --abbrev=0` to get the latest tag and `git rev-parse --short HEAD` to get the short commit ID.
+
+Finally, the script echoes the determined version.
+
+This script is useful in CI/CD pipelines where the software version needs to be identified for deployment purposes.

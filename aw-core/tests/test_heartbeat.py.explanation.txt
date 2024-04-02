@@ -1,0 +1,13 @@
+This test script is testing the functions `heartbeat_merge` and `heartbeat_reduce` from the `aw_transform` module in the `activitywatch` project. The purpose of these functions is to merge or reduce events based on a specified pulse time.
+
+The `test_heartbeat_merge` function tests the merging of two events by calling the `heartbeat_merge` function and asserts that the result is not None.
+
+The `test_heartbeat_merge_fail` function tests cases where merging should not happen. It covers scenarios where the timestamp of the heartbeat event is more than the pulsetime away and where the labels of the events are not identical.
+
+The `test_heartbeat_reduce` function tests the reduction of events by calling the `heartbeat_reduce` function and asserts that the length of the reduced events list is 1.
+
+The `test_heartbeat_same_timestamp` function tests scenarios where events with the same timestamp but different duration are merged successfully. It also tests that the order of the events should not matter for merging.
+
+The `test_heartbeat_reduce_fail` function tests cases where events should not be reduced, and asserts that the length of the reduced events list is not equal to 1.
+
+Overall, these test functions cover different scenarios to ensure that the `heartbeat_merge` and `heartbeat_reduce` functions work as expected in merging or reducing events based on the pulse time.

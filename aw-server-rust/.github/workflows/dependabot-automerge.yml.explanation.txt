@@ -1,0 +1,5 @@
+This GitHub Actions workflow is named "Dependabot Auto-merge" and is triggered by the completion of the "Build" workflow. It only runs if the previous workflow run was successful and the actor is the dependabot[bot] user.
+
+The workflow has a job called "auto_merge" that runs on an ubuntu-latest runner. The job uses the ridedott/merge-me-action version 2 to automatically merge pull requests. The GITHUB_TOKEN secret is passed to the action in order to have the necessary permissions to merge pull requests.
+
+This workflow is designed to automatically merge pull requests created by the Dependabot bot user when certain conditions are met, such as the success of a specific workflow.

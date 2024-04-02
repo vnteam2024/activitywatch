@@ -1,0 +1,5 @@
+This code is initializing the aw-core package in the Activity Watch project. It imports various modules and classes from the aw-core package such as decorators, util, dirs, config, log, models, and schema. It also imports the Event class from models. Additionally, it imports the metadata about the package from __about__.py.
+
+The __all__ variable is used to define what symbols will be exported/imported when using the `from aw_core import *` syntax. In this case, it includes the modules and classes mentioned above.
+
+Overall, this code is setting up the aw-core package for use within the Activity Watch project.

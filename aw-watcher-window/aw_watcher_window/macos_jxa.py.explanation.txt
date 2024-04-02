@@ -1,0 +1,13 @@
+This Python script is using JXA (JavaScript for Automation) to interact with the macOS system to get information about the currently focused window (application) on the screen. Here's a breakdown of the script:
+
+1. The script imports necessary modules, defines a logger, and initializes a global variable `script` to cache the compiled JXA script for performance reasons.
+
+2. The `compileScript()` function compiles the JXA script stored in `printAppStatus.jxa` file and caches the compiled script using the `OSAScript` and `OSALanguage` from `OSAKit`. It removes the shebang line if present in the script.
+
+3. The `getInfo()` function calls the `compileScript()` function to get the compiled JXA script. It then executes the script using `script.executeAndReturnError_(None)` and returns the result as a dictionary after parsing it as JSON.
+
+4. The script also contains a block that allows you to test the `getInfo()` function by printing the window information, waiting for 5 seconds, and then printing the window information again.
+
+5. The script can be run to get information about the currently focused window on macOS.
+
+Overall, this script demonstrates how to use JXA to interact with macOS system information and retrieve data about the active window.

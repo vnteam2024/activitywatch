@@ -1,0 +1,5 @@
+This code defines custom exception classes `BadRequest`, `NotFound`, and `Unauthorized` that extend from the Werkzeug exceptions `BadRequest`, `NotFound`, and `Unauthorized` classes respectively. Each custom exception class has two parameters in its constructor: `type` (a string representing the type of the exception) and `message` (a string representing the error message).
+
+When an instance of one of these custom exception classes is created, it calls the superclass constructor with the provided message and then sets the `type` attribute based on the input parameter.
+
+These custom exceptions allow for more specific and controlled error handling in the application, providing additional context about the type of error that occurred.

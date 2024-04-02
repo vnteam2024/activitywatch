@@ -1,0 +1,8 @@
+This is a PyInstaller spec file used to define how a Python script should be packaged into a standalone executable. 
+
+In this spec file:
+- The Analysis object specifies the main Python script that should be included in the executable, as well as any hidden imports that are needed for the script to run successfully.
+- The hidden imports include various modules related to Xlib and pynput, which are dependencies for the aw-watcher-afk script.
+- The PyInstaller options are set for the executable, including whether to use encryption (block_cipher), whether to use UPX compression, and whether the executable should be a console application.
+
+Overall, this spec file is used by PyInstaller to generate a standalone executable for the aw-watcher-afk script with all the necessary dependencies included.

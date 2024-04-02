@@ -1,0 +1,11 @@
+This Python script is an implementation of a macOS strategy to retrieve information about the current active window (frontmost window) and the application it belongs to. It uses AppleScript, specifically the `NSAppleScript` class from the Foundation module, to execute an AppleScript code that fetches the frontmost application's name and the title of the frontmost window.
+
+Here's a breakdown of the script:
+
+1. The script defines an AppleScript source code named `source`, which retrieves the frontmost application's name and the title of the frontmost window.
+2. The `getInfo()` function compiles the AppleScript code using the `NSAppleScript` class, executes it, and extracts the application name and window title from the output.
+3. The `getApp()` function extracts the application name from the info string returned by the AppleScript.
+4. The `getTitle()` function extracts the window title from the info string returned by the AppleScript.
+5. If the script is executed as a standalone script (not imported as a module), it calls the `getInfo()` function and prints the application name and window title.
+
+Overall, this script provides a way to monitor the active window and the application being used on a macOS system using AppleScript in Python.

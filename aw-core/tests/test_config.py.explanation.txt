@@ -1,0 +1,15 @@
+This code provides tests for the configuration handling functionality in the `aw_core` module of the ActivityWatch project. Here is a breakdown of what each test does:
+
+1. **clean_config fixture**: This fixture is used to clean up the config directory before and after each test. It removes the test config file if it already exists, reruns the `get_config_dir` function to create the config directory, runs the test, and then removes the config directory again.
+
+2. **test_create**: This test checks if the config directory is created successfully using the `get_config_dir` function.
+
+3. **test_config_defaults**: This test loads a non-existing config and checks if it uses default values provided in a TOML string. It checks if the loaded config matches the default values specified in the TOML string.
+
+4. **test_config_no_defaults**: This test saves the default configuration specified in the TOML string to a file, then loads the config without providing default values. It checks if the loaded config matches the default values specified.
+
+5. **test_config_override**: This test creates a minimal config file with one overridden value, loads it, and verifies that the overridden value is being used in the loaded configuration.
+
+6. **test_config_ini**: This test is for testing the handling of configuration using INI format (ConfigParser). It creates a default ConfigParser object with some default values, loads a non-existing config using this default config, checks if the loaded config matches the default values, modifies and saves the config file, and finally loads the modified config file and verifies the changes.
+
+The tests cover scenarios such as loading configs with and without defaults, overriding values in the loaded configuration, and testing both TOML and INI configuration file formats. The code uses fixtures for setup and cleanup and asserts for testing the expected behavior of the configuration handling functions.

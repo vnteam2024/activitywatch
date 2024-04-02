@@ -1,0 +1,27 @@
+This code is a Python script that interacts with the `xprop` command in Linux to fetch information about windows and their properties. 
+
+Here is a breakdown of the script:
+
+1. The script imports necessary modules such as `sys`, `subprocess`, `re`, and `logging`, and defines some constants and a logger.
+
+2. It checks the Python version and exits if the version is not at least 3.5.
+
+3. The script defines functions `xprop_id`, `xprop_root`, `get_active_window_id`, `get_window_ids`, `_extract_xprop_field`, `get_xprop_field`, `get_xprop_field_str`, `get_xprop_field_strlist`, `get_xprop_field_int`, `get_xprop_field_class`, `get_window`, and `get_windows`.
+
+4. The `xprop_id` function takes a window ID as input, runs the `xprop` command with that ID, and returns the output as a string.
+
+5. The `xprop_root` function runs the `xprop` command with the root window and returns the output as a string.
+
+6. The `get_active_window_id` function parses the output of `xprop_root` to find the active window ID and returns it.
+
+7. The `get_window_ids` function parses the output of `xprop_root` to find all window IDs and returns them as a list.
+
+8. The other functions are utility functions to parse specific fields from the `xprop` output.
+
+9. The `get_window` function takes a window ID, fetches its properties using `xprop_id`, and returns a dictionary with relevant window information.
+
+10. The `get_windows` function takes a list of window IDs, fetches information for each window using `get_window`, and returns a list of window dictionaries.
+
+11. Finally, the script includes a block that continuously prints the active window ID every second, demonstrating the functionality of the script.
+
+Overall, this script provides a way to interact with the `xprop` command to gather information about windows and their properties in a Linux environment.

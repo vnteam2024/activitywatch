@@ -1,0 +1,9 @@
+This YAML code defines a GitHub Actions workflow named "Test" that runs integration tests to catch bugs triggered by updating activitywatch. The workflow is triggered manually using `workflow_dispatch`.
+
+The workflow has a job named "upgrades" that runs on the latest version of Ubuntu. It has environment variables for the old and new versions of activitywatch that are being tested.
+
+The job uses a strategy matrix to test different upgrade scenarios, such as upgrading from one version of aw-server to another version. It also includes scenarios for switching storage from peewee to sqlite, and vice versa. It excludes unsupported scenarios like upgrading from aw-server-rust to aw-server.
+
+The steps in the job include downloading build artifacts, downloading new activitywatch version, installing old and new activitywatch versions, running and testing the old server, running and testing the new server, and outputting logs.
+
+Overall, this workflow is designed to test activitywatch upgrades and detect any bugs or issues that may arise during the process.

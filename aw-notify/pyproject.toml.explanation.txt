@@ -1,0 +1,11 @@
+This code is a configuration file written in TOML format for a Python project managed by Poetry. 
+
+In this file:
+- The project name, version, description, authors, license, readme, homepage, and repository are specified.
+- The project package is specified as "aw-notify".
+- A script called "aw-notify" is defined to run the main function in the "aw_notify.main" module.
+- Dependencies are specified for Python version 3.9 up to, but not including, version 3.12, aw-client version 0.5.13, desktop-notifier version 3.4.2, and rubicon-objc version 0.4.0 for Darwin (macOS).
+- Development dependencies are specified for black, mypy, pyinstaller, and pytest.
+- The build backend is defined as poetry-core.
+
+Overall, this configuration file sets up the project metadata, dependencies, scripts, and build system configuration for the "aw-notify" Python application using Poetry.

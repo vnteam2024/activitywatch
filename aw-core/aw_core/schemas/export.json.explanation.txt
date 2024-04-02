@@ -1,0 +1,12 @@
+This code defines a JSON schema for the Export model used by ActivityWatch. 
+
+- "$id": specifies the ID of the schema.
+- "$schema": specifies the schema version being used.
+- "title": specifies the title of the schema.
+- "description": provides a description of the schema.
+- "type": specifies that the root element of the schema is an object.
+- "required": specifies any properties that are required in the object (in this case, none are required).
+- "properties": defines the properties that the object can have. In this case, there is one property called "buckets" which is an array of objects.
+  - "buckets": specifies an array of objects, where each object conforms to the "Bucket" schema defined elsewhere.
+
+Overall, this JSON schema defines the structure of an "Export" object used by ActivityWatch, which contains an array of "Bucket" objects.

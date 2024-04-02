@@ -1,0 +1,18 @@
+This bash script updates the dependency locks for each submodule in the activitywatch repository. Here is an explanation of what each part of the script does:
+
+1. `set -e`: This option makes the script exit immediately if a command fails.
+
+2. `set -x`: This option makes the script print each command before executing it.
+
+3. The script loops through each submodule in the activitywatch repository.
+
+4. For each submodule:
+   - It navigates to the submodule directory.
+   - It checks if the submodule is on the master branch. If it's not on the master branch, the script aborts.
+   - It then updates dependency locks for the submodule:
+     - If `poetry.lock` exists in the submodule directory, it uses `poetry update` to update the dependencies.
+     - If `Cargo.toml` exists in the submodule directory, it uses `cargo update` to update the dependencies.
+
+5. After updating the dependencies for the submodule, the script goes back to the root directory of the activitywatch repository.
+
+Overall, this script automates the process of updating dependencies for each submodule in the activitywatch repository based on the type of dependency management tool used (either Poetry or Cargo).

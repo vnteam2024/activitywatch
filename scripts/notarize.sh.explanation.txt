@@ -1,0 +1,16 @@
+This script is used to notarize a macOS application using Apple's notarization service. Notarization is necessary in order to distribute macOS applications outside of the Mac App Store.
+
+1. The script defines variables for the Apple email address, password (apps-specific password), team ID, keychain profile, bundle ID, path to the application and the disk image file.
+
+2. There are three main functions in the script:
+   - `run_notarytool()`: This function uses the `xcrun notarytool` command to store credentials, submit the application for notarization, and wait for the notarization process to complete.
+   - `run_altool()`: This function uses the `xcrun altool` command to store credentials, notarize the application, and wait for the notarization process to complete.
+   - `run_stapler()`: This function uses the `xcrun stapler` command to staple the notarization certificate to the executable or bundle.
+
+3. The script then checks for the availability of notarization tools (`notarytool` and `altool`) and selects the appropriate method for notarization based on the availability of the tools.
+
+4. If the notarization method is determined, the script proceeds to zip the application (if it exists), notarize the zip file and staple the notarization certificate to the application.
+
+5. The script also checks for the existence of the disk image file, notarizes it (if it exists), and staples the notarization certificate to the disk image.
+
+Overall, the script automates the notarization process for a macOS application, making it easier to distribute the application outside of the Mac App Store.

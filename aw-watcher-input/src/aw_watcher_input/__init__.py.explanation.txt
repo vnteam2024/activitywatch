@@ -1,0 +1,1 @@
+This code is importing the main module from the aw_watcher_input package. The `aw_watcher_input` package is used for tracking user activity, and the `main` module likely contains the main functionality for this activity tracking. By importing `main`, the code can access and use the functionalities provided by that module within the `aw_watcher_input` package.

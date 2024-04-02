@@ -1,0 +1,14 @@
+This Python script sends an email with a summary report. It uses the smtplib module to send the email and the email.mime module to create the email message.
+
+The script defines a dataclass for Recipient, which includes the name and email address of the recipient. The create_msg function creates a MIME multipart message with the given sender, receiver, subject, text, and optional HTML content.
+
+In the main function:
+1. It retrieves SMTP server configuration from environment variables (SMTP_SERVER, SMTP_USERNAME, SMTP_PASSWORD).
+2. Defines sender and receiver Recipient objects.
+3. Reads input from stdin if read_stdin is set to True or sets a default test message.
+4. Formats the text and HTML content for the email message.
+5. Creates the email message using create_msg function.
+6. Attempts to send the email using an SMTP connection with SSL encryption to the specified SMTP server.
+7. Prints a success message if the email is sent successfully or an error message if sending fails.
+
+The script can be run from the command line and accepts input from stdin to generate an email report. It provides a basic framework for sending emails with text and HTML content for reporting purposes.

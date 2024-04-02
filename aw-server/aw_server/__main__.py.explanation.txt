@@ -1,0 +1,1 @@
+The code is importing the aw_server module and then calling the main function from it. This main function is the entry point for running the ActivityWatch server. So, by calling main(), the ActivityWatch server will be started and will begin watching and logging user activity.

@@ -1,0 +1,8 @@
+This is a `Cargo.toml` file for a Rust package called "aw-client-rust". 
+
+In this file:
+- The package specifies its name, version, edition, and authors.
+- It includes dependencies on various crates, such as `reqwest` for making HTTP requests with JSON handling, `gethostname` for getting the hostname of the machine, `serde` and `serde_json` for serialization and deserialization, `chrono` for date and time handling with serde support, `aw-models` for the models used by the package, and `tokio` for asynchronous programming.
+- It also includes dev-dependencies on `aw-datastore` and `aw-server`, along with `rocket` and `tokio-test`.
+
+Overall, this `Cargo.toml` file specifies the necessary dependencies for the "aw-client-rust" package to function properly, as well as the development dependencies needed for testing and development purposes.

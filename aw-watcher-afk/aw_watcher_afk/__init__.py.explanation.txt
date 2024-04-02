@@ -1,0 +1,1 @@
+This code is importing the `main` function from the `__main__` module within the `aw_watcher_afk` package. It then specifies that when importing from this package, only the `main` function should be available to other modules. This helps to organize the code and make it clear which functions are intended to be used externally.

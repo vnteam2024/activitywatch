@@ -1,0 +1,8 @@
+This GitHub Actions workflow is used to build and test a Python project called "aw-watcher-afk" on different operating systems (Ubuntu, Windows, macOS) with Python version 3.9. 
+
+- The workflow runs on push and pull request events on the master branch.
+- It defines a job called "build" that runs on different operating systems using the matrix strategy.
+- The steps in the job include checking out the code, setting up Python, creating a virtual environment, installing dependencies using Poetry, running tests, packaging the project, testing the package, and uploading the artifact.
+- The workflow uses a combination of shell commands and Python-specific commands to perform the necessary actions.
+
+Overall, this workflow automates the process of building, testing, and packaging the "aw-watcher-afk" project on different operating systems using GitHub Actions.

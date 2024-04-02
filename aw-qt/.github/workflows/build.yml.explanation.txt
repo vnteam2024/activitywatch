@@ -1,0 +1,20 @@
+This GitHub Actions workflow is set up to build, test, and package a project. Here is a breakdown of the workflow:
+
+1. **Trigger**: The workflow is triggered on pushes to the master branch and pull requests targeting the master branch.
+
+2. **Jobs**: 
+   - There is one job named `build`.
+   - The job runs on different operating systems specified in the `matrix.os` parameter, which includes ubuntu-20.04, windows-latest, and macOS-11.
+  
+3. **Steps**:
+   - `actions/checkout@v3` is used to check out the code with submodules.
+   - `actions/setup-python@v4` is used to set up the Python version specified in `matrix.python_version`.
+   - For Linux runners, APT dependencies are installed using `sudo apt-get install`.
+   - Python packages are installed using `poetry` after creating a virtual environment.
+   - The project is built using `make build`.
+   - Tests are run using `make test` and `make typecheck`.
+   - Integration tests are run for Linux runners, and xvfb is installed before that.
+   - The project is packaged using `make package`.
+   - The built package is uploaded as an artifact with the name `builds-${{ runner.os }}-py${{ matrix.python_version }}`.
+
+Overall, this workflow sets up the environment, installs dependencies, builds and tests the project, runs integration tests, packages the project, and uploads the artifact.

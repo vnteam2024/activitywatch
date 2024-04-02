@@ -1,0 +1,21 @@
+This test file `test_query2.py` is testing the functionality of the `aw_query` module in the ActivityWatch project. The tests cover various aspects of query parsing, function calling, and query execution using the `query2` module.
+
+Here is a summary of the tests in the file:
+
+1. Token Parsing Test: Tests the parsing of different types of tokens such as integers, strings, variables, functions, lists, and dictionaries.
+2. Dictionary Test: Tests the parsing and interpretation of dictionaries in queries.
+3. List Test: Tests the parsing and interpretation of lists in queries.
+4. Bogus Query Test: Tests some invalid query scenarios such as incomplete assignments and incorrect syntax.
+5. Query Function Calling Test: Tests calling query functions that may or may not exist and the handling of invalid arguments.
+6. Return Value Test: Tests the return value of queries with different types of values.
+7. Multiline Test: Tests the handling of multiline queries.
+8. Function Invalid Types Test: Tests query functions with invalid argument types.
+9. Function Invalid Argument Count Test: Tests query functions with an incorrect number of arguments.
+10. Function in Function Test: Tests calling a function inside another function.
+11. Query Functions Test: Tests calling all available query functions to ensure they work as expected.
+12. Basic Query Test: Tests a basic query involving querying events and filtering them based on another bucket.
+13. Merged Keys Test: Tests merging events based on multiple keys and sorting them by duration.
+14. Fancy Query Test: Tests more complex queries involving finding a bucket and simplifying window titles.
+15. Query Categorize Test: Tests categorizing events based on certain criteria and merging events based on categories.
+
+Overall, these tests ensure the proper functioning of the query functionality provided by the `aw_query` module in the ActivityWatch project.

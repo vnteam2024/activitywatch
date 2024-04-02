@@ -1,0 +1,11 @@
+This is a GitHub Actions workflow file for running CodeQL analysis on a repository for the aw-watcher-window project. 
+
+The workflow is triggered on push and pull request events on the master branch, as well as on a scheduled basis every Wednesday at 22:39.
+
+The workflow defines a single job called "analyze", which runs on an Ubuntu virtual environment. The job has permissions to read actions and contents, and write security events.
+
+Within the job, a matrix strategy is defined with a single variable "language" set to "python". This allows the same job to run CodeQL analysis for different languages by simply adding them to the "language" matrix.
+
+The steps in the job include checking out the repository, initializing CodeQL with the specified language and queries, performing an autobuild, and finally running the CodeQL analysis for the specified language.
+
+Overall, this workflow automates the CodeQL analysis process for the specified repository and language.

@@ -1,0 +1,5 @@
+This script creates symbolic links for systemd unit files of three modules (aw-server, aw-watcher-afk, aw-watcher-x11) to run them as user services. 
+
+The script iterates through the list of module names and creates symbolic links for their respective systemd unit files. The path for the systemd unit file is constructed using the `$(pwd)` command to get the current working directory where the script is located and appending the module name and its service file path. The symbolic link is created in the `~/.config/systemd/user/` directory with the same name as the module.
+
+Overall, this script enables the user to easily start and manage the specified modules as systemd user services.

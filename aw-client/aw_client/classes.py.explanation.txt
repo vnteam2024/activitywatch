@@ -1,0 +1,7 @@
+This code defines default classes for categorizing different activities based on specific criteria. The classes are defined as a list of tuples, where each tuple contains a list of category IDs and a dictionary of category specifications. 
+
+The category specifications include the type of rule used (regex), the regular expression pattern to match against the activity name, and optional parameters such as ignore_case. 
+
+There is a function `get_classes()` that attempts to fetch classes from a server-side setting using the ActivityWatchClient. If fetching the classes fails, it falls back to using the default classes defined at the beginning of the file.
+
+Overall, this code provides a set of default classes for categorizing activities, and it allows for fetching customized classes from a server-side setting if available.

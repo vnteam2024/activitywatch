@@ -1,0 +1,17 @@
+This Python script loads ActivityWatch data into a pandas DataFrame and exports it as a CSV file. Here is a breakdown of the different parts of the code:
+
+1. The script starts by importing necessary libraries including `datetime`, `timedelta`, `timezone`, `iso8601`, `pandas`, `ActivityWatchClient`, and some classes and functions from the `aw_client` module.
+
+2. The `build_query` function constructs a query using the `canonicalEvents` function from the `aw_client` module. It defines the query parameters for the Desktop events to be retrieved.
+
+3. The `main` function is where the main logic of the script resides. It initializes the `ActivityWatchClient`, retrieves the data using the built query, processes the data into a suitable format, and exports it as a CSV file.
+
+4. Within the `main` function, the script retrieves ActivityWatch data from the last 30 days using the query and converts the data into a format suitable for a DataFrame.
+
+5. The code then creates a pandas DataFrame `df` from the processed data, sets the timestamp column as the index, and prints the DataFrame.
+
+6. The script prompts the user to decide whether they want to export the DataFrame to a CSV file. If the user chooses to do so, the DataFrame is saved as a CSV file named "output.csv".
+
+7. Finally, the script checks if it is being run as the main module and calls the `main` function.
+
+Overall, this script demonstrates how to query ActivityWatch data, transform it into a structured format, and export it for further analysis or storage.

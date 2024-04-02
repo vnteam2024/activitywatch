@@ -1,0 +1,27 @@
+This code is a REST API implementation using Flask and Flask-RESTPlus in Python. It defines various endpoints for interacting with the ActivityWatch server, such as getting server info, managing buckets, managing events, querying data, exporting and importing data, logging, and settings.
+
+Here is a breakdown of the code structure:
+1. It starts by importing necessary modules and defining some required functions, such as `host_header_check` and `copy_doc`.
+
+2. It creates a Blueprint named "api" with a base URL prefix '/api' to group related endpoints together.
+
+3. It initializes a Flask-RESTPlus Api instance with the blueprint, which provides support for documenting and validating APIs.
+
+4. It defines models using Flask-RESTPlus fields to represent data structures like event, bucket, export, info, create_bucket, update_bucket, and query.
+
+5. It defines various API routes for different functionalities:
+   - Server info endpoint (/0/info)
+   - Bucket endpoints (/0/buckets/, /0/buckets/<bucket_id>)
+   - Events endpoints (/0/buckets/<bucket_id>/events, /0/buckets/<bucket_id>/events/<event_id>, etc.)
+   - Query endpoint (/0/query/)
+   - Export and Import endpoints (/0/export, /0/buckets/<bucket_id>/export, /0/import)
+   - Logging endpoint (/0/log)
+   - Settings endpoint (/0/settings, /0/settings/<key>)
+
+6. Each endpoint is associated with a Flask-RESTPlus Resource class where the actual operations are defined. The operations include handling GET, POST, PUT, DELETE requests, validating input data, and calling corresponding functions from the `ServerAPI`.
+
+7. The `copy_doc` decorator is used to copy docstrings from the `ServerAPI` functions to the Flask-RESTPlus Resources for better documentation and Swagger UI integration.
+
+8. The code structure follows the RESTful API design principles and provides a clear separation of concerns between different functionalities.
+
+Overall, this code sets up a RESTful API for the ActivityWatch server using Flask and Flask-RESTPlus, allowing clients to interact with the server for managing data, querying, exporting, importing, logging, and settings configuration.

@@ -1,0 +1,13 @@
+This Makefile contains a set of targets for building, testing, packaging, and cleaning the aw-notify tool.
+
+1. `build`: Installs the required dependencies using Poetry.
+
+2. `test`: Runs the aw-notify tool with the help flag to check if it starts correctly. It also runs the `typecheck` target.
+
+3. `typecheck`: Uses MyPy to perform static type checking on the `aw_notify` module, ignoring missing imports.
+
+4. `package`: Uses PyInstaller to package the aw-notify tool according to the specifications in `aw-notify.spec`, cleaning up any previous builds without confirmation.
+
+5. `clean`: Removes build and distribution directories (`build` and `dist`), as well as any `__pycache__` folders.
+
+These targets can be executed by running `make <target>` in the command line, where `<target>` is one of the targets defined in the Makefile.

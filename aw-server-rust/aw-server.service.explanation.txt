@@ -1,0 +1,14 @@
+This code is a systemd service configuration file for running the ActivityWatch Server with the Rust implementation (aw-server-rust). 
+
+In the [Service] section:
+- Type=simple specifies that the service is a simple process that does not fork into multiple processes.
+- ExecStart=aw-server specifies the command to start the aw-server process.
+
+In the [Unit] section:
+- Description=ActivityWatch Server (Rust implementation) provides a description of the service.
+- Wants=network.target specifies that the service requires networking to be available before starting.
+
+In the [Install] section:
+- WantedBy=default.target specifies that the service should be started by default when the system boots up.
+
+The instructions provided in the comments at the beginning of the file guide the user on how to build, install, and start the aw-server-rust service using systemd. These instructions include building and packaging aw-server-rust and aw-webui with "make", installing aw-server-rust with "sudo make install", reloading systemd with 'systemctl --user daemon-reload', starting the service with 'systemctl --user start aw-server-rust.service', and optionally enabling the service to start automatically when the user logs in.

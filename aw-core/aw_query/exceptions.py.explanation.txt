@@ -1,0 +1,11 @@
+This code defines custom exceptions for the aw_query module in the ActivityWatch core library. 
+
+1. QueryException: This is a general exception class that inherits from the built-in Exception class.
+
+2. QueryFunctionException: This exception class inherits from QueryException and is used for exceptions related to query functions.
+
+3. QueryParseException: This exception class inherits from QueryException and is used for exceptions related to parsing queries.
+
+4. QueryInterpretException: This exception class inherits from QueryException and is used for exceptions related to interpreting queries.
+
+These custom exception classes provide a way to handle different types of exceptions that may occur within the aw_query module more specifically and effectively. They can be raised in the code when certain error conditions are encountered and caught by the calling code to handle those errors appropriately.

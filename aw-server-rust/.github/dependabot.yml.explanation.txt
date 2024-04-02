@@ -1,0 +1,7 @@
+This is a configuration file for Dependabot, a service that automates updates to dependencies in a project. 
+
+The file specifies the following update schedules:
+1. Update GitHub Actions configuration files in the root directory on a monthly basis.
+2. Update Git submodules in the root directory on a monthly basis.
+
+Additionally, there are commented out sections that show an example of updating cargo dependencies in a Rust project. Each dependency listed has a specific version that should be ignored if it matches, and a limit of 10 open pull requests. This section is currently disabled (commented out) because it is considered too spammy to automate updates for these dependencies. The intention is to manually update the lockfile for these dependencies as needed.

@@ -1,0 +1,2 @@
+This code is used to import the `context` module from the `tests` package. The `context` module likely contains utilities or setup code that are commonly used in multiple test files within the `tests` package. By importing the `context` module in the `__init__.py` file, it allows other modules within the `tests` package to easily access and use the functionality provided in the `context` module. 
+It's also important to note that the `# noqa: F401` comment is used to suppress flake8 warnings related to unused imports in this case.

@@ -1,0 +1,9 @@
+This script is used to package the ActivityWatch application as an AppImage. Here is a breakdown of what the script does:
+
+1. It finds the latest zip file in the `./dist/` directory (which is assumed to be the built zip file) and unzips it.
+2. It fetches two AppImage tools (`linuxdeploy-x86_64.AppImage` and `appimagetool-x86_64.AppImage`) from their respective Github repositories and makes them executable.
+3. It creates an `AppRun` file which is a shell script that executes the `aw-qt` executable in the `activitywatch` directory.
+4. It uses `linuxdeploy-x86_64.AppImage` to build the AppImage by specifying the necessary parameters such as the app directory, executable, desktop file, icon file, and icon filename.
+5. The built AppImage file is then copied to the `./dist/` directory with the name `activitywatch-linux-x86_64.AppImage`.
+
+Overall, this script automates the process of creating an AppImage for the ActivityWatch application using the specified tools and parameters.

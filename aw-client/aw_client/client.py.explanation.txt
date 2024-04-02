@@ -1,0 +1,13 @@
+The code above is a Python module that serves as a client for interacting with the ActivityWatch server via its REST API. Here is an explanation of the key components of the code:
+
+1. `ActivityWatchClient`: This class is the main client interface for interacting with the server. It provides methods for performing various operations such as getting info, managing events, buckets, exporting, importing, querying, settings, and connecting/disconnecting.
+
+2. `always_raise_for_request_errors`: This is a decorator function that wraps around functions making HTTP requests and raises an exception if the request encounters an error.
+
+3. `RequestQueue`: This class is used to asynchronously send heartbeats to the server. It handles cases where the server is temporarily unavailable and saves queued requests to a file in case of a server crash. It runs in a separate thread and manages the queue of requests to be sent.
+
+4. `QueuedRequest` and `Bucket`: These are named tuples used to represent a queued request and a bucket, respectively.
+
+5. The module also defines helper functions, such as `_log_request_exception` for logging request exceptions, `_dt_is_tzaware` for checking if a datetime object is timezone-aware, and `_url` for constructing API endpoint URLs.
+
+Overall, the code provides a robust client interface for interacting with the ActivityWatch server, handling potential errors, and queuing requests for asynchronous processing.

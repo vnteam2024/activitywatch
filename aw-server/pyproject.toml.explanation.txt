@@ -1,0 +1,19 @@
+This is a `pyproject.toml` file which is used by Poetry, a dependency management and packaging tool for Python projects. 
+
+Here is an explanation of the key sections in this file:
+
+1. `[tool.poetry]`: This section defines metadata about the project such as name, version, description, authors, and license.
+
+2. `[tool.poetry.scripts]`: This section defines executable scripts that will be installed when the project is installed. In this case, it defines that the `aw-server` script will be the entry point to the application.
+
+3. `[tool.poetry.dependencies]`: This section lists the dependencies required by the project. It includes the Python version required, as well as specific versions of the `aw-core`, `aw-client`, `flask`, `flask-restx`, `flask-cors`, `importlib-metadata`, and `werkzeug` packages.
+
+4. `[tool.poetry.dev-dependencies]`: This section lists the development dependencies required for testing and development purposes. It includes packages such as `mypy`, `pytest`, `pytest-flask`, `pytest-benchmark`, `pytest-cov`, `types-Werkzeug`, `types-pkg-resources`, `types-Flask`, and `black`.
+
+5. `[tool.pytest.ini_options]`: This section specifies options for pytest, a testing framework for Python. It sets the minimum version of pytest, additional options for coverage reporting, and specifies which python files to include in the tests.
+
+6. `[tool.ruff]`: This section configures the Ruff plugin which is used for linting. It defines which linting errors to ignore.
+
+7. `[build-system]`: This section specifies the build requirements and backend for building the project. In this case, it requires `poetry-core` and specifies the backend as `poetry.core.masonry.api`.
+
+Overall, this `pyproject.toml` file defines the project metadata, dependencies, and testing configurations for the `aw-server` project.

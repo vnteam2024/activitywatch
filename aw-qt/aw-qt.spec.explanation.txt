@@ -1,0 +1,17 @@
+This code is a spec file for PyInstaller, a tool used to package Python applications into standalone executables. 
+
+Here is a breakdown of the code:
+
+1. The `extra_pathex` variable is used to provide additional paths to binary dependencies for Windows.
+
+2. The `Analysis` class is used to specify the Python script(s) to be analyzed, along with other settings such as binaries, data files, hidden imports, etc.
+
+3. The `exclude_libs` variable is used to exclude certain libraries from the binaries list.
+
+4. The `PYZ` and `EXE` classes are used to specify the Python interpreter archive and the executable file to be created, respectively.
+
+5. The `COLLECT` class is used to collect all necessary files (binaries, zip files, data files, etc.) into a single package.
+
+6. There is a commented-out section for building a .app bundle for macOS. This feature is mentioned as untested.
+
+Overall, this spec file configures PyInstaller to create a standalone executable for the `aw-qt` application, handling dependencies and packaging the necessary files into a single package.

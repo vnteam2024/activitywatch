@@ -1,0 +1,26 @@
+This code is a Python script that performs a benchmark test on the ActivityWatcher server API by sending heartbeat events to a specific bucket. Here's an explanation of the code:
+
+1. The script imports necessary modules and classes:
+    - `sleep` from `time` module for pausing the script execution.
+    - `cProfile` for profiling the code.
+    - `pstats` for creating and analyzing the profiling statistics.
+    - `timezone` and `datetime` from `datetime` module for handling timestamps.
+    - `Event` model from `aw_core.models` for creating events.
+    - `aw_datastore` and `aw_server` modules for interacting with the ActivityWatcher datastore and server API.
+
+2. The `benchmark()` function is defined:
+    - It creates an instance of the Datastore using PeeweeStorage for testing purposes.
+    - It creates an instance of the ServerAPI using the Datastore for testing purposes.
+    - It prints the API information.
+    - It creates a bucket for the benchmark test.
+    - It then performs the benchmark test by sending 120 heartbeat events to the bucket with a delay of 0.1 seconds between each event and a pulsetime of 0.3 seconds.
+
+3. The script checks if it is being run as the main module:
+    - It defines a filename for the benchmark data file.
+    - It uses `cProfile.run()` to run the `benchmark()` function and store the profiling data in the benchmark data file.
+    - It creates a `pstats.Stats` object to read and analyze the profiling data.
+    - It strips the directories from the statistics.
+    - It sorts the statistics by cumulative time spent in functions.
+    - It prints the top 20 statistics with the highest cumulative time spent in functions.
+
+Overall, this script sets up a benchmark test for the ActivityWatcher server API by simulating heartbeat events and profiling the API performance using cProfile.

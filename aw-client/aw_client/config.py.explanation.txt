@@ -1,0 +1,7 @@
+This code defines a default configuration for the activity watcher client. The configuration includes settings for the server such as hostname and port, as well as settings for the client such as the commit interval.
+
+The default configuration is defined as a multi-line string using TOML format. It includes sections for the server, client, and additional sections for testing purposes.
+
+The `load_config()` function calls the `load_config_toml()` function from the `aw_core.config` module to load the configuration for the "aw-client" application using the default configuration defined above.
+
+Overall, this code provides a way to load configuration settings for the activity watcher client, with the option to customize the settings through a TOML file.

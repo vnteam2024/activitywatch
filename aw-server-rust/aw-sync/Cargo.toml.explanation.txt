@@ -1,0 +1,11 @@
+This is a Cargo.toml file, which is used by the Rust package manager Cargo to manage dependencies, metadata, and build configurations for a Rust project. 
+
+In this specific file:
+
+- The package name is set to "aw-sync" with version 0.1.0 and the author is Erik Bjäreholt.
+- The library is defined with the name "aw_sync" in the file src/lib.rs.
+- Additionally, there is a binary executable defined with the name "aw-sync" in the file src/main.rs.
+- The dependencies section lists the external crates that this project depends on, including log, toml, chrono, serde, serde_json, reqwest, clap, appdirs, dirs, aw-server, aw-models, aw-datastore, aw-client-rust, and gethostname.
+- Some dependencies have specific versions or features specified, such as chrono with the serde feature, reqwest with the json and blocking features, and clap with the derive feature.
+
+Overall, this Cargo.toml file provides the necessary information for Cargo to build and manage the "aw-sync" Rust project and its dependencies.

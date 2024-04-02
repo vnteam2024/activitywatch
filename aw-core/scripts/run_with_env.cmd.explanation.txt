@@ -1,0 +1,10 @@
+This batch script is used to configure the environment variables for building Python extensions on Windows, specifically for 64-bit Python versions 2 and 3. It determines the version of Python being used (major and minor versions) and sets the appropriate Windows SDK version and configuration based on that.
+
+Here's a breakdown of the script:
+- It sets the initial variables, such as the command to run, the path to the Windows SDK root, and the path to the Windows WDK.
+- It extracts the major and minor versions of the Python being used.
+- It then determines the Windows SDK version to use based on the Python version and whether to set the SDK for 64-bit.
+- If the Python architecture is 64-bit, it configures the Windows SDK accordingly and executes the command to run. If not, it uses the default MSVC build environment for 64-bit architecture.
+- If the Python architecture is 32-bit, it uses the default MSVC build environment and executes the command to run.
+
+Overall, the script dynamically sets up the environment for building Python extensions on Windows based on the Python version and architecture.

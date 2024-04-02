@@ -1,0 +1,13 @@
+This Python script defines integration tests for the Activity Watch application. 
+
+It starts by importing necessary modules such as `os`, `platform`, `subprocess`, `tempfile`, and `sleep`. It also imports `pytest` for running tests.
+
+The script defines a fixture named `server_process` that sets up and tears down the `aw-server` process. It first creates temporary log files for stdout and stderr. Then, it checks the path of the `aw-server` binary using the `which` command. If the binary path contains `aw-server-rust`, it asserts that the binary picked up is `aw-server-rust`. It then starts the `aw-server` process with the `--testing` flag, redirects stdout and stderr to the temporary log files, and waits for the server to start up properly.
+
+The fixture then yields the server process to the test, waits for it to finish, kills the process using `kill` or a platform-specific method and checks the log files for any error indicators. If any error indicators are found in the stdout or stderr, the test fails.
+
+There is a test function `test_integration` defined, but it is empty and serves the purpose of triggering the `server_process` fixture initialization.
+
+The script also contains a commented-out code block that invokes `pytest` to run integration tests against the server, but this is not currently used.
+
+Overall, this script sets up the `aw-server` process as a fixture for integration tests and ensures that the server starts and stops correctly without errors.

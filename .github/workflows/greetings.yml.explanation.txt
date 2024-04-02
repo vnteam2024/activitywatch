@@ -1,0 +1,5 @@
+This code is a GitHub Actions workflow that runs a job called "greeting" when there is an issue or pull request event. The job runs on an Ubuntu latest runner and includes a conditional statement that checks if the repository owner is "ActivityWatch" before executing the steps.
+
+The steps of the job use the "actions/first-interaction@v1" action, which sends a greeting message to new contributors when they open their first issue or pull request. The message includes links to the repository's issue template, contribution guidelines, code of conduct, and thanks the contributor for their contribution.
+
+Overall, this workflow is designed to greet and guide new contributors to the ActivityWatch repository when they interact with the project for the first time.

@@ -1,0 +1,9 @@
+This code snippet is a configuration file for funding options for a GitHub repository named ActivityWatch. 
+
+- The `github` key lists GitHub usernames who are involved with the project and can receive funding through GitHub Sponsors.
+- The `patreon` key specifies the Patreon username who can receive funding through Patreon.
+- The `open_collective` key specifies the Open Collective username who can receive funding through Open Collective.
+- The `liberapay` key specifies the Liberapay username who can receive funding through Liberapay.
+- The `custom` key provides a custom URL where users can go to donate to the project.
+
+By adding this configuration file to the repository, users visiting the repository will see options to fund the project through the listed platforms. This can help support the development and maintenance of the project by allowing users to contribute financially.

@@ -1,0 +1,7 @@
+This is a JSON schema definition for the "Event" model used in ActivityWatch. 
+
+- The schema specifies that an Event object must have a "timestamp" property, which is a string in date-time format. This timestamp represents the time at which the event occurred.
+- The schema also specifies that an Event can have a "duration" property, which is a number representing the duration of the event.
+- The schema allows for an optional property called "data" which is an object that can contain additional information about the event.
+
+Overall, this schema defines the structure and required properties for an Event object in the ActivityWatch system.

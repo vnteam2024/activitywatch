@@ -1,0 +1,17 @@
+This shell script is used to configure auto-start functionality for the ActivityWatch application on Linux systems. Here is a breakdown of the script:
+
+1. The script first defines two variables: SCRIPT_DIR which stores the current directory of the script, and ROOT_DIR which stores the parent directory of the script.
+
+2. It then checks if the operating system is Linux using the uname command.
+
+3. If the OS is Linux, it checks if the XDG_CONFIG_HOME environment variable is set. If it is not set, the script sets the AUTOSTART_PATH variable to $HOME/.config/autostart. If XDG_CONFIG_HOME is set, AUTOSTART_PATH is set to $XDG_CONFIG_HOME/autostart.
+
+4. The script then echoes a message indicating that it is installing a .desktop file to the AUTOSTART_PATH.
+
+5. It copies the aw-qt.desktop file from the resources directory of the ActivityWatch application to the AUTOSTART_PATH.
+
+6. The xdg-icon-resource commands are used to install the logo.png file as an icon for the ActivityWatch application in two different sizes (32x32 and 512x512) using the xdg-icon-resource utility.
+
+7. If the operating system is not Linux, the script prints a message indicating that the platform is not supported and exits.
+
+In summary, this script configures auto-start functionality for the ActivityWatch application on Linux systems by copying a .desktop file to the appropriate directory and installing an icon for the application.

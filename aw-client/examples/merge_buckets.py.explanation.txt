@@ -1,0 +1,18 @@
+This Python script is used to merge events from one bucket into another bucket in the ActivityWatch database. Here is a breakdown of the script:
+
+1. The script first imports necessary modules, including `timedelta` for time calculations and `aw_client` for interacting with the ActivityWatch client.
+
+2. The `main()` function is defined, which is the entry point for the script. It performs the following steps:
+    a. Initializes an `ActivityWatchClient` object with testing mode enabled.
+    b. Retrieves the list of available buckets and prompts the user to enter the source and destination bucket IDs.
+    c. Gets the events from both the source and destination buckets.
+    d. Checks for any overlap between the events in the two buckets. If there is overlap, the script exits to prevent merging conflicting data.
+    e. Asks for confirmation from the user to proceed with the merge operation.
+    f. Inserts the events from the source bucket into the destination bucket.
+    g. Asks the user if they want to delete the source bucket after merging events.
+
+3. Finally, the `main()` function is called if the script is executed as the main program, triggering the merge operation.
+
+The script ensures that there is no overlap between the events in the source and destination buckets before merging them. It provides a way for the user to confirm the merge operation and even delete the source bucket after merging the events.
+
+This script is useful for resolving issues like duplicate buckets caused by a changing hostname in ActivityWatch. It allows users to merge events from one bucket to another while maintaining data integrity.

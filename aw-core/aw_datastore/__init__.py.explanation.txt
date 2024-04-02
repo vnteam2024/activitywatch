@@ -1,0 +1,7 @@
+This code defines a package called `aw_datastore` within the `aw-core` package. It includes a function `get_storage_methods()` that returns a dictionary mapping storage method names to functions that create instances of those storage methods.
+
+The package also includes imports for specific storage implementations such as `MemoryStorage`, `PeeweeStorage`, and `SqliteStorage`. These implementations are used to create instances of storage methods for storing data.
+
+The `__all__` variable specifies the list of symbols that will be exported when using the `from aw_datastore import *` syntax. In this case, it includes `Datastore`, `get_storage_methods`, and `check_for_migration`. This means that these symbols can be accessed from other modules that import the `aw_datastore` package.
+
+Overall, this code sets up the structure for managing different storage methods and allows for easy access to these methods within the `aw-core` package.

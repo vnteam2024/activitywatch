@@ -1,0 +1,13 @@
+This code snippet is setting up a Werkzeug middleware profiler for a Flask web application. 
+
+1. `from werkzeug.contrib.profiler import ProfilerMiddleware`: This imports the ProfilerMiddleware class from the Werkzeug library, which is a WSGI middleware for profiling Python code.
+
+2. `from aw_server import app`: This imports the Flask application instance `app` from the `aw_server` module.
+
+3. `app.config["PROFILE"] = True`: This sets a configuration option in the Flask app to enable profiling.
+
+4. `app.wsgi_app = ProfilerMiddleware(app.wsgi_app, restrictions=[30])`: This line creates an instance of ProfilerMiddleware, passing in the `app.wsgi_app` as the application to profile, and setting a restriction of 30 seconds for profiling. This means that only functions taking longer than 30 seconds will be profiled.
+
+5. `app.run(debug=True)`: This runs the Flask application in debug mode, which allows for real-time debugging and reloading of the application when changes are made.
+
+Overall, this code sets up a profiler middleware for profiling the Flask application using Werkzeug, with a restriction set on the duration of functions to be profiled. This can be useful for identifying performance bottlenecks in the application.

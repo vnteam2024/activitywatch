@@ -1,0 +1,8 @@
+The code above lists out several tasks or tests that need to be completed in the `/Users/andynghi/Downloads/activity-watcher/activitywatch-master/aw-server-rust` directory. 
+
+1. "bucket already exists test" is a test that likely checks if a certain bucket already exists in the system.
+2. "get_keys_starting no rows test" is a test that probably verifies if a query for keys starting with a certain value returns no rows.
+3. "event model default duration test" is a test that may check the default duration set for an event model.
+4. "make a log message in logging.rs test" is a test that involves creating a log message in the `logging.rs` file.
+
+These tasks/tests are likely related to the development or testing of a Rust server for an activity tracking/watching application. Each task probably corresponds to a specific functionality or feature that needs to be implemented or verified in the codebase.

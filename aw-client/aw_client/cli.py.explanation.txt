@@ -1,0 +1,30 @@
+This is a Python script that serves as a command-line utility for interacting with an ActivityWatch server. Here's an explanation of the key components of the script:
+
+1. Imports: The script imports necessary modules and packages such as `json`, `argparse`, `logging`, `click`, and `tabulate`.
+
+2. Definitions:
+   - `_valid_date`: A function that validates a date string.
+   - `_Context`: A class that holds a reference to the ActivityWatchClient for the context of the command-line application.
+
+3. Command-line app setup:
+   - The `main` function is the main entry point of the script. It sets up a command-line interface using the `click` library.
+   - Options like host, port, and verbosity can be set when running the application.
+
+4. Command Definitions:
+   - `heartbeat`: Command to send a heartbeat to a specific bucket with data.
+   - `buckets`: Command to list all buckets available on the ActivityWatch server.
+   - `events`: Command to query events from a specific bucket.
+   - `query`: Command to run a custom query on the server.
+   - `report`: Command to generate an activity report for a specific hostname.
+   - `canonical`: Command to query 'canonical events' for a single host.
+
+5. Helper Functions:
+   - `_parse_events`: Converts a list of event dictionaries to a list of Event objects.
+   - `print_top`: Prints the top events based on a key function.
+
+6. Command Execution:
+   - The script parses the command-line arguments and options when executed to perform different actions such as querying data, generating reports, etc.
+
+7. `if __name__ == "__main__":` block: Executes the `main()` function when the script is run as a standalone program.
+
+Overall, this script provides a CLI interface for managing and interacting with an ActivityWatch server, allowing users to perform operations like sending heartbeats, querying events, generating reports, and more.

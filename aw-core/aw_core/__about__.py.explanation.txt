@@ -1,0 +1,12 @@
+This code defines several metadata variables for the `aw-core` library:
+
+- `__title__`: The title of the library, which is "aw-core".
+- `__summary__`: A brief summary or description of the library, which is "Core library for ActivityWatch".
+- `__uri__`: The URI or URL for the library's repository, which is "https://github.com/ActivityWatch/aw-core".
+- `__version__`: The version of the library, which is "0.4.2".
+- `__author__`: The author(s) of the library, which are "Erik Bjäreholt, Johan Bjäreholt".
+- `__email__`: The email address(es) of the author(s), which are "erik@bjareho.lt, johan@bjareho.lt".
+- `__license__`: The license under which the library is distributed, which is "MPL2" (Mozilla Public License 2.0).
+- `__copyright__`: The copyright statement for the library, which indicates the year 2017 and the author(s) "Erik Bjäreholt, Johan Bjäreholt".
+
+These variables are intended to provide important information about the library for users, developers, and automated tools.

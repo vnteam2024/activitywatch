@@ -1,0 +1,15 @@
+This GitHub Actions workflow is triggered on pushes to the master branch as well as pull requests to the master branch. 
+
+The workflow defines a job named "build" that runs on different operating systems (Ubuntu 20.04, Windows, and macOS) and with Python version 3.11. 
+
+The steps in the job include:
+1. Checking out the code repository.
+2. Setting up Python with the specified version.
+3. Creating a virtual environment named "venv".
+4. Installing dependencies using Poetry package manager.
+5. Running tests with the "make test" command.
+6. Packaging the project using the "make package" command.
+7. Testing the packaged executable by running `dist/aw-notify/aw-notify --help`.
+8. Uploading the packaged artifact as an artifact for later use.
+
+Overall, this workflow automates the building, testing, and packaging of the project on different operating systems whenever there is a push or pull request to the master branch.

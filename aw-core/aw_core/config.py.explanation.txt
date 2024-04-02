@@ -1,0 +1,9 @@
+This code consists of functions for loading and saving configuration settings for an application in TOML format. 
+
+1. `_merge` function recursively merges two dictionaries `a` and `b` with `b` taking precedence over `a.
+2. `_comment_out_toml` function comments out keys in a TOML string.
+3. `load_config_toml` function loads a TOML configuration file for the given `appname`, merges it with the `default_config`, and returns the resulting configuration as a dictionary.
+4. `save_config_toml` function saves the given configuration string in TOML format for the specified `appname`.
+5. `load_config` and `save_config` functions are deprecated and are aliases for `load_config_toml` and `save_config_toml` respectively. These functions are maintained for backward compatibility.
+
+Overall, this code provides a convenient way to manage configuration settings for an application using TOML files.

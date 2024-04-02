@@ -1,0 +1,9 @@
+This code defines a Python package `aw_server` that contains a module `__init__.py`. 
+
+Here is a breakdown of the code:
+- It imports the logging module as `_logging`.
+- It creates a logger object with the name of the module (`__name__`).
+- It imports the `__version__` and `main` functions from the `__about__` and `main` modules within the `aw_server` package.
+- It specifies the items that should be imported when someone imports the `aw_server` package.
+
+Overall, this `__init__.py` file sets up the initialization of the `aw_server` package, defining what should be imported and exposing those items to users who import the package.

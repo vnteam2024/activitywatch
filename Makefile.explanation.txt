@@ -1,0 +1,25 @@
+This Makefile is used to build, install, test, and clean the ActivityWatch bundle. Here is an explanation of the main targets and functionalities within the Makefile:
+
+1. `build`: Initializes submodules if they are not already initialized, installs required Python modules, builds the web UI, and bundles it with `aw-server`.
+
+2. `install`: Installs things like desktop/menu shortcuts. Note that installation is already happening in the `build` step currently.
+
+3. `update`: Pulls the latest version, updates all the submodules, and then runs `make build`.
+
+4. `lint`: Lints all submodules that have a lint target.
+
+5. `typecheck`: Typechecks all submodules that have a typecheck target.
+
+6. `uninstall`: Uninstalls all the Python modules related to ActivityWatch.
+
+7. `test`: Runs tests for all submodules that have a test target.
+
+8. `test-integration`: Runs integration tests for `aw-server` and `aw-server-rust`.
+
+9. `clean`: Removes build and dist directories.
+
+10. `clean_all`: Cleans all subprojects by running the clean target in each submodule.
+
+It also includes additional functionalities such as creating an ICNS file from a PNG image, creating a macOS app bundle, creating a macOS DMG file, notarizing the DMG file, packaging all submodules into a single distribution folder, and cleaning auto-generated files like target directories and node_modules.
+
+Overall, this Makefile provides a comprehensive set of targets to manage building, testing, installing, and cleaning the ActivityWatch bundle and its submodules.

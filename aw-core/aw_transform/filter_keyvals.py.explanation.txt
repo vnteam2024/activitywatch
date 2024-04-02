@@ -1,0 +1,7 @@
+This code defines two functions `filter_keyvals` and `filter_keyvals_regex` that filter a list of `Event` objects based on given criteria.
+
+1. `filter_keyvals` function takes a list of `Event` objects, a key (attribute), a list of values, and an optional parameter `exclude` that indicates whether to exclude events that match the criteria. It filters the list of events based on whether the key exists in the event data and if its value is in the list of values. If `exclude` is `True`, it excludes events that match the criteria, otherwise it includes them.
+
+2. `filter_keyvals_regex` function takes similar inputs as `filter_keyvals` but also takes a regular expression pattern. It compiles the regex pattern, and then filters the list of events based on whether the key exists in the event data and the value matches the regex pattern.
+
+Both functions return a new list of `Event` objects that satisfy the filtering criteria.

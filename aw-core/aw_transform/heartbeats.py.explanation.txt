@@ -1,0 +1,18 @@
+This code provides functionality to reduce a list of heartbeat events by merging consecutive events together based on certain conditions. 
+
+1. `heartbeat_reduce` function:
+   - Takes a list of `Event` objects and a `pulsetime` value as input.
+   - Initializes an empty list called `reduced` to store the reduced events.
+   - Adds the first event from the input list to the `reduced` list.
+   - Iterates through the remaining events in the input list and merges consecutive events using the `heartbeat_merge` function.
+   - Returns the reduced list of events.
+
+2. `heartbeat_merge` function:
+   - Takes two `Event` objects (`last_event` and `heartbeat`) and a `pulsetime` value as input.
+   - Compares the data of the last event with the data of the heartbeat event.
+   - Checks if the timestamp of the heartbeat event falls within the pulsetime window after the end of the last event.
+   - If the conditions are met, calculates a new duration for the merged event.
+   - Updates the duration of the last event with the maximum value to avoid shortening it.
+   - Returns the merged event if the conditions are met, otherwise returns None.
+
+Overall, this code allows for the merging of consecutive heartbeat events if they have identical data and the timestamp of the heartbeat event falls within a certain time window after the end of the last event.

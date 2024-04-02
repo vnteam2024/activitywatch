@@ -1,0 +1,11 @@
+This bash script is creating a Cargo config file in TOML format for cross-compiling Rust code to Android platforms using the Android NDK (Native Development Kit). 
+
+Here's an explanation of the script:
+
+1. The script first checks if the environment variable ANDROID_NDK_HOME is set. If it is not set, it prints an error message and exits the script.
+
+2. The `tee` command is used to write the following content to a file named `test-cargo-config.toml` in the user's home directory. The content is a TOML configuration specifying the compiler and linker paths for three different Android target architectures: aarch64-linux-android, armv7-linux-androideabi, and i686-linux-android.
+
+3. For each target architecture, the script specifies the `ar` (archiver) and `linker` paths based on the Android NDK paths provided by the ANDROID_NDK_HOME environment variable. The paths are constructed using the NDK_HOME variable instead of ANDROID_NDK_HOME which may be a typo or a mistake in the script.
+
+This script sets up the necessary configuration for compiling Rust code for Android platforms using Cargo and the Android NDK.

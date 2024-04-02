@@ -1,0 +1,25 @@
+This Makefile is used for building, installing, testing, type checking, packaging, linting, formatting, and cleaning up the ActivityWatch server (aw-server) project.
+
+Here are the targets defined in the Makefile:
+
+1. `build`: This target builds the aw-webui (web user interface) and installs the necessary dependencies using poetry.
+
+2. `aw-webui`: This target builds the web user interface for the project. It checks if the `SKIP_WEBUI` variable is set to `true`, and if not, it builds the web UI using the `make` command in the `aw-webui` directory and copies the generated files to the `aw_server/static/` directory.
+
+3. `install`: This target copies the aw-server service file to `/usr/lib/systemd/user/aw-server.service`.
+
+4. `test`: This target runs tests for the server using `pytest`.
+
+5. `typecheck`: This target performs type checking using `mypy` for the server files.
+
+6. `package`: This target generates a packaged version of the server using PyInstaller.
+
+7. `lint`: This target runs linting checks using `ruff`.
+
+8. `lint-fix`: This target fixes linting issues using `pyupgrade` and `ruff`.
+
+9. `format`: This target formats the code using `black`.
+
+10. `clean`: This target cleans up build artifacts, cached files, and uninstalls the `aw_server` package.
+
+Overall, this Makefile provides a set of commands to manage the development workflow for the ActivityWatch server project.

@@ -1,0 +1,14 @@
+This code is a Python script that is used to package the `aw-server` project into an executable file. 
+
+Here is a breakdown of the key components:
+
+1. The script imports necessary modules such as `os`, `aw_core`, and `flask_restx`.
+2. It defines the paths for the `aw_core` and `flask_restx` modules.
+3. It specifies the name of the executable file to be created as "aw-server".
+4. It defines the list of files and directories to be included in the executable, such as static files, templates, and schemas.
+5. It creates an Analysis object that specifies the files and directories to be packaged.
+6. It creates a PYZ (Python Zip) object containing the pure Python modules.
+7. It creates an EXE (Executable) object with the PYZ, scripts, and other options such as name, debug, strip, upx, and console.
+8. It creates a COLLECT object with the EXE, binaries, zipfiles, datas, and options such as strip, upx, and name.
+
+Overall, this script is used to package the `aw-server` project into an executable file with all the necessary dependencies and resources included.

@@ -1,0 +1,5 @@
+This code is the entry point for the aw-watcher-input module in the ActivityWatch project. It imports the main function from the main module and then calls it when this script is executed directly.
+
+The main function likely contains the core functionality of the aw-watcher-input module, which is responsible for monitoring user input events such as keystrokes and mouse movements.
+
+When this script is executed, it will call the main function, which will start monitoring input events and recording them for further analysis or logging.

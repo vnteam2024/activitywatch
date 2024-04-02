@@ -1,0 +1,14 @@
+This script is a bash script used to package the ActivityWatch application for different platforms (Linux, macOS, and Windows) and architectures (32-bit and 64-bit). 
+
+Here's a brief overview of what the script does:
+
+1. The `get_platform` function determines the platform (linux, macos, windows) the script is running on.
+2. The `get_version` function uses the `getversion.sh` script to get the version of the application.
+3. The `get_arch` function gets the architecture of the platform the script is running on.
+4. It then outputs the platform, architecture, and version of the application.
+5. The `build_zip` function zips the executables for the application into a zip file named based on the platform, architecture, and version.
+6. The `build_setup` function builds a Windows setup installer using Inno Setup and names it based on the platform, architecture, and version.
+7. If the platform is Windows, it calls the `build_setup` function after calling the `build_zip` function.
+8. Finally, it lists the contents of the `dist` directory to show the packaged files.
+
+Overall, this script is used to automate the packaging process for distributing the ActivityWatch application on different platforms and architectures.

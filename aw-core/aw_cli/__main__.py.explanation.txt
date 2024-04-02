@@ -1,0 +1,16 @@
+This script is a wrapper for the ActivityWatch command-line interface (aw-cli) tool. It provides several commands to interact with ActivityWatch modules and directories on a system.
+
+1. The script defines a `main` function using `click` to create a command-line interface with subcommands.
+2. The `main` function has two subcommands:
+   - `qt`: Calls the `aw-qt` command (possibly with a testing flag) to run the ActivityWatch GUI.
+   - `directories`: Prints the paths of the configuration, data, log, and cache directories used by ActivityWatch.
+   - `logs`: Displays logs from ActivityWatch modules. It can filter logs by module name, date, and log level.
+
+3. The script uses functions to handle specific tasks:
+   - `print_oldest_log`: Finds the oldest log file in a given directory and prints its contents.
+   
+4. The script also checks for testing mode and passes relevant information to the subcommands.
+
+5. The `if __name__ == "__main__":` block ensures that the `main()` function is called if the script is executed directly.
+
+Overall, this script provides a command-line interface for managing and interacting with ActivityWatch modules and directories on a system.

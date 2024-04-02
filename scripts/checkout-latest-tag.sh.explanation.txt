@@ -1,0 +1,17 @@
+This script is designed to find the latest version tag in a git repository and compare it to the current version tag.
+
+1. `latest_version_tag=$(git tag -l | grep "^v[0-9]\..*" | sort --version-sort | tail -n1 )`: 
+   - `git tag -l`: Lists all the tags in the git repository.
+   - `grep "^v[0-9]\..*"`: Filters out only the tags that start with a "v" followed by a number (e.g. v1.0, v2.0).
+   - `sort --version-sort`: Sorts the filtered tags in version order.
+   - `tail -n1`: Selects the last tag in the sorted list, which is the latest version tag.
+   - The latest version tag is stored in the variable `latest_version_tag`.
+
+2. `current_version_tag=$(git describe --tags)`: 
+   - `git describe --tags`: Describes the current commit based on the closest annotated (tag) object.
+   - The current version tag is stored in the variable `current_version_tag`.
+
+3. `echo "Latest version: $latest_version_tag"`: Outputs the latest version tag to the console.
+4. `echo "Current version: $current_version_tag"`: Outputs the current version tag to the console.
+
+Overall, this script helps identify the latest version tag in the git repository and compares it with the current version tag, providing visibility into the version control status of the repository.

@@ -1,0 +1,17 @@
+This code is a configuration file in TOML format for a Python project using Poetry as a dependency manager. Here's a breakdown of the key sections:
+
+1. `[tool.poetry]`: This section includes metadata about the project, such as its name, version, description, authors, license, homepage, repository, and dependencies.
+
+2. `[tool.poetry.scripts]`: This section defines scripts that will be generated when the package is installed. In this case, a script named `aw-client` is defined which will execute the `main` function in the `aw_client.cli` module.
+
+3. `[tool.poetry.dependencies]`: This section lists the runtime dependencies of the project. It specifies the Python version required, as well as dependencies on other packages like `aw-core`, `requests`, `persist-queue`, `click`, `tabulate`, and `typing-extensions`.
+
+4. `[tool.poetry.dev-dependencies]`: This section lists development dependencies, such as testing frameworks (`pytest`, `pytest-cov`), type checking tools (`mypy`), code quality tools (`pylint`, `black`), and type hinting packages (`types-requests`, `types-tabulate`).
+
+5. `[tool.mypy]`: This section configures the Mypy type checker for the project. It specifies the files to type check and sets options like `ignore_missing_imports` and `check_untyped_defs`.
+
+6. `[tool.ruff]`: This section configures Ruff, a linting tool, and specifies rules to ignore ('E402' and 'E501').
+
+7. `[build-system]`: This section specifies the build system requirements for Poetry.
+
+This configuration file defines the project structure, dependencies, and development tools for the `aw-client` library for ActivityWatch.

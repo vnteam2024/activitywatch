@@ -1,0 +1,39 @@
+This Python script is an interactive tool designed to redact sensitive data in events stored in an ActivityWatch bucket. Here is a breakdown of the script:
+
+1. Import statements:
+   - The script imports necessary modules including `sys`, `re`, `typing`, `deepcopy` from the standard library, as well as `Event` and `ActivityWatchClient` from custom modules.
+
+2. Global variables:
+   - `REDACTED`: The string used to replace sensitive data in events.
+   - `DRYRUN`: A boolean flag to control whether the script is running in dry-run mode (only preview changes) or wet-run mode (actually modify events).
+   - `aw`: An instance of `ActivityWatchClient` initialized for interacting with ActivityWatch.
+
+3. `main()` function:
+   - The main entry point of the script.
+   - Handles user input for specifying the bucket and sensitive content pattern to redact.
+   - Provides an option to run in dry-run or wet-run mode.
+   - Calls `_redact_bucket()` function to redact sensitive data in the specified bucket.
+
+4. `_redact_bucket()` function:
+   - Takes a bucket ID and a pattern.
+   - Retrieves events from the specified bucket and identifies sensitive events.
+   - Asks for confirmation before redacting sensitive data in events.
+   - Redacts the sensitive data in events based on the pattern (REDACTED) if confirmed.
+
+5. `_check_event()` function:
+   - Checks if an event contains sensitive data based on the pattern.
+   - Returns True if sensitive data is found in the event.
+
+6. `_redact_event()` function:
+   - Redacts sensitive data in an event by replacing it with the `REDACTED` string.
+   - Returns the modified event.
+
+7. `_find_sensitive()` function:
+   - Identifies events that contain sensitive data based on the pattern.
+   - Returns a set of event IDs that match the sensitive pattern.
+
+8. Script execution:
+   - Calls `main()` function when the script is run.
+   - This is where the script begins execution by interacting with the user to redact sensitive data in ActivityWatch buckets.
+
+Overall, the script provides a way to redact sensitive data in ActivityWatch events interactively, with options for dry-run mode and customization of the redacted string. Users should use caution when redacting data, as it can lead to irreversible modifications.

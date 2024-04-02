@@ -1,0 +1,11 @@
+This is a GitHub Actions workflow file that defines a job called "build" which tests the examples for an ActivityWatch client library. 
+
+The workflow is triggered on pushes and pull requests to the master branch. It runs on an Ubuntu latest operating system and Python version 3.9.
+
+The steps in the job include setting up Python, creating a virtual environment, installing dependencies using Poetry, setting up ActivityWatch server, and running the examples. 
+
+To set up ActivityWatch, the workflow uses the ActivityWatch/setup-action GitHub Action, specifying the aw-server version as "aw-server" and the release version as "v0.12.0b2". The fakedata parameter is set to false.
+
+The last step runs the examples, first activating the virtual environment and then installing the pandas library to run one of the examples. Finally, it runs the command "make test-examples" to test the examples.
+
+Overall, this workflow automates the testing of examples for an ActivityWatch client library on every push or pull request to the master branch.

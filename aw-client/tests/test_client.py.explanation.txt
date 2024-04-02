@@ -1,0 +1,20 @@
+This code is a test script written in Python for testing the functionality of an ActivityWatch client. The script includes multiple test cases to ensure that the client can perform various operations correctly, such as creating buckets, inserting events, querying events, deleting events, and deleting buckets.
+
+Here's an overview of the test cases included in the script:
+
+1. Create a unique event using random data.
+2. Test the ActivityWatchClient context manager by:
+   - Checking the client name.
+   - Deleting the bucket (if it exists) before creating it.
+   - Creating a bucket and checking its properties.
+   - Inserting multiple events into the bucket.
+   - Getting events from the bucket and asserting their correctness.
+   - Checking the event count.
+   - Querying events within a specific time period.
+   - Getting a single event by ID.
+   - Deleting a single event and verifying that it no longer exists.
+   - Testing exception handling for invalid time period.
+   - Creating and deleting an event to ensure it no longer exists.
+   - Deleting the bucket at the end of the test.
+
+Overall, this script covers a wide range of scenarios to validate the functionality and correctness of the ActivityWatch client. The test cases use assertions to verify the expected behavior of the client methods and raise exceptions when necessary.

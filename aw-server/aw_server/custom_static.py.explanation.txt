@@ -1,0 +1,9 @@
+This code defines a Flask blueprint called `custom_static_blueprint` that serves custom static content for custom watchers in the ActivityWatch server. The blueprint includes two routes:
+
+1. `/pages/`: This route serves a list of all watchers that are supported or registered successfully. This information can be used to determine which custom watchers have custom static content available.
+
+2. `/pages/<string:name>/<path:path>`: This route serves the custom static content for a specific custom watcher. The `<string:name>` placeholder is used to specify the name of the watcher, and the `<path:path>` placeholder is used to specify the path to the static content within the watcher's directory.
+
+The `get_custom_static_blueprint` function takes a dictionary `custom_static_directories` as input, which maps watcher names to directories containing their custom static content. This function returns the `custom_static_blueprint` with the defined routes that serve the custom static content.
+
+Overall, this code allows custom watchers to extend the ActivityWatch Web UI and create custom visualizations independently by serving their own static content. The custom visualizations can be displayed in the ActivityWatch UI using the "Custom Watcher View".

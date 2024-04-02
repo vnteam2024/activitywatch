@@ -1,0 +1,17 @@
+This is a GitHub Actions workflow file named `lint.yml` located in the `.github/workflows` directory of a repository. 
+
+The workflow has two jobs: `lint` and `format`. 
+
+The `lint` job runs on pushes to the `master` branch and pull requests targeting the `master` branch. It runs on the `ubuntu-latest` virtual environment. 
+The steps in the `lint` job are as follows:
+1. Checkout the code from the repository using `actions/checkout@v3`.
+2. Setup Python using `actions/setup-python@v4`.
+3. Use the `jpetrucciani/ruff-check@main` action to perform linting checks.
+
+The `format` job also runs on the `ubuntu-latest` virtual environment. 
+The steps in the `format` job are as follows:
+1. Checkout the code from the repository using `actions/checkout@v3`.
+2. Setup Python using `actions/setup-python@v4`.
+3. Use the `psf/black@stable` action to format the code using the Black code formatter.
+
+In summary, this workflow file sets up two jobs that run linting checks and code formatting checks respectively on the codebase when pushed to the `master` branch or when pull requests are made to the `master` branch.

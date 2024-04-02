@@ -1,0 +1,1 @@
+This code is importing the `query` function from the `query2` module within the `aw_query` package. It then defines the `__all__` variable to contain a list with the string `"query"`. This means that when someone imports `aw_query`, they will only have access to the `query` function.

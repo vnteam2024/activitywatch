@@ -1,0 +1,11 @@
+This code defines functions to retrieve information about the currently active window on different operating systems. 
+
+1. `get_current_window_linux()` function uses the `xlib` module to get information about the current window on a Linux system. It retrieves the window class and name and returns them as a dictionary.
+
+2. `get_current_window_macos(strategy: str)` function is used to get information about the current window on macOS. It takes a `strategy` parameter to determine the method to use (`jxa` or `applescript`). If the strategy is `jxa`, it uses the `macos_jxa` module to get information, and if the strategy is `applescript`, it uses the `macos_applescript` module. It returns the window information as a dictionary.
+
+3. `get_current_window_windows()` function retrieves information about the current window on a Windows system. It uses the `windows` module to get the active window handle, application name, and window title. It handles exceptions by trying with an alternative method using WMI if the first method fails. It returns the window information as a dictionary.
+
+4. `get_current_window(strategy: Optional[str] = None)` function is a generic function that determines the current platform and calls the appropriate platform-specific function to get the window information. It can raise a `FatalError` if the platform is not supported or if an error occurs during retrieval.
+
+Overall, this code allows for cross-platform retrieval of information about the current window on different operating systems.

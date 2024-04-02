@@ -1,0 +1,35 @@
+This is a `Cargo.toml` file for a Rust project called `aw-server`. 
+
+In this file:
+- The name of the project is "aw-server" with version 0.12.1
+- The authors are Johan Bjäreholt and Erik Bjäreholt
+- The edition of Rust being used is 2021
+
+Under the `lib` section, the library name is defined as `aw_server`, with crate types `lib` and `cdylib`, and the path to the main library file is `src/lib.rs`.
+
+There is also a binary defined called `aw-server` with its path set to `src/main.rs`.
+
+The project has several dependencies listed:
+- `rocket` version 0.5.0 with the "json" feature
+- `rocket_cors` version 0.6.0
+- `multipart` version 0.18 with the "server" feature
+- `serde` version 1.0 with the "derive" feature
+- `serde_json` version 1.0
+- `chrono` version 0.4 with the "serde" feature
+- `appdirs` version 0.2.0
+- `lazy_static` version 1.4
+- `log` version 0.4
+- `fern` version 0.6 with the "colored" feature
+- `toml` version 0.8
+- `gethostname` version 0.4
+- `uuid` version 1.3 with the "serde" and "v4" features
+- `clap` version 4.1 with the "derive" and "cargo" features
+- `log-panics` version 2 with the "with-backtrace" feature
+- `rust-embed` version 8.0.0 with the "interpolate-folder-path" and "debug-embed" features
+
+Additionally, there are dependencies to other local crates:
+- `aw-datastore`, `aw-models`, `aw-transform`, and `aw-query`
+
+There are also specific dependencies for different targets:
+- For `linux` and `x86`, there is a dependency `jemallocator` version 0.5.0
+- For `android`, there are dependencies `jni`, `libc`, `android_logger`, and `openssl-sys` with specific versions and features specified.

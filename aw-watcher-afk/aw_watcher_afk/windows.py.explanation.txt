@@ -1,0 +1,13 @@
+This code defines a Python module that uses ctypes to access Windows API functions to determine the number of seconds since the last user input (such as keyboard or mouse activity).
+
+1. The code defines a structure `LastInputInfo` that represents information about the last user input event. It has two fields: `cbSize` and `dwTime`.
+
+2. The `_getLastInputTick()` function uses ctypes to define and call the Windows API function `GetLastInputInfo` to retrieve information about the last user input. It returns the timestamp of the last user input event.
+
+3. The `_getTickCount()` function uses ctypes to define and call the Windows API function `GetTickCount` to retrieve the number of milliseconds elapsed since the system started.
+
+4. The `seconds_since_last_input()` function calculates the number of seconds elapsed since the last user input event by subtracting the last input timestamp from the current system tick count and dividing by 1000.
+
+5. The script runs an infinite loop that sleeps for 1 second and then prints the number of seconds since the last user input event by calling the `seconds_since_last_input()` function.
+
+Overall, this code snippet demonstrates how to access Windows API functions using ctypes in Python to monitor user activity and determine the time elapsed since the last input event.

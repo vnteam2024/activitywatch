@@ -1,0 +1,28 @@
+This code is the API implementation for the activitywatch server. It provides methods for interacting with the server, managing buckets (collections of events), and handling events.
+
+Here is an explanation of the key components of the code:
+
+1. **Imports**: The code imports necessary modules and classes for the functionality of the API.
+
+2. **ServerAPI Class**: This class contains methods for interacting with the server. Here are some key methods:
+   - `get_info`: Get server information like hostname, version, testing status, and device ID.
+   - `get_buckets`: Get a dictionary of all buckets with their metadata.
+   - `create_bucket`: Create a new bucket with specified parameters.
+   - `update_bucket`: Update metadata of a bucket.
+   - `delete_bucket`: Delete a bucket.
+   - `get_event`: Get a single event from a bucket.
+   - `get_events`: Get events from a bucket based on limit, start, and end parameters.
+   - `create_events`: Create events for a bucket.
+   - `get_eventcount`: Get the count of events in a bucket.
+   - `delete_event`: Delete a single event from a bucket.
+   - `heartbeat`: Handle heartbeat events, merging with existing events if possible.
+   - `query2`: Perform a query on the server's data.
+   - `get_log`: Get the server log in JSON format.
+   - `get_setting`: Get a specific setting from the server.
+   - `set_setting`: Set a specific setting on the server.
+
+3. **Helper Functions**:
+   - `get_device_id`: Generates or retrieves a unique device ID for the server.
+   - `check_bucket_exists`: Decorator function to check if a bucket exists before executing a method.
+
+4. **Overall Purpose**: The code serves as the backend API for managing data (events) stored by the activitywatch server. It provides methods for creating, updating, deleting, and retrieving data from buckets, as well as handling heartbeat events and querying the data.

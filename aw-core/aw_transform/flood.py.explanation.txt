@@ -1,0 +1,13 @@
+This code defines a function `flood` that takes a list of events and a pulsetime as input and "floods" any empty space between events by extending one of the surrounding events to cover the empty space. The function loops through the events, calculates the gap between each pair of events, and then extends or merges the events based on certain conditions.
+
+Here is an overview of the main steps in the `flood` function:
+
+1. Make a deep copy of the input events list and sort it by timestamp.
+2. Loop through each pair of adjacent events in the sorted list.
+3. Calculate the gap between the current event and the next event.
+4. In the case of a zero gap or overlapping events with the same data, merge the events by extending or merging their durations.
+5. If the gap is negative and cannot be safely merged, issue a warning.
+6. If the gap is within a certain threshold (`-negative_gap_trim_thres` to `pulsetime`), extend one of the events to cover the gap.
+7. Filter out any events with zero duration after the flooding process is complete.
+
+Overall, the function aims to optimize the event durations by flooding empty spaces and merging or extending events when necessary. It includes checks for overlapping events, negative gaps, and handles merging events with the same or different data differently. The function also includes logging for warnings about negative gaps that cannot be safely merged.

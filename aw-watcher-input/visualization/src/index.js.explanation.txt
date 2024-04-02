@@ -1,0 +1,21 @@
+This code is a JavaScript file that is used for visualizing data from the ActivityWatch tool. 
+
+Here is a breakdown of the code:
+
+1. It imports the 'aw-client' module which is used for interacting with the ActivityWatch API.
+
+2. It extracts the URL parameters, specifically 'start', 'end', and 'hostname', from the current web page URL.
+
+3. It initializes variables 'today_start' and 'today_end' to represent the start and end of today.
+
+4. It checks if the URL port is 5600 to determine if it is running in testing mode.
+
+5. It creates an instance of the 'AWClient' class from the 'aw-client' module.
+
+6. It defines a function 'load()' that fetches data from the ActivityWatch API based on the parameters extracted from the URL.
+
+7. It updates the HTML elements with id 'status', 'presses', and 'clicks' with data retrieved from the ActivityWatch API.
+
+8. Finally, it calls the 'load()' function to fetch and display the data.
+
+Overall, this code fetches data from the ActivityWatch API based on the specified parameters in the URL and displays the number of key presses and clicks for the specified hostname within the specified time range.

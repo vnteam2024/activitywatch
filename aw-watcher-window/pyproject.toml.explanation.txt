@@ -1,0 +1,11 @@
+This is a `pyproject.toml` file for the "aw-watcher-window" Python project using Poetry for dependency management. 
+
+- The project has a name, version, and description specified under `[tool.poetry]`.
+- The author and license information is also provided.
+- A script named "aw-watcher-window" is defined to run the `main` function in the `aw_watcher_window` module.
+- Dependencies are listed under `[tool.poetry.dependencies]`, including Python version, `aw-client`, `pywin32`, `wmi`, and various `pyobjc-framework` modules for different platforms.
+- The version of `python-xlib` is locked to "0.31" for Linux due to a known issue causing CPU stalls.
+- Development dependencies like `pytest`, `mypy`, `macholib`, and `pyinstaller` are specified under `[tool.poetry.dev-dependencies]`.
+- The build system is specified under `[build-system]`, requiring `poetry-core` and using "poetry.core.masonry.api" as the build backend.
+
+Overall, this file defines the project and its dependencies, scripts, and build configurations using Poetry.

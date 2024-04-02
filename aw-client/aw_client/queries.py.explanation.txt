@@ -1,0 +1,29 @@
+This code defines several dataclasses and functions for working with ActivityWatch queries. Here is an explanation of each part of the code:
+
+1. `EnhancedJSONEncoder`: a custom JSON encoder class that allows dataclasses to be serialized into JSON.
+   
+2. `_QueryParamsDefaultsBase`, `QueryParams`, `_DesktopQueryParamsBase`, `DesktopQueryParams`, `_AndroidQueryParamsBase`, `AndroidQueryParams`: dataclasses representing query parameters for different types of queries (desktop and Android).
+   
+3. `isDesktopParams` and `isAndroidParams`: functions that check if a given set of query parameters corresponds to a desktop query or an Android query.
+   
+4. `canonicalEvents`: a function that builds the canonical query for either desktop or Android based on the provided parameters.
+   
+5. `pretty_query`: a function that formats a query string to make it more readable.
+   
+6. `_browser_in_buckets` and `browsersWithBuckets`: functions that match browser names with their corresponding bucket IDs.
+   
+7. `browserEvents`: a function that retrieves active browser events from all browser buckets.
+   
+8. `browser_appnames`: a dictionary mapping browser names to their corresponding app names.
+   
+9. `default_limit`: a default limit set for the number of events to return.
+   
+10. `querystr_to_array`: a function that converts a query string into an array of individual query lines.
+   
+11. `escape_doublequote`: a function that escapes double quotes in a string.
+   
+12. `fullDesktopQuery`: a function that constructs the full desktop query based on the provided parameters.
+   
+13. `test_fullDesktopQuery`: a test function that demonstrates how to use the `fullDesktopQuery` function to run a query using the ActivityWatchClient.
+
+Overall, this code provides a set of utilities for creating, formatting, and executing ActivityWatch queries for desktop and Android activities.

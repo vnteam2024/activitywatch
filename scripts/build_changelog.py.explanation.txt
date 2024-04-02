@@ -1,0 +1,24 @@
+This Python script generates a changelog for a repository and its submodules. The script parses the commit messages in the git history and organizes them into different categories such as features, fixes, and miscellaneous changes. It also generates a list of contributors by resolving their emails to GitHub usernames and fetching their Twitter handles.
+
+Here's a breakdown of the script:
+
+- **Command Line Arguments**: The script takes several command line arguments to specify the organization, repository, project title, commit range, output path, and other settings.
+
+- **CommitMsg Class**: Represents a commit message and provides methods for parsing the type of change (like feature, fix, build, etc.) and formatting the message.
+
+- **Utility Functions**: 
+  - `run`: Helper function to run shell commands.
+  - `pr_linkify`: Formats pull request links.
+  - `commit_linkify`: Formats commit links.
+  - `wrap_details`: Wraps lines into a `<details>` HTML element if the body is longer than a specified number of lines.
+  - `remove_duplicates`: A function to remove the longest sequence of repeated elements in a list if the sequence is longer than a minimum length.
+
+- **Main Functions**:
+  - `summary_repo`: Recursively generates a commit summary for the main repo and its submodules.
+  - `build`: Builds the final changelog including contributors, release notes, and full changelog links.
+
+- **Contributor Handling**: The script resolves contributors by matching email addresses to GitHub usernames and querying GitHub API for additional information about contributors.
+
+- **Output**: The script outputs the final changelog with release notes, contributors, and full changelog links.
+
+Overall, the script is designed to automate the process of generating detailed changelogs for repositories and handling contributors efficiently.

@@ -1,0 +1,9 @@
+This code defines a function `split_url_events` that takes a list of Event objects as input and processes each event to extract different components of the URL present in the event data. 
+
+1. For each event in the input list, it checks if there is a "url" key in the event data.
+2. If a URL is present, it uses the `urlparse` function from the `urllib.parse` module to parse the URL and extract its components like scheme, domain, path, parameters, options, and identifier.
+3. It then adds these extracted components as new keys in the event data dictionary with names like "$protocol", "$domain", "$path", "$params", "$options", and "$identifier".
+4. The code also includes a TODO comment suggesting that additional components like user and port could also be parsed from the URL.
+5. Finally, the function returns the updated list of Event objects with the extracted URL components added to each event data.
+
+Overall, this function is splitting the URL present in each Event object's data into its different components and adding them as new keys in the data dictionary.

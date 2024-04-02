@@ -1,0 +1,15 @@
+This Python script defines a configuration file and a set of functions for loading configurations and parsing command line arguments for the aw-watcher-afk application, which watches for keyboard and mouse input to detect AFK (Away From Keyboard) state.
+
+Here's an explanation of the code:
+
+1. The `default_config` variable contains a default configuration in TOML format for the `aw-watcher-afk` application. It includes settings for `timeout` (time in seconds before considering the user as AFK) and `poll_time` (interval in seconds for polling input events).
+
+2. The `load_config` function takes a boolean `testing` flag as an argument and uses it to determine which configuration section to load from the TOML configuration file. It calls `load_config_toml` function from `aw_core.config` module to load the configuration and returns the relevant section based on the `testing` flag.
+
+3. The `parse_args` function parses command line arguments using `argparse.ArgumentParser`. It includes options for `--host`, `--port`, `--testing`, `--verbose`, `--timeout`, and `--poll-time`. The default values for `timeout` and `poll_time` are obtained from the configuration loaded based on the `testing` flag.
+
+4. If the script is run with `--testing` flag, it sets a variable `testing` to `True`, otherwise, it remains `False`. The `load_config` function is called with this `testing` flag to get the appropriate configuration settings.
+
+5. The function returns the parsed command line arguments after parsing them with `argparse`.
+
+Overall, this script provides a way to load configuration settings based on whether the application is running in testing mode and allows users to specify additional configuration options through command line arguments.

@@ -1,0 +1,25 @@
+This bash script is used to count the lines of code in different types of files within a specified directory, excluding certain directories and files (such as build, dist, venv, etc.) and test files.
+
+Here is a breakdown of the script:
+
+1. Set a regular expression `re_ignore` to match directories or files to be ignored, such as build, dist, venv, etc.
+
+2. Print "Lines of code (excluding test): " to the console.
+
+3. Use the `find` command to search for files with specific extensions (py, js, ts, rs, vue) in the current directory.
+
+4. Exclude files that match the `re_ignore` regex and also exclude files containing 'test'.
+
+5. Concatenate the files found into a single list and count the total lines using `cat` and `wc -l`.
+
+6. Repeat steps 3-5 for specific file types such as Python, Rust, JS/TS, and Vue files.
+
+7. Print the number of lines for each language category.
+
+8. Print "Lines of test: " to the console.
+
+9. Find files with specific extensions (py, js, vue) that contain 'test'.
+
+10. Concatenate the test files found into a single list and count the total lines using `cat` and `wc -l`.
+
+Overall, this script provides an overview of the lines of code in different programming languages within the specified directory, excluding certain directories and test files.

@@ -1,0 +1,12 @@
+This code is the main entry point for the AW-Watcher-AFK program, which is a part of the ActivityWatch project. Here is a breakdown of the code:
+
+1. The code imports necessary modules and functions: `setup_logging` from `aw_core.log`, `AFKWatcher` and `parse_args` from `aw_watcher_afk` package.
+
+2. The `main()` function is defined, which does the following:
+    a. Parses command line arguments using the `parse_args()` function.
+    b. Sets up logging using the `setup_logging()` function with specific parameters.
+    c. Initializes an instance of the `AFKWatcher` class with the parsed arguments and starts the watcher by calling its `run()` method.
+
+3. The `if __name__ == "__main__":` block checks if the script is being run directly (not imported as a module) and calls the `main()` function if true, which starts the AW-Watcher-AFK program.
+
+Overall, this script sets up logging, parses command line arguments, initializes the AFK watcher, and starts tracking user activity (or inactivity) on the computer.

@@ -1,0 +1,9 @@
+This code defines functions to ensure and prompt for accessibility permissions on macOS. 
+
+1. `background_ensure_permissions()` function creates a new process to run the `ensure_permissions()` function.
+2. `ensure_permissions()` function checks if the process has accessibility permissions using AXIsProcessTrusted().
+3. If permissions are not granted, it prompts the user with an NSAlert dialog to grant accessibility permissions to ActivityWatch. 
+4. The alert gives the user the option to open the System Preferences where they can grant accessibility permissions to ActivityWatch.
+5. The code uses AppKit and ApplicationServices libraries to interact with macOS APIs for handling permissions and displaying alerts.
+
+Overall, this code is responsible for handling macOS accessibility permissions for the ActivityWatch application by prompting the user to grant the necessary permissions.

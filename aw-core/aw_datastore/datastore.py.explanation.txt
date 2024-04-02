@@ -1,0 +1,25 @@
+This code defines a `Datastore` class and a `Bucket` class for managing and interacting with data storage. Here are the key components of the code:
+
+1. `Datastore` class:
+    - Constructor: Initializes the datastore with a storage strategy, which is a callable that creates an instance of an abstract storage class. It also initializes a dictionary to store instances of buckets.
+    - `__repr__`: Returns a string representation of the Datastore object.
+    - `__getitem__`: Returns a Bucket object for a given bucket ID. If the bucket does not exist in the database, it raises a KeyError.
+    - Methods:
+        - `create_bucket`: Creates a new bucket in the datastore.
+        - `update_bucket`: Updates an existing bucket in the datastore.
+        - `delete_bucket`: Deletes a bucket from the datastore.
+        - `buckets`: Returns the list of buckets in the datastore.
+
+2. `Bucket` class:
+    - Constructor: Initializes a bucket with a reference to the datastore and a bucket ID.
+    - Methods:
+        - `metadata`: Returns metadata for the bucket.
+        - `get`: Retrieves events from the bucket within a specified time range.
+        - `get_by_id`: Retrieves an event by its ID.
+        - `get_eventcount`: Returns the count of events in the bucket within a specified time range.
+        - `insert`: Inserts one or multiple events into the bucket.
+        - `delete`: Deletes an event from the bucket.
+        - `replace_last`: Replaces the last event in the bucket with a new event.
+        - `replace`: Replaces an event in the bucket by its ID with a new event.
+
+Overall, the code provides a structured way to interact with data storage in terms of creating, updating, deleting buckets, and managing events within these buckets. The `Datastore` class acts as a controller for managing multiple buckets through the `Bucket` class instances.

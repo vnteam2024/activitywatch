@@ -1,0 +1,13 @@
+This is a GitHub Actions workflow configuration file that specifies a workflow named "Build". This workflow is triggered on pushes to the master branch as well as pull requests targeting the master branch.
+
+The workflow defines a single job named "build" that runs on different operating systems specified in the "os" matrix (ubuntu-latest, windows-latest, macOS-11). It also uses Python version 3.9.
+
+The steps in the job are as follows:
+1. Checks out the code from the repository including submodules.
+2. Sets up Python with the specified version.
+3. Installs dependencies using Poetry and creates a virtual environment using venv.
+4. Runs the build command.
+5. Activates the virtual environment and runs tests using the "make test" and "make typecheck" commands.
+6. Reports coverage using the codecov bash script. The command to run the bash script is fetched using curl.
+
+Overall, this workflow sets up a Python environment, installs dependencies, runs tests, and reports coverage for the project on different operating systems.

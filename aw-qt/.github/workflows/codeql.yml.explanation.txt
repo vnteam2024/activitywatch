@@ -1,0 +1,15 @@
+This is a GitHub Actions workflow file for the CodeQL analysis of a project. 
+
+The workflow is triggered on pushes to the "master" branch, pull requests targeting the "master" branch, and on a scheduled basis every Thursday at 3:30 AM.
+
+The workflow has one job called "analyze" that runs on an Ubuntu latest environment. The job has permissions specified for actions, contents, and security events.
+
+The job uses a strategy matrix with the language set to Python.
+
+The steps in the job include:
+1. Checking out the code from the repository
+2. Initializing CodeQL with the specified language and queries for security and quality
+3. Autobuilding the CodeQL database
+4. Performing the CodeQL analysis with the specified language category in the matrix
+
+Overall, this workflow sets up CodeQL analysis for the Python language in the project when triggered by specific events.

@@ -1,0 +1,13 @@
+This code defines two classes, `KeyboardListener` and `MouseListener`, that listen for keyboard and mouse events respectively. 
+
+- The `EventFactory` class is an abstract base class that provides a blueprint for creating event listeners. It has methods for resetting event data, getting the next event, and checking if a new event is available.
+
+- The `KeyboardListener` class extends `EventFactory` and implements event listeners for keyboard events. It tracks the number of key presses and ignores key releases. When a key is pressed, it increments the "presses" count in the event data and sets a new event flag.
+
+- The `MouseListener` class extends `EventFactory` and implements event listeners for mouse events. It tracks the number of mouse clicks, mouse movement distance (deltaX and deltaY), and scroll distance (scrollX and scrollY). When a mouse event occurs, it updates the event data and sets a new event flag.
+
+- Both `KeyboardListener` and `MouseListener` classes use the `pynput` library to listen to keyboard and mouse events. They start listening for events in separate threads.
+
+- The `logger` is used for logging debug messages, but it is commented out for performance reasons and can be uncommented if needed.
+
+Overall, these classes provide a way to listen for keyboard and mouse events and track user activity for AFK (Away From Keyboard) detection on Linux systems.

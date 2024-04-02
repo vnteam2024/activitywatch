@@ -1,0 +1,17 @@
+This code provides functions to retrieve information about the active window on a Windows system. Here is a breakdown of the key components:
+
+1. `get_app_path(hwnd)`: This function retrieves the application path of the active window given its `hwnd` (window handle). It uses the `win32process` and `win32api` modules to get the process ID associated with the window handle, then opens the process and retrieves the module file name.
+
+2. `get_app_name(hwnd)`: This function retrieves the application filename of the active window given its `hwnd`. It calls `get_app_path()` first to get the path and then extracts the basename of the path to get the filename.
+
+3. `get_window_title(hwnd)`: This function simply returns the title of the active window given its `hwnd`.
+
+4. `get_active_window_handle()`: This function retrieves the handle of the foreground window, i.e., the currently active window.
+
+5. `get_app_name_wmi(hwnd)`: This function is a fallback option that uses the Windows Management Instrumentation (WMI) to retrieve the application filename of the active window. It queries for the process name based on the process ID.
+
+6. `get_app_path_wmi(hwnd)`: This function is similar to `get_app_name_wmi()` but retrieves the application path using WMI.
+
+7. The script contains a loop that continuously prints out the title, application name, and application path of the active window using the functions mentioned above.
+
+Overall, this code allows you to monitor and retrieve information about the active window on a Windows system continuously. It uses a combination of Win32 API functions and WMI queries to gather the necessary information.

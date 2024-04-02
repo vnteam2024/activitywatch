@@ -1,0 +1,12 @@
+This is a citation file (CITATION.cff) following the Citation File Format (CFF) version 1.2.0. The purpose of this file is to provide information on how to cite the software "ActivityWatch" if it is used in a research project or publication.
+
+The citation includes:
+- Authors: Erik Bjäreholt and Johan Bjäreholt
+- ORCID identifiers for both authors
+- Title: ActivityWatch
+- Version: 0.12.1
+- DOI: 10.5281/zenodo.4957165
+- Date released: September 26, 2022
+- URL: https://github.com/ActivityWatch/activitywatch
+
+This information is provided for users of "ActivityWatch" to properly cite the software in their work.

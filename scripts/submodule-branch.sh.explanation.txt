@@ -1,0 +1,15 @@
+This bash script is designed to get the current branch of the main repository as well as the branch for each submodule in the repository.
+
+Here is a breakdown of the script:
+
+1. Get a list of submodules in the repository using `git submodule`. This command lists all the submodules along with some additional information.
+
+2. Use `sed` to extract just the submodule paths from the output of `git submodule`. The `sed` command strips out the extra information and leaves only the submodule paths.
+
+3. Loop through each submodule path extracted in step 2.
+
+4. For each submodule, use `git --git-dir=$module/.git rev-parse --abbrev-ref HEAD` to get the current branch of the submodule. This command runs `git rev-parse --abbrev-ref HEAD` in the context of the specific submodule by using the `--git-dir` flag to specify the submodule's git directory.
+
+5. Print the submodule path and its corresponding branch using `printf` with formatting to display the information neatly.
+
+Overall, the script provides a way to quickly check the branch of both the main repository and its submodules.

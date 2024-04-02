@@ -1,0 +1,1 @@
+This code imports the `aw_server` module and then calls the `main()` function within the `aw_server` module. This is likely the entry point for the application and will start the activity watcher server.

@@ -1,0 +1,15 @@
+This code is a script written in Python that computes how many hours were spent in a regex-specified "work" category for each day in a given month. It also saves the matching work events to a JSON file for auditing purposes.
+
+Here is a breakdown of the key components in the code:
+
+1. The script uses the ActivityWatch client library to query event data related to user activity.
+2. It defines a regular expression (regex) pattern to specify the "work" category, which is used to filter and identify relevant events.
+3. The `_pretty_timedelta` function formats a timedelta object into a human-readable string representation of time.
+4. The `generous_approx` function calculates a generous approximation of worked time by including non-categorized time when the duration is shorter than a specific threshold.
+5. The `query` function performs the event query using the specified regex pattern and optionally saves the results to a JSON file.
+6. The script defines a query to retrieve events matching the regex pattern within specific time periods and calculates the total duration spent in the "work" category for each period.
+7. It also includes logic to print the results in a tabular format, showing the date, duration, and number of events for each time period.
+8. The script then calculates the total duration across all time periods and prints the cumulative result.
+9. Lastly, the script executes the `query` function when the script is run as the main program.
+
+Overall, this script provides a way to analyze and track work-related activities based on user event data, allowing users to monitor their productivity and time spent on work tasks.

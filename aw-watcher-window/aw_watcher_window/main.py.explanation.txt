@@ -1,0 +1,15 @@
+This code is the main script for the aw-watcher-window application in the ActivityWatch project. It is responsible for monitoring the currently active window on the user's desktop and sending the information to an ActivityWatch server.
+
+Here is a breakdown of the main components of the code:
+
+1. Imports: The script imports necessary modules and functions from various files, including logging, signal, subprocess, os, and datetime.
+
+2. Configuration and Logging: The script parses command-line arguments using the `parse_args` function, sets up logging based on the provided arguments, and performs platform-specific setup if running on macOS.
+
+3. Main Function: The `main` function is the entry point of the script. It initializes the ActivityWatch client, creates a bucket for the current window events, and starts the monitoring process. It also handles initialization specific to macOS and spawns a subprocess for monitoring on macOS if the strategy is set to "swift".
+
+4. Heartbeat Loop: The `heartbeat_loop` function continuously monitors the current active window at regular intervals specified by the `poll_time` parameter. It retrieves the current window using the specified strategy, formats the data into an Event object, and sends it to the ActivityWatch server using the client's heartbeat method. It also handles exceptions gracefully and excludes window titles if specified by the `exclude_title` parameter.
+
+5. Kill Process Function: The `kill_process` function is a utility function used to terminate a given process ID using the `os.kill` function with `signal.SIGTERM`. It is mainly used for handling the subprocess created for macOS monitoring.
+
+Overall, this script is designed to monitor the current active window on the desktop, send this information to an ActivityWatch server, and handle any errors or exceptions that may occur during the monitoring process.

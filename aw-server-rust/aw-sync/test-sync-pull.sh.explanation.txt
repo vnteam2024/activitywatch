@@ -1,0 +1,13 @@
+This shell script is used for testing synchronization in an ActivityWatch server. Here is a breakdown of what the script does:
+
+1. Sets the script path and changes directory to that path.
+2. Defines a port number (5667) to use for the testing instance.
+3. Checks if the ActivityWatch server is already running on the port specified. If it is, it uses that server. If not, it starts a new server using the `test-server.sh` script.
+4. Defines a root directory for synchronization (`SYNCROOTDIR`).
+5. Defines a function `sync_host` that takes a host as an argument and syncs the data for that host.
+6. If no host is given as an argument, it syncs all hosts found in the sync directory by iterating through each host directory and syncing the data for each database file found using `aw-sync`.
+7. If a host is provided as an argument, it syncs only the data for that specific host.
+8. Checks if the server was started by the script and if so, kills the server process.
+9. The script utilizes various command line tools such as `lsof`, `find`, `stat`, and `cargo run` to manage and sync the data between the ActivityWatch server and clients.
+
+Overall, the script automates the process of syncing data between the ActivityWatch server and clients for testing purposes.

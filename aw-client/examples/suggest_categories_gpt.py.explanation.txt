@@ -1,0 +1,21 @@
+This code is a Python script that uses OpenAI's GPT-3 to suggest new categories for window titles. The script first defines some helper functions and data structures related to categories and event processing. 
+
+Here is a breakdown of the main parts of the code:
+
+1. The `prompt_preamble` function generates a prompt text that lists existing categories and provides examples of how new categories can be suggested. 
+
+2. The `process_prompt` function parses the prompt preamble for categories created/modified in the prompt. It updates the existing categories based on user input.
+
+3. The `gpt_suggest` function uses OpenAI's GPT-3 to suggest new categories for uncategorized events. It generates a prompt, sends it to GPT-3, and processes the response to extract and update categories.
+
+4. The `check_is_category` function checks if a given text belongs to a specific category. It uses the `categorize` function from the `aw_transform.classify` module to classify the text.
+
+5. The `parse_gpt_response` function interprets the response from GPT-3 and updates the categories accordingly. It handles cases where a new category is suggested, an existing category is chosen, a category is modified, or an event is skipped.
+
+6. The `main` function is the entry point of the script. It starts by loading example categories and events, sorts events by duration, and then iterates through the events to suggest new categories using GPT-3.
+
+7. The `test_parse_gpt_response` function is a unit test for the `parse_gpt_response` function. It validates the behavior of the function with a specific test case.
+
+8. Lastly, the script runs the `main` function if it is executed as a standalone script.
+
+Overall, this script demonstrates how GPT-3 can be used to suggest categories for uncategorized events based on user input and existing categories.

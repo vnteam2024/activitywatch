@@ -1,0 +1,21 @@
+This script is used to cross-compile the "aw-server" project for Android using the Rust programming language. Here is a breakdown of what the script does:
+
+1. It first checks the current platform to determine the appropriate configuration for cross-compilation.
+
+2. It checks if any arguments are provided when running the script. If arguments are provided, those will be used as targets (e.g., x86_64, arm64). If no arguments are provided, it defaults to building for arm64, x86_64, x86, and arm.
+
+3. It sets up the environment variables required for cross-compiling for Android, specifically setting the location of the Android NDK.
+
+4. It checks if the script should build in release or debug mode based on the "RELEASE" environment variable.
+
+5. It works around a known issue related to the "libgcc" library by creating a "libgcc.a" file.
+
+6. It loops through a list of target architectures (arm64, x86_64, x86, arm) and sets up the necessary build configurations for each target.
+
+7. It sets the necessary environment variables for the build (e.g., AR, CC, RANLIB) based on the target architecture.
+
+8. It sets additional Rust flags for linking the libgcc library.
+
+9. It performs the compilation for each target architecture using Cargo.
+
+Overall, this script automates the process of cross-compiling the "aw-server" project for Android by setting up the necessary build configurations and environment variables for each target architecture.

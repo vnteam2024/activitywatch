@@ -1,0 +1,23 @@
+This Python script is a program that calculates the time spent on different categories of activities in a day and sends notifications to the user based on predefined conditions. Here is an explanation of the key components of the script:
+
+1. The script uses the `aw_client` module to interact with an ActivityWatch server to retrieve activity data.
+
+2. It defines a `cache_ttl` decorator that caches the result of a function in memory with a specified time-to-live (TTL) duration.
+
+3. The `get_time` function retrieves the time spent today for each category of activities using a query to the ActivityWatch server.
+
+4. The `to_hms` function converts a timedelta object representing time duration into a human-readable string in the format `days hours minutes seconds`.
+
+5. The `notify` function sends a desktop notification to the user with a specified title and message using the `DesktopNotifier` class.
+
+6. The `CategoryAlert` class represents an alert for a specific category of activity. It tracks the time spent, thresholds to trigger alerts, and whether the alert is positive (encouraging activity) or not.
+
+7. The `threshold_alerts` function continuously monitors the time spent in each category and triggers alerts when predefined thresholds are reached.
+
+8. The `checkin` and `send_checkin` functions send summary notifications of the day or yesterday to the user.
+
+9. The `get_active_status` function polls the latest event in the `aw-watcher-afk` bucket to determine whether the user is active or not based on their AFK status.
+
+10. The script has functions to start threads that perform check-ins hourly, send notifications on the start of a new day, and potentially welcome back notifications after periods of non-activity.
+
+Overall, the script uses ActivityWatch data to provide the user with notifications about their time spent on different activities and to encourage specific behaviors based on predefined conditions.

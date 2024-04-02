@@ -1,0 +1,12 @@
+This code is the main entry point for the ActivityWatch server. Here's a breakdown of what the code is doing:
+
+1. It imports necessary modules and functions from the project.
+2. It defines a `main()` function that will be called when the script is executed.
+3. It parses command-line arguments using the `argparse` module to customize the server settings.
+4. It reads settings from a configuration file and overrides them with the command-line arguments.
+5. It sets up logging for the server.
+6. It logs information about the server startup.
+7. It starts the server using the `_start()` function from `aw_server/server.py`.
+8. There is a `parse_str_to_dict()` function that parses a string in the format "key=value,key2=value2" into a dictionary.
+
+Overall, this script is responsible for configuring and starting the ActivityWatch server with the specified settings provided through the command line arguments and configuration file. Additionally, it sets up logging and initializes the storage method based on the configuration.

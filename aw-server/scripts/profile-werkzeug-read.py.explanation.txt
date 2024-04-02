@@ -1,0 +1,8 @@
+This Python script reads and analyzes the profiling data collected in the "profile.out" file using the `pstats` module. Here's a breakdown of what the script does:
+
+1. Import the `pstats` module, which provides tools for reading and analyzing Python profiling data.
+2. Create an instance of `pstats.Stats` class, passing the path to the profiling data file ("profile.out") as an argument to initialize it.
+3. Sort the profiling data by cumulative time spent in each function by calling the `sort_stats("cumulative")` method on the `p` object.
+4. Print the statistics for the top 100 functions with the highest cumulative time spent in them by calling the `print_stats(100)` method on the `p` object.
+
+By running this script, you can get a summary of the most time-consuming functions in the codebase based on the profiling data collected. This information can help identify performance bottlenecks and optimize the code for better efficiency.

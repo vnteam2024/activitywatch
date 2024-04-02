@@ -1,0 +1,8 @@
+This is a configuration file for a GitHub stale bot, which helps manage stale issues in a GitHub repository. 
+
+- `daysUntilStale`: This specifies the number of days of inactivity before an issue becomes stale. In this case, it is set to 365 days.
+- `daysUntilClose`: This specifies the number of days of inactivity before a stale issue is automatically closed. In this case, it is set to 14 days.
+- `exemptLabels`: This is a list of labels that exempt the issue from being considered stale. Issues with these labels will not be marked as stale or closed automatically. Labels like 'pinned', 'priority: high', 'improves: security', and 'improves: sustainability' are exempted.
+- `staleLabel`: This is the label that will be added to the issue when it is marked as stale. In this case, it is set to 'stale'.
+- `markComment`: This is the comment that will be posted when an issue is marked as stale. It notifies the participants that the issue has been inactive and may be closed if no further activity occurs.
+- `closeComment`: This is the comment that will be posted when a stale issue is automatically closed. In this case, it is set to 'false', which means this feature is disabled and no comment will be posted when closing a stale issue.

@@ -1,0 +1,9 @@
+This code is a test suite for the `flood` function in the `aw_transform` module. The `flood` function is responsible for merging overlapping or adjacent events into a single event.
+
+The test cases in this code cover different scenarios such as merging events that are forward in time, merging events that are backward in time, handling negative gaps with the same data, handling negative gaps with differing data, and handling small negative gaps with differing data.
+
+Each test case creates a list of `Event` objects with specific timestamps, durations, and data, and then calls the `flood` function on these events. After calling the `flood` function, the code contains assertions to check whether the expected behavior has been achieved.
+
+For example, in the `test_flood_forward_merge` test case, two events with timestamps `now` and `now + 15 * td1s` and durations of 10 and 5 are created. The `flood` function is called on these events, and then it is asserted that the resulting merged event has a duration of 20 seconds.
+
+Overall, this code ensures that the `flood` function behaves as expected when merging events with different timestamps, durations, and data.

@@ -1,0 +1,15 @@
+This GitHub Actions workflow is named "Lint" and is triggered on pushes to the master branch as well as pull requests targeting the master branch.
+
+There are two jobs defined in this workflow:
+
+1. format:
+   - This job runs on a Ubuntu-latest runner.
+   - It checks the code formatting using Rust nightly toolchain and cargo fmt command with the --check flag.
+
+2. clippy:
+   - This job also runs on a Ubuntu-latest runner.
+   - It runs the Rust clippy linter tool using the Rust nightly toolchain and cargo clippy command.
+
+Both jobs include steps to checkout the code from the repository and set up the Rust nightly toolchain with the necessary components (rustfmt for the format job, clippy for the clippy job).
+
+Overall, this workflow is set up to run code formatting checks and linting checks on Rust code in the repository to maintain code quality.

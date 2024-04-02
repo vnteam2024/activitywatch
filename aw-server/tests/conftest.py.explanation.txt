@@ -1,0 +1,9 @@
+This code defines fixtures for pytest tests in the activitywatch repository. 
+
+1. The `app` fixture initializes an instance of `AWFlask`, which is a Flask application for the ActivityWatch server, configured for testing.
+
+2. The `flask_client` fixture creates a test client for the Flask application.
+
+3. The `aw_client` fixture creates an instance of `ActivityWatchClient` with the name "aw-client-test" and testing set to True. It also deletes any test buckets that start with "test-" after all tests using this fixture have been run.
+
+Overall, these fixtures help in setting up the required environment for testing the activitywatch server.

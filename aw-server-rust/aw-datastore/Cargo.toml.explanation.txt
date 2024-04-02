@@ -1,0 +1,18 @@
+This is a `Cargo.toml` file for a Rust package named `aw-datastore`. 
+
+In this file:
+- The package name is set to "aw-datastore" with version "0.1.0".
+- The author is listed as "Johan Bjäreholt <johan@bjareho.lt>".
+- The edition of Rust used is "2021".
+- The package has no default features, and it may optionally enable the "legacy_import_tests" feature.
+- The dependencies are specified:
+  - appdirs version 0.2
+  - serde version 1.0
+  - serde_json version 1.0
+  - chrono version 0.4 with the "serde" feature enabled
+  - rusqlite version 0.30 with features "chrono", "serde_json", and "bundled" enabled
+  - mpsc_requests version 0.3
+  - log version 0.4
+  - The package also depends on two local crates `aw-models` and `aw-transform`, located in the specified paths.
+
+This file declares the necessary dependencies and configuration for building the `aw-datastore` Rust package.

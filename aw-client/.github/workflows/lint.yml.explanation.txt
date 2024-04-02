@@ -1,0 +1,8 @@
+This is a GitHub Actions workflow file named "lint.yml" that defines a job called "lint". This job is triggered on pushes to the master branch as well as pull requests targeting the master branch.
+
+The job runs on the latest version of the Ubuntu operating system. It consists of three steps:
+1. "actions/checkout@v2": This step checks out the code from the repository.
+2. "actions/setup-python@v2": This step sets up the Python environment.
+3. "psf/black@stable": This step installs and runs the Black code formatter to lint the code.
+
+Overall, this workflow is set up to lint the code using the Black code formatter on push events and pull requests to the master branch.

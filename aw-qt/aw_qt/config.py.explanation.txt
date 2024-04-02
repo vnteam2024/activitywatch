@@ -1,0 +1,10 @@
+This Python code defines a class `AwQtSettings` that represents the settings for the aw-qt module of the ActivityWatch application. The class has an `__init__` constructor that takes a boolean argument `testing`.
+
+The code also defines a default TOML configuration `default_config` for the aw-qt module, which includes a list of autostart modules.
+
+In the `AwQtSettings` class:
+- The constructor loads the configuration using `load_config_toml` from the `aw_core.config` module.
+- It then retrieves the configuration section based on whether the `testing` flag is set to `True` or `False`.
+- Finally, it initializes the `autostart_modules` attribute with a list of autostart_modules parsed from the configuration section.
+
+Overall, this code is responsible for loading and initializing the settings for the aw-qt module based on the configuration provided.

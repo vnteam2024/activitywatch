@@ -1,0 +1,15 @@
+This code is for creating a spec file for cx_Freeze, which is a tool for converting Python scripts into executable files. 
+
+Here's a breakdown of the code:
+
+1. The code imports the platform module.
+2. It sets the variable block_cipher to None.
+3. It creates an Analysis object with the entry point script as "aw_watcher_window/__main__.py".
+4. It checks the platform system to determine if it is "Darwin" (macOS) and includes the necessary binaries accordingly.
+5. It specifies additional data files to be included in the distribution, such as "aw_watcher_window/printAppStatus.jxa".
+6. It sets various options for the analysis, such as hiddenimports, hookspath, runtime_hooks, excludes, etc.
+7. It creates a PYZ (Python Zip) archive with the pure Python modules and zipped data.
+8. It creates an EXE (executable) file with the PYZ archive, scripts, and other options.
+9. It collects all the necessary files for the final distribution using the COLLECT function.
+
+Overall, this code is setting up the configuration for building an executable file for the aw-watcher-window Python script using cx_Freeze.

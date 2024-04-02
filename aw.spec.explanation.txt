@@ -1,0 +1,9 @@
+This code is a Python script that is used to build a PyInstaller spec file for activitywatch. PyInstaller is a program that can be used to package Python programs into stand-alone executables.
+
+In this script, the `build_analysis` function is defined to create an analysis instance for a given module. The `build_collect` function is used to build the COLLECT statements for each module.
+
+The script then defines the analysis instances for various modules such as `aw-server`, `aw-qt`, `aw-watcher-afk`, `aw-watcher-input`, `aw-watcher-window`, and `aw-notify` using the `build_analysis` function. It also sets up the necessary binaries, datas, and hidden imports for these modules.
+
+Finally, the script uses the MERGE function to merge the analysis instances for the different modules and then builds the COLLECT statements for each module using the `build_collect` function. It also creates a bundle for the different modules if the platform is macOS.
+
+Overall, this script is used to define the packaging configuration for the activitywatch project using PyInstaller. It sets up the necessary analysis and collection configurations for each module and then defines a bundle for macOS.

@@ -1,0 +1,19 @@
+This document provides a guide on how to contribute to the ActivityWatch project. Here are the key points covered in the document:
+
+1. **Getting started**: Instructions on how to install ActivityWatch from the source and useful resources to understand the architecture and data model of the project.
+
+2. **How you can help**: Different ways in which individuals can contribute to ActivityWatch, such as working on specific issues, fixing bugs, implementing new features, writing documentation, and building the ecosystem. Links to relevant resources and areas where contributions are needed are provided.
+
+3. **Filing an issue**: Guidelines on how to file an issue in a way that provides all the necessary information for the developers to understand and address the problem effectively.
+
+4. **Code of Conduct**: Reference to the Code of Conduct that all contributors are expected to follow.
+
+5. **Commit message guidelines**: Suggestions on how to structure commit messages following the Conventional Commits format for clarity and consistency in version control.
+
+6. **Getting paid**: Information on an experiment to pay contributors for their work on ActivityWatch, including details on how to track work and contact the team for compensation.
+
+7. **Claiming GitPOAP**: Explanation of how contributors can claim a GitPOAP on Ethereum if they have made a commit to ActivityWatch.
+
+8. **Questions?**: Contact information for the team, including the Discord server, forum, GitHub discussions, and email addresses for maintainers.
+
+Overall, this document serves as a comprehensive guide for individuals interested in contributing to the ActivityWatch project, providing them with the necessary resources, guidelines, and support channels to get started and participate effectively.

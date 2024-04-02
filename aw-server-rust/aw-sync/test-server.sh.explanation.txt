@@ -1,0 +1,14 @@
+This script sets up a testing server for ActivityWatch by running the `aw-server` binary with specific testing parameters. 
+
+- The script first sets the port number to use for the server. If the `PORT` environment variable is already set, it uses that value, otherwise it defaults to port 5667.
+- It creates a temporary directory `DBPATH` at `/tmp/aw-server-rust-sync-testing/` to store the database files.
+- The script then navigates to the parent directory (`pushd ..`) to run the `aw-server` binary.
+- It uses `cargo run` to compile and run the `aw-server` binary with the following arguments:
+   - `--bin aw-server` specifies which binary to run.
+   - `--testing` flag indicates that this is a testing instance.
+   - `--port $PORT` specifies the port number to use for the server.
+   - `--dbpath $DBPATH/data.db` specifies the path to store the database files.
+   - `--no-legacy-import` flag disables legacy import functionality.
+   - `--verbose` flag enables verbose output.
+
+Overall, this script sets up a testing server for ActivityWatch with specific configurations for port, database path, and other parameters needed for testing.

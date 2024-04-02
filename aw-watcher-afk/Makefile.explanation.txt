@@ -1,0 +1,9 @@
+This is a Makefile for the aw-watcher-afk project within the ActivityWatch repository. It contains several targets that can be run using the `make` command:
+
+1. `build`: Installs dependencies using Poetry.
+2. `test`: Executes the `aw-watcher-afk` command with the `--help` flag to ensure it starts and then runs type checking using MyPy.
+3. `typecheck`: Runs type checking using MyPy on the `aw_watcher_afk` module while ignoring missing imports.
+4. `package`: Uses PyInstaller to build an executable package based on the `aw-watcher-afk.spec` file.
+5. `clean`: Removes build artifacts and any cached files in the `aw_watcher_afk` module.
+
+Users can run these targets by executing `make <target>` in the terminal within the project directory. This Makefile helps automate the build, testing, and packaging processes of the aw-watcher-afk project.

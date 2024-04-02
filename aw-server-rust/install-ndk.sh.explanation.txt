@@ -1,0 +1,13 @@
+This script is used to set up the Android NDK (Native Development Kit) for building Android applications with Rust programming language. It downloads the NDK if it is not already available, sets up toolchain binary symlinks, adds target architectures to Rust, and creates a cargo config file with configuration for each target architecture.
+
+Here's a breakdown of the script:
+
+1. Set the NDK version to r25c.
+2. Determine the current platform (Linux or macOS).
+3. Check if ANDROID_NDK_HOME is set, download the NDK if it is not set.
+4. Set up toolchain binary symlinks for different architectures (aarch64, x86_64, i686, armv7a).
+5. Add target architectures to Rust using rustup.
+6. Create a cargo config file with linker and ar (archiver) configurations for each target architecture.
+7. Write the cargo config to the .cargo directory in the project path.
+
+Overall, this script automates the setup process for using the Android NDK with Rust for building Android applications.
