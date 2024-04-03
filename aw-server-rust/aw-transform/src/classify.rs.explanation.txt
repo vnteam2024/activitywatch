@@ -1,0 +1,15 @@
+This code defines transformations for classifying (tagging and categorizing) events in a Rust project called `aw-transform`. The main components of the code include:
+
+1. `Rule` enum: Represents a classification rule, which can be either `None` or a `RegexRule`.
+2. `RuleTrait` trait: Defines a trait for classification rules, with a method `matches` that determines if the rule matches a given event.
+3. `RegexRule` struct: Represents a regex rule for classification. It contains a regular expression and implements the `RuleTrait` trait.
+4. Implementations for `Rule` and `RegexRule`:
+   - Conversion of a `Regex` to a `Rule`.
+   - Logic for matching events against rules.
+5. Functions for categorizing and tagging events:
+   - `categorize`: Classifies events into categories based on rules.
+   - `tag`: Tags events based on rules.
+6. Helper function `_pick_highest_ranking_category`: Helps in determining the highest ranking category among multiple matches.
+7. Tests for rule matching, lookahead in regex, categorization, and tagging.
+
+Overall, this code provides a flexible way to classify and tag events based on rules defined by regex patterns. It allows for categorizing events into specific categories and tagging events with multiple tags. The code is structured to support extensibility in the future without breaking backwards compatibility.

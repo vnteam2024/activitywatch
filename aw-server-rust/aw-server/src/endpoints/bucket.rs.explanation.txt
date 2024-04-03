@@ -1,0 +1,15 @@
+This code defines various endpoints for managing buckets and events in the ActivityWatch server. Here is a brief explanation of each endpoint:
+
+1. `buckets_get`: GET request to retrieve a list of all buckets from the datastore.
+2. `bucket_get`: GET request to retrieve information about a specific bucket specified by `bucket_id`.
+3. `bucket_new`: POST request to create a new bucket with the specified `bucket_id`. If the hostname is set to "!local", it will be replaced with the hostname of the server.
+4. `bucket_events_get`: GET request to retrieve events from a specific bucket within a specified time range and limit.
+5. `bucket_events_get_single`: GET request to retrieve a single event from a specific bucket.
+6. `bucket_events_create`: POST request to insert new events into a specific bucket.
+7. `bucket_events_heartbeat`: POST request to update the heartbeat of an event within a specific bucket.
+8. `bucket_event_count`: GET request to retrieve the count of events in a specific bucket.
+9. `bucket_events_delete_by_id`: DELETE request to delete events by their IDs from a specific bucket.
+10. `bucket_export`: GET request to export the data of a specific bucket, including its events.
+11. `bucket_delete`: DELETE request to delete a specific bucket.
+
+Each endpoint handles different operations related to managing buckets and events such as retrieving, creating, updating, and deleting data within the ActivityWatch server. It interacts with the server's datastore to perform these operations and returns appropriate responses or errors.

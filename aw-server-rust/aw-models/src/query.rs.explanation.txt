@@ -1,0 +1,9 @@
+This code defines a struct `Query` that represents a query object with a list of time periods (`timeperiods`) and a list of query strings (`query`). The struct has been derived with `Deserialize`, allowing it to be deserialized from JSON strings into a Rust struct.
+
+The `Query` struct has two fields:
+1. `timeperiods`: A vector of `TimeInterval` structs. `TimeInterval` likely represents a specific time interval, such as a start and end time.
+2. `query`: A vector of strings representing the query to be executed.
+
+There is a TODO comment indicating that serialization for the `TimeInterval` struct needs to be implemented.
+
+Overall, this code defines the data structure for a query object that can be deserialized from JSON and contains information about time periods and query strings.

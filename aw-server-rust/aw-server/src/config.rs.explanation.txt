@@ -1,0 +1,17 @@
+This code is a configuration module for the AW (ActivityWatch) server in Rust. It contains a struct `AWConfig` that represents the configuration settings for the server. The configuration settings include address, port, testing mode, CORS settings, and custom static paths.
+
+Key points in the code:
+
+1. Static variable `TESTING` is used to determine if the server is running in testing mode or not. It has functions `set_testing` and `is_testing` to set and get the testing mode.
+
+2. The `AWConfig` struct is derived from `Serialize` and `Deserialize`, allowing it to be serialized and deserialized to/from TOML format.
+
+3. The `Default` trait is implemented for `AWConfig`, providing default values for the configuration settings.
+
+4. The `to_rocket_config` method converts the `AWConfig` struct into a `rocket::Config` struct, which is used by the Rocket framework for web server configuration.
+
+5. Various helper functions like `default_address`, `default_cors`, `default_testing`, `default_port`, and `default_custom_static` provide default values for different configuration settings.
+
+6. The `create_config` function is used to create or read the configuration file in TOML format. If the config file is not found, a default commented-out config file is created with default values.
+
+Overall, this code handles the server configuration in a modular and customizable way, allowing for easy modification and retrieval of configuration settings for the AW server.

@@ -1,0 +1,21 @@
+This code sets up CORS (Cross-Origin Resource Sharing) configuration for the Rocket web framework in Rust. CORS is a security feature that allows servers to specify who can access its resources from different origins (domains).
+
+Here's a breakdown of the code:
+
+1. It first constructs the root URLs for the server based on the configuration provided.
+
+2. It adds the root URLs along with any additional CORS origins specified in the configuration to the list of allowed origins.
+
+3. If the server is running in a testing environment, it adds additional origins for testing purposes.
+
+4. It also sets up allowed regex origins for specific browser extensions like Chrome and Mozilla.
+
+5. It defines the allowed methods (GET, POST, DELETE) that the server supports.
+
+6. It allows all headers by calling `AllowedHeaders::all()`.
+
+7. It creates a `rocket_cors::CorsOptions` struct with the allowed origins, methods, headers, and sets `allow_credentials` to false (disallowing sending credentials like cookies along with requests).
+
+8. Finally, it converts the `CorsOptions` to a `rocket_cors::Cors` struct using `to_cors()`, which will be used by the Rocket framework to handle CORS requests.
+
+In summary, this code sets up CORS configuration for the Rocket web framework in Rust by defining allowed origins, methods, and headers, as well as specifying whether credentials are allowed in CORS requests.

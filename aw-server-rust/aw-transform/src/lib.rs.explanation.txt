@@ -1,0 +1,9 @@
+This code is a Rust library that contains multiple modules for transforming and processing events in ActivityWatch. 
+
+1. The `json_map!` macro is defined to create a JSON map object with key-value pairs. It uses the `serde_json` crate to work with JSON data.
+
+2. The library contains modules such as `classify`, `heartbeat`, `find_bucket`, `flood`, `merge`, `chunk`, `sort`, `filter_keyvals`, `filter_period`, `split_url`, `period_union`, and `union_no_overlap`. Each module provides functions for specific tasks like classifying events, handling heartbeats, finding buckets, flooding events, merging events, chunking events, sorting events, filtering key-value pairs, filtering periods, splitting URL events, performing period unions, and performing unions with no overlap.
+
+3. Each module has its own implementation for the respective task and exposes functions that can be used by other parts of the codebase.
+
+Overall, this library provides a set of utilities and functions for processing events in ActivityWatch, making it easier to manipulate and work with event data.

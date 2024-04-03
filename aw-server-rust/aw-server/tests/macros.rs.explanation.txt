@@ -1,0 +1,7 @@
+This code defines a unit test module `macros_tests` within a file named `macros.rs` that tests a custom macro `json_map!` which is defined in the crate `aw_server`.
+
+The test function `test_json_map` within the module is testing the `json_map!` macro by calling it with different input parameters. The `json_map!` macro is used to define JSON objects with key-value pairs in a more concise and readable way.
+
+The test cases for the `json_map!` macro include calling it with empty `{}` object, with a single key-value pair `{"a": json!(1)}`, and with multiple key-value pairs `{"a": json!(1), "b": json!(2)}`. These test cases are meant to ensure that the `json_map!` macro behaves as expected and correctly generates JSON objects with the provided key-value pairs.
+
+Overall, this test module is used to verify the functionality and correctness of the `json_map!` macro within the `aw_server` crate.

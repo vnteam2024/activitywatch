@@ -1,0 +1,9 @@
+This code defines a serialization and deserialization implementation for the `chrono::Duration` struct using `serde`. 
+
+The `get_nanos` function calculates the duration in nanoseconds as a `f64` value. 
+
+The `DurationSerialization` struct is annotated with `#[derive(Serialize, Deserialize)]` to enable serde serialization and deserialization. It contains a single field of type `f64` which represents the duration in nanoseconds.
+
+The implementation `From<DurationSerialization> for chrono::Duration` provides a conversion from `DurationSerialization` to `chrono::Duration`, converting the nanoseconds value to the appropriate `chrono::Duration` object.
+
+Overall, this code allows for easy serialization and deserialization of `chrono::Duration` objects using serde.

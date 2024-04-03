@@ -1,0 +1,9 @@
+This code defines a struct called `Info` with the following fields:
+- `hostname` of type `String`
+- `version` of type `String`
+- `testing` of type `bool`
+- `device_id` of type `String`
+
+The `Info` struct also derives `Serialize`, `Deserialize`, and `JsonSchema` traits using the `serde` and `schemars` libraries. This allows instances of the `Info` struct to be serialized and deserialized to and from JSON, as well as generate a JSON schema for validation purposes.
+
+Overall, this code is used to define a data structure representing information about a device or system, which can be serialized to JSON, deserialized from JSON, and generate a JSON schema.

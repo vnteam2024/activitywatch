@@ -1,0 +1,15 @@
+This code is a lexer written in Rust for tokenizing input text into specific tokens. Here is a brief explanation of the code:
+
+1. The `Token` enum defines the different types of tokens that the lexer can recognize, such as identifiers, keywords, numbers, strings, operators, and punctuation.
+
+2. The `lexer!` macro defines the rules for tokenizing input text. Each rule consists of a regular expression pattern matched against the input text and the corresponding token to be returned.
+
+3. The `Lexer` struct is used to tokenize a given input text. It keeps track of the original text, the remaining text to tokenize, and the current line number for error reporting.
+
+4. The `Span` struct represents a span of text in the input, including the start and end indices and the line number.
+
+5. The `span_in` function calculates the span of a token relative to the original input text.
+
+6. The `Iterator` implementation for `Lexer` iterates over the input text, tokenizing each token and updating the line number as needed. It returns a tuple of the token and its corresponding span.
+
+Overall, this lexer implementation provides a way to tokenize input text according to the defined rules and produce tokens along with their spans in the original input text.

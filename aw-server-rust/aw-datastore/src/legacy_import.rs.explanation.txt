@@ -1,0 +1,24 @@
+This code is a module in the `legacy_import.rs` file that handles importing data from a legacy version of the ActivityWatch server's SQLite database. It defines functions and structures to import legacy data into the current version of the ActivityWatch server.
+
+Here is an overview of the code:
+
+1. `LegacyDatastoreImportError`: An enum that represents possible errors that can occur during the legacy data import process.
+
+2. `legacy_import`: A function that initiates the legacy import process by calling the `legacy_import` function in the `import` submodule.
+
+3. `import` submodule:
+   - `dbfile_path`: A function that returns the path to the legacy SQLite database file.
+   - `get_legacy_buckets`: A function that retrieves legacy buckets from the legacy database.
+   - `get_legacy_events`: A function that retrieves legacy events associated with a specific bucket from the legacy database.
+   - `legacy_import`: The main function responsible for importing legacy data:
+      - Opens the legacy database connection.
+      - Retrieves legacy buckets and events.
+      - Creates new buckets and inserts legacy events into the current database.
+
+4. The `test_legacy_import` function is included but disabled by default. It tests the legacy import functionality by ensuring that legacy data is successfully imported into the new database on test execution.
+
+5. The module includes platform-specific conditionals:
+   - For non-Android platforms, the legacy import functionality is implemented.
+   - For Android platforms, a placeholder implementation that returns successfully is provided.
+
+Overall, this code orchestrates the process of importing legacy data from a legacy SQLite database into the current ActivityWatch server's database. It handles retrieving legacy buckets and events, creating corresponding new buckets, and importing events. Additionally, it includes test functionality to verify the success of the legacy import process.

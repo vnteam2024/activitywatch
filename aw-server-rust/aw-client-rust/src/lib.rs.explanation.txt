@@ -1,0 +1,16 @@
+This code defines a Rust library (`AwClient`) that provides a client for interacting with an ActivityWatch server. The main functionalities provided by this client include creating, getting, and deleting buckets, as well as inserting, getting, and deleting events within those buckets.
+
+Here is an overview of the key components in the code:
+1. External crates: The code imports several external crates such as `aw_models`, `chrono`, `reqwest`, `serde_json`, and `tokio` to handle various functionalities like data models, date/time operations, HTTP requests, JSON serialization, and asynchronous programming.
+
+2. `AwClient` struct: This struct represents the ActivityWatch client and contains fields for the client itself, the base URL of the server, the client's name, and the hostname of the client's machine.
+
+3. Implementation of `AwClient` struct: The code implements methods for interacting with the ActivityWatch server, including getting buckets, creating buckets, getting events, inserting events, and more.
+
+4. Helper functions: The code includes a helper function `get_hostname()` to retrieve the hostname of the client's machine.
+
+5. Error handling: The methods in the `AwClient` struct return `Result` types to handle potential errors during API calls.
+
+6. Asynchronous operations: Many of the methods in the `AwClient` struct are asynchronous (`async`), allowing them to make non-blocking HTTP requests using the `reqwest` crate and the `tokio` runtime.
+
+Overall, this code constitutes a Rust client library that provides an interface for interacting with an ActivityWatch server, enabling users to manage buckets and events for tracking activities.

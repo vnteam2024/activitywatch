@@ -1,0 +1,12 @@
+This code defines a function `split_url_event` that takes an `Event` reference and parses the URL within the event's data field to extract the protocol, domain, path, and parameters of the URL. The parsed values are then inserted into the event's data field with keys `$protocol`, `$domain`, `$path`, and `$params`.
+
+Here is a breakdown of the code:
+1. The function `split_url_event` takes a mutable reference to an `Event`.
+2. It checks if the event's data contains a key "url". If not, it returns early.
+3. It then extracts the URL string from the event's data and attempts to parse it as an absolute URI using the Rocket crate. If parsing fails, it returns early.
+4. The function then extracts the protocol, domain, path, and parameters from the parsed URI and inserts them into the event's data field with respective keys.
+5. The function ends with a TODO comment about additional fields to consider adding.
+
+The code also includes a test module `tests`, which tests the `split_url_event` function. The test creates a sample `Event` with a URL, calls the `split_url_event` function on it, and asserts that the parsed values have been correctly inserted into the event's data field.
+
+Overall, this code segment demonstrates how to extract and split a URL into its components within an `Event` structure in the context of the ActivityWatch project.

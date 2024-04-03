@@ -1,0 +1,19 @@
+The code above contains test cases for the API endpoints in the `aw-server` Rust server. The test cases use the `rocket` crate for testing the API endpoints, and they cover various scenarios to ensure that the API functions correctly.
+
+Here is an overview of the test cases included in the code:
+
+1. `test_bucket`: Tests CRUD operations on buckets including creating, fetching, updating, and deleting buckets.
+2. `test_events`: Tests inserting, fetching, updating, and deleting events in a bucket.
+3. `test_import_export`: Tests importing and exporting buckets.
+4. `test_query`: Tests querying events based on a specified time period and query.
+5. `test_setting_setting`: Tests setting a key-value pair in the server settings.
+6. `test_get_unset_setting`: Tests getting a setting that does not exist.
+7. `test_get_settings`: Tests getting all the settings key-value pairs.
+8. `test_get_setting`: Tests getting a specific setting by key.
+9. `test_get_setting_list`: Tests getting a setting that contains a list value.
+10. `test_get_setting_dict`: Tests getting a setting that contains a dictionary value.
+11. `test_set_setting`: Tests setting a setting value and then updating it with a new value.
+12. `test_delete_setting`: Tests setting a setting value and then deleting it.
+13. `test_cors_catching`: Tests the handling of CORS preflight requests for the API.
+
+Overall, these test cases ensure the functionality and correctness of the API endpoints in the `aw-server` Rust server by covering various scenarios related to CRUD operations, event management, imports/exports, querying, and server settings.

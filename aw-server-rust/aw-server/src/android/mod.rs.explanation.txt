@@ -1,0 +1,13 @@
+This code is an example of integrating Rust code with Android using JNI (Java Native Interface). 
+
+- The `rust_greeting` function takes a string as input and returns a new string that concatenates "Hello" with the input string. This function is called from Java code using JNI.
+
+- The `android` module contains functions that can be called from Java code. These functions interact with a Rocket server running in Rust, allowing communication between the Android app and the Rust server.
+
+- The `Java_net_activitywatch_android_RustInterface_startServer` function starts the Rocket server in Rust asynchronously.
+
+- The `Java_net_activitywatch_android_RustInterface_initialize` function initializes the Android logger once and redirects `stdout` and `stderr` to logcat.
+
+- Other functions like `Java_net_activitywatch_android_RustInterface_setDataDir`, `Java_net_activitywatch_android_RustInterface_getBuckets`, `Java_net_activitywatch_android_RustInterface_createBucket`, `Java_net_activitywatch_android_RustInterface_heartbeat`, and `Java_net_activitywatch_android_RustInterface_getEvents` handle various operations related to interacting with the Datastore, such as getting buckets, creating buckets, sending heartbeats, and getting events.
+
+Overall, this code demonstrates how to create a bridge between Rust and Android using JNI, allowing for communication and data exchange between the two platforms.

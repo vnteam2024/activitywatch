@@ -1,0 +1,10 @@
+This code is for a Rust library that provides functionality for syncing datastores. 
+
+- The code imports the log, chrono, serde, and serde_json crates.
+- It defines several modules: sync, sync_wrapper, accessmethod, dirs, and util.
+- The sync module contains functions for creating datastores, syncing datastores, running syncs, and defining sync specifications.
+- The sync_wrapper module contains functions for pushing and pulling data.
+- The accessmethod module defines an AccessMethod enum.
+- The dirs and util modules are not directly used in the public API but likely contain utility functions or constants used internally.
+
+Overall, this code provides a set of tools for syncing datastores and managing access to data within Rust programs.

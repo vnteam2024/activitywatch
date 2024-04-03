@@ -1,0 +1,13 @@
+This file defines several functions that are used for querying and manipulating data in the ActivityWatch system. Here is an explanation of the key components of the code:
+
+- `QueryFn` type alias: Defines a function type that takes arguments of type `Vec<DataType>`, a variable environment reference, and a datastore reference, and returns a result that can be either a `DataType` or a `QueryError`.
+
+- `fill_env` function: Populates the variable environment (`VarEnv`) with various functions that are used in querying and transforming data. Each function is associated with a key (e.g., "print", "query_bucket") and is stored in the environment as a `DataType::Function` value.
+
+- `qfunctions` module: Contains the implementation of various query functions used in the system, such as printing data, querying buckets, sorting events, filtering events, etc.
+
+- Each function in the `qfunctions` module takes arguments, the variable environment, and the datastore, performs the necessary operations on the data based on the function's functionality, and returns the result as a `DataType`.
+
+- The `validate` module contains utility functions for validating function arguments and retrieving the time interval from the environment.
+
+Overall, this file defines a set of functions that can be used for querying, filtering, and manipulating data in the ActivityWatch system. The functions are stored in the variable environment, and clients can invoke these functions by their associated keys to perform various data operations.

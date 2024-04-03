@@ -1,0 +1,12 @@
+This code provides an implementation of merging two event lists and removing overlap between the events. The function `union_no_overlap` takes two vectors of `Event` structs as input, where the first event list has precedence, and returns a new vector of `Event` structs with the overlap removed.
+
+Here is a high-level explanation of the code:
+1. The function iterates through the two event lists while there are still elements in both lists.
+2. It compares the time intervals of the events from the two lists to determine if there is any overlap.
+3. If there is an overlap, it splits the overlapping event into two separate events and only keeps the non-overlapping portion.
+4. It then combines the non-overlapping events from both lists into a new list.
+5. Finally, it adds any remaining events from either list to the new list.
+6. The `split_event` function is used to split an event at a specified timestamp if there is overlap.
+7. The code also includes unit tests to verify the correctness of the `split_event` and `union_no_overlap` functions.
+
+Overall, this code implements a merging algorithm for event lists that ensures no overlap between events, prioritizing events from the first list. The splitting of overlapping events allows for the creation of non-overlapping events in the final merged list.

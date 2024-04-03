@@ -1,0 +1,9 @@
+This code is an example of using the `aw-models` crate to generate a JSON schema for the `Bucket` struct. 
+
+1. The code starts by importing the `aw_models` crate and the `schemars` crate, which is used for generating JSON schemas.
+
+2. The `schema_for!` macro is used to generate a JSON schema for the `Bucket` struct from the `aw_models` crate.
+
+3. The generated schema is then pretty-printed using `serde_json::to_string_pretty()` and printed to the console.
+
+Overall, this code demonstrates how to generate a JSON schema for a struct using the `schemars` crate and the `schema_for!` macro provided by that crate.

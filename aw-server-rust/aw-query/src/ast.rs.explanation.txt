@@ -1,0 +1,19 @@
+This code defines a simple abstract syntax tree (AST) for a programming language. Here's an explanation of each part of the code:
+
+- `Program`: Represents a program, which consists of a list of statements (`stmts`).
+- `Expr`: Represents an expression in the AST. It contains a `span` representing the position in the code and a `node` which is an `Expr_`.
+- `Expr_`: Enum representing different types of expressions in the AST. The supported expressions include:
+  - Arithmetic operations: `Add`, `Sub`, `Mul`, `Div`, `Mod` where each operation takes two expressions as operands.
+  - Comparison operation: `Equal` which checks equality between two expressions.
+  - Variable: `Var` representing a variable name.
+  - Assignment: `Assign` representing an assignment operation with a variable name and an expression to assign to it.
+  - Function: `Function` representing a function definition with a name and an expression representing its body.
+  - Conditional: `If` representing an if statement with a condition and a list of statements to execute when the condition is true.
+  - Return: `Return` representing a return statement with an expression to return.
+  - Boolean: `Bool` representing a boolean value.
+  - Number: `Number` representing a numeric value.
+  - String: `String` representing a string value.
+  - List: `List` representing a list of expressions.
+  - Dict: `Dict` representing a dictionary with key-value pairs where keys are strings and values are expressions.
+
+Overall, this code provides a basic structure for representing programs in an abstract syntax tree format, which can be used in parsing and interpreting a programming language.

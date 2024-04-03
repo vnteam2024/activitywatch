@@ -1,0 +1,25 @@
+This code is responsible for setting up the logger for the `aw-server-rust` application. Here is a breakdown of the code:
+
+1. The `setup_logger` function is defined with parameters `module` (name of the module), `testing` (boolean indicating if testing mode is enabled), and `verbose` (boolean indicating if verbose mode is enabled).
+
+2. The function first creates a log file path based on the module name and the current timestamp.
+
+3. It initializes logging for panics using `log_panics::init()`.
+
+4. It sets up colored log levels for debug, info, warn, and error messages.
+
+5. It determines the default log level based on whether testing or verbose mode is enabled.
+
+6. It checks the `LOG_LEVEL` environment variable to see if a custom log level is specified and adjusts the log level accordingly.
+
+7. It configures logging levels for Rocket messages and sets appropriate levels based on whether debugging is enabled.
+
+8. It formats log messages to include timestamp, log level, target, and message.
+
+9. It chains log outputs to stdout and a log file.
+
+10. Finally, it applies the logger configuration.
+
+11. The code also includes a test function `test_setup_logger` in the `tests` module that calls the `setup_logger` function with testing and verbose modes enabled. The test is disabled with the `#[ignore]` attribute because it fails in GitHub actions due to logger initialization issues.
+
+Overall, this code sets up a logger with colored log levels, timestamps, and output to both stdout and a log file based on the configuration parameters provided.

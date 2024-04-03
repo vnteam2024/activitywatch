@@ -1,0 +1,9 @@
+This code defines a trait called AccessMethod, which serves as a unified API for both AwClient and Datastore types. The trait includes methods for getting buckets, getting a specific bucket, creating a bucket, getting events, inserting events, getting event count, and performing a heartbeat operation. 
+
+The trait also includes a close method for cleaning up resources. 
+
+There are two implementations provided for the AccessMethod trait:
+1. Datastore implementation: Implements the AccessMethod trait for the Datastore type. The methods in this implementation simply delegate the calls to the corresponding Datastore methods and handle errors as necessary.
+2. AwClient implementation: Implements the AccessMethod trait for the AwClient type. This implementation also delegates the calls to the corresponding AwClient methods and handles errors in a similar way to the Datastore implementation.
+
+Overall, this code enables both AwClient and Datastore to conform to a common interface (AccessMethod), allowing them to be used interchangeably in the codebase without requiring changes to the calling code. This makes the code more modular and flexible in terms of the underlying implementation being used.

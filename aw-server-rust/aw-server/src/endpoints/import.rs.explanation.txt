@@ -1,0 +1,9 @@
+This code defines two endpoints for importing data into the server. 
+
+1. The `bucket_import_json` function is a POST request endpoint that expects JSON data in the request body. It takes a `State<ServerState>` and `Json<BucketsExport>` as input, extracts the JSON data, and calls the `import` function to import the data into the datastore.
+
+2. The `bucket_import_form` function is a POST request endpoint that expects form data in the request body with a field named "buckets". It uses the `ImportForm` struct to extract the JSON data from the form field and then calls the `import` function to import the data into the datastore.
+
+The `import` function takes a `Mutex<Datastore>` and a `BucketsExport` as input. It iterates over the buckets from the `BucketsExport` data and calls the `create_bucket` method of the `Datastore` to create each bucket. If any error occurs during the import process, it logs the error and returns an `HttpErrorJson` with an internal server error status.
+
+Overall, these endpoints allow users to import bucket data into the server either using JSON data or form data. The `import` function handles the actual import logic by creating each bucket in the datastore.

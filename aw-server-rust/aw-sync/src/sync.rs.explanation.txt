@@ -1,0 +1,25 @@
+This code is a Rust module that provides basic syncing functionality for ActivityWatch. The syncing process involves syncing the data in the aw-server datastore with a copy/staging datastore in a specified sync folder. The sync folder can then be synced with remote locations using tools like Syncthing or Dropbox.
+
+Here is an overview of the main components in the code:
+
+1. The `SyncSpec` struct defines the specifications for syncing, including the sync folder path, sync db path (optional), bucket IDs to sync, and start time for syncing.
+
+2. The `SyncMode` enum defines different syncing modes: Push, Pull, or Both. Push mode pushes local server buckets to the sync folder, Pull mode pulls data from remote locations, and Both mode combines Push and Pull operations.
+
+3. The `sync_run` function performs a single sync pass based on the specified sync mode and sync specifications. It manages the syncing process between the local server and remote locations.
+
+4. The `setup_local_remote` function sets up the local and remote directories for syncing based on the provided device ID.
+
+5. The `create_datastore` function creates a new instance of a Datastore using the specified path.
+
+6. The `list_buckets` function lists all buckets in the local datastore, sync folder, and remote datastores for debugging and logging purposes.
+
+7. The `get_or_create_sync_bucket` function retrieves or creates a sync destination bucket based on the source bucket.
+
+8. The `sync_datastores` function synchronizes the buckets between two datastores (local and remote) based on the specified sync specifications.
+
+9. The `sync_one` function syncs a single bucket from the source datastore to the destination datastore.
+
+10. The `log_buckets` function logs all the buckets and some metadata for a given datastore.
+
+Overall, this module provides a basic framework for syncing data between different locations using ActivityWatch datastores. The syncing process involves managing buckets, events, and data synchronization between local and remote datastores.

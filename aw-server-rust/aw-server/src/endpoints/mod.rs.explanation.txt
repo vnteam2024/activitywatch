@@ -1,0 +1,22 @@
+This code defines various endpoints for the activitywatch server in Rust using the Rocket web framework. Here is a summary of the main components in the code:
+
+1. `AssetResolver` struct:
+   - Responsible for resolving assets (files) to be served by the server.
+   - Contains a method `resolve()` that tries to read the file from a specified path or falls back to embedded assets if not found.
+
+2. `ServerState` struct:
+   - Contains the shared state needed by the server, including a `Datastore`, `AssetResolver`, and `device_id`.
+   
+3. Endpoints:
+   - Defines several HTTP GET endpoints for serving static files like CSS, fonts, JavaScript, etc., and also an endpoint for serving favicon.
+   - Contains an endpoint for retrieving server information (hostname, version, testing status, device_id).
+   
+4. `build_rocket()` function:
+   - Builds the Rocket instance with configurations and attaches middleware like CORS.
+   - Mounts different routes for various endpoints and custom static directories.
+   - Configures the server to serve the API endpoints for managing buckets, querying data, importing/exporting data, and managing settings.
+   
+5. `tests` module:
+   - Contains unit tests for the `AssetResolver` functionality, testing the resolution of files from filesystem paths and fallback to embedded assets.
+
+Overall, this code sets up the web server for the activitywatch service in Rust, serving static assets and providing endpoints for interacting with the data store and configuring the server.

@@ -1,0 +1,25 @@
+This file contains unit tests for the query module in the `aw-query` Rust crate. 
+
+Here is a summary of the contents of the file:
+
+1. Import statements for necessary external crates and modules.
+2. Definition of a macro called `json_map!` for creating JSON maps easily.
+3. Module `query_tests` that contains all the unit tests.
+4. Helper functions for setting up a datastore with different levels of data.
+5. Macro `assert_err_type!` for checking if a result is an error of a specific type.
+6. Unit tests for various query functionalities:
+   - Testing boolean values
+   - Testing numerical values
+   - Testing equals comparison
+   - Testing return statements
+   - Testing if conditions
+   - Testing function calls
+   - Testing different functions available in the query module
+   - Testing string handling
+   - Testing list handling
+   - Testing dictionary handling
+   - Testing concatenation of lists and strings
+   - Testing `contains` function for lists and dictionaries
+   - Testing basic mathematical operations
+
+Overall, the file covers a wide range of scenarios to ensure the correctness of the query functionality in the `aw-query` crate.

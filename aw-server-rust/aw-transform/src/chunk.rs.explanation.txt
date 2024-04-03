@@ -1,0 +1,7 @@
+This code defines a function `chunk_events_by_key` that chunks together events with the same key. The function takes a vector of events and a key as input parameters, and returns a vector of chunked events.
+
+Inside the function, it loops through each event in the input vector and checks if the chunked_events vector is empty and if the event has the specified key in its data. If so, it adds the event to the chunked_events vector. If not, it compares the value of the key in the current event with the last event in the chunked_events vector. If they are the same, it updates the duration of the last event by adding the duration of the current event. If they are different, it adds the current event as a new chunked event.
+
+The function ultimately returns the chunked_events vector after processing all events.
+
+The code also includes a test case in the `mod tests`, where it creates some sample events and tests the `chunk_events_by_key` function with those events. It asserts that the resulting chunked events have the expected durations based on the test input.

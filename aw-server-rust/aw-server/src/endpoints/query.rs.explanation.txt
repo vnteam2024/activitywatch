@@ -1,0 +1,9 @@
+This code defines a Rocket endpoint `query` that handles POST requests to the root path ("/"). The endpoint takes in JSON data representing a query using the `Json<Query>` type. The `Query` struct is imported from `aw_models`.
+
+Inside the `query` function, the query code is extracted from the request JSON and intervals are extracted from the `Query` struct. The function then initializes an empty vector `results` to store the query results. It then acquires a lock on the `datastore` to access the data and loops through each interval in the `timeperiods`.
+
+For each interval, it calls the `aw_query::query` function with the query code, interval, and datastore as arguments. If the query is successful, the result is added to the `results` vector. If the query fails, an error message is logged and an internal server error response is returned.
+
+Finally, the function returns the results of all the queries as JSON in the response.
+
+Overall, this code defines an endpoint for executing queries on the server using Rocket, handling errors and returning the results as JSON.

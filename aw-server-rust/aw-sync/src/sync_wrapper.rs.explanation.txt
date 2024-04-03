@@ -1,0 +1,19 @@
+This code defines functions for pulling and pushing data from/to the ActivityWatch server using the ActivityWatch client. 
+
+1. `pull_all` function:
+- This function pulls data from all remote hosts specified in the configuration file.
+- It iterates over each host, calls the `pull` function for each host, and handles any errors that occur during the process.
+
+2. `pull` function:
+- This function pulls data from a specific host.
+- It establishes a TCP connection to the specified host to check if the server is running.
+- It then retrieves the list of databases (`.db` files) in the sync folder for the specified host.
+- It filters out databases that are smaller than 50kB (possibly empty files) and chooses the largest database if multiple databases are found.
+- It constructs a `SyncSpec` object with the path to the sync folder and the selected database, and then calls the `sync_run` function with `SyncMode::Pull` to synchronize data with the ActivityWatch server.
+
+3. `push` function:
+- This function pushes data to the ActivityWatch server.
+- It constructs a `SyncSpec` object with the path to the sync folder for the client's hostname and the list of buckets to sync.
+- It then calls the `sync_run` function with `SyncMode::Push` to push data to the ActivityWatch server.
+
+Overall, these functions handle the synchronization of data between the local client and the ActivityWatch server using the provided client and configuration settings.

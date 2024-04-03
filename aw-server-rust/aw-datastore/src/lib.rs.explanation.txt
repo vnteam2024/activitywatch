@@ -1,0 +1,10 @@
+This code defines a library for the `aw-datastore`, which is part of the ActivityWatch project written in Rust. 
+
+- The code imports the `log` crate and defines a macro `json_map!` for creating JSON maps.
+- It contains modules for `datastore`, `legacy_import`, and `worker`.
+- It exports `DatastoreInstance` and `Datastore`.
+- It defines enums for `DatastoreMethod` and `DatastoreError`, which are used to represent different methods and errors related to the data store.
+- The `DatastoreMethod` enum defines two variants `Memory` and `File`, representing in-memory and file-based data storage methods.
+- The `DatastoreError` enum defines different error types that can occur in the data store, such as `NoSuchBucket`, `BucketAlreadyExists`, `NoSuchKey`, `MpscError`, `InternalError`, `Uninitialized`, and `OldDbVersion`.
+
+Overall, this code provides the structure and definitions for the `aw-datastore` library in the ActivityWatch project.

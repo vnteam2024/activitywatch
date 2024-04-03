@@ -1,0 +1,32 @@
+This Rust program is an implementation of a synchronization tool for ActivityWatch, a tool for tracking computer usage. The program allows users to sync their tracked data between local and remote servers.
+
+Here is a breakdown of the main components of the program:
+
+1. `main` function: 
+   - Parses command-line arguments using the `clap` crate.
+   - Sets up logging and initializes an `AwClient` for interacting with ActivityWatch servers.
+   - Executes different subcommands based on the user's input.
+
+2. `Opts` struct:
+   - Represents the command-line options available to the user.
+
+3. `Commands` enum:
+   - Defines the possible subcommands that the user can choose.
+
+4. Subcommand implementations:
+   - `daemon`: Runs the program as a daemon, continuously syncing data every 5 minutes.
+   - `Sync`: Pulls data from remote servers and pushes local data.
+   - `SyncAdvanced`: Performs two-way synchronization with advanced options like specifying the start date, specific buckets to sync, and the sync directory.
+   - `List`: Lists all buckets and their sync status.
+
+5. Helper functions:
+   - `parse_start_date`: Parses a string into a `DateTime<Utc>` object with the format "YYYY-MM-DD".
+   - `parse_list`: Parses a comma-separated list of strings into a vector of strings.
+
+6. Logging:
+   - Sets up logging using the `log` crate to provide informative messages during synchronization operations.
+
+7. Loop in `daemon` function:
+   - Continuously pulls data from all hosts and pushes local data at regular intervals (5 minutes) while running as a daemon.
+
+Overall, this program provides a flexible and powerful tool for syncing ActivityWatch data between local and remote servers, with options for customization and automation through command-line arguments.

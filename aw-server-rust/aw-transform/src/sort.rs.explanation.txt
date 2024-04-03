@@ -1,0 +1,9 @@
+This code defines two functions, `sort_by_timestamp` and `sort_by_duration`, which sort a vector of `Event` structs by timestamp and duration, respectively. 
+
+- `sort_by_timestamp`: This function takes a mutable vector of events, sorts them by their timestamp in ascending order using the `sort_by` method, and returns the sorted vector.
+
+- `sort_by_duration`: This function is similar to `sort_by_timestamp`, but it sorts the events by duration in descending order.
+
+The code also includes test cases for both sorting functions using the `assert_eq` macro to compare the expected sorted vector with the actual sorted vector.
+
+Overall, this code provides utility functions to sort events based on their timestamp and duration, and it includes tests to ensure that the sorting functions work as expected.

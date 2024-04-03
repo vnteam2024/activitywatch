@@ -1,0 +1,15 @@
+This code defines a macro called `json_map` that takes a list of key-value pairs in JSON format and returns a `Map<String, Value>` object. Here's how the macro works:
+
+1. The syntax `{ $( $key:literal : $value:expr),* }` specifies that the macro takes a list of key-value pairs where the key is a literal (string) and the value can be any expression.
+
+2. Inside the macro, it first imports the necessary items from the `serde_json` crate to work with JSON data.
+
+3. It then creates a new `Map<String, Value>` object to store the key-value pairs.
+
+4. It iterates over each key-value pair in the input using the `$()` syntax and inserts the key and the value into the map using the `insert` method.
+
+5. The value is converted to JSON format using the `json!($value)` macro from `serde_json`.
+
+6. Finally, the macro returns the populated map.
+
+Overall, this macro simplifies the process of creating a `Map<String, Value>` object from a list of key-value pairs in JSON format by automating the insertion of each key-value pair.

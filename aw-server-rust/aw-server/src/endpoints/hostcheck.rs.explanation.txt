@@ -1,0 +1,17 @@
+This code implements a host header check as a Rocket fairing in a Rust server application. The purpose of the host header check is to protect against DNS poisoning attacks by ensuring that the Host header in incoming requests is valid.
+
+Here is a summary of the key components and functionality of the code:
+
+1. The `HostCheck` struct is defined to handle the host header check. It has a `validate` field that determines whether to perform the validation based on the server configuration.
+
+2. The `FairingErrorRoute` struct implements the `Handler` trait to handle errors when the host header is invalid. It returns a BadRequest response with an error message.
+
+3. The `fairing_route` function creates a new Route for fairing handling when the host header is invalid.
+
+4. The `redirect_bad_request` function updates the request to reroute it to the BadRequest response route.
+
+5. The `HostCheck` implementation of the `Fairing` trait includes methods for information, ignite, and request handling. It checks the host header in incoming requests and redirects them if the host header is invalid.
+
+6. The `tests` module contains unit tests to validate the functionality of the host header check for different scenarios, such as testing public address behavior and localhost address behavior with different host header values.
+
+Overall, this code provides a security measure to protect the server against potential DNS poisoning attacks by validating the Host header in incoming requests.

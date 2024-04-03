@@ -1,0 +1,9 @@
+This code defines functions to get directories for configuration and synchronization in the ActivityWatch server Rust project. 
+
+- The `get_config_dir()` function gets the user's configuration directory for the aw-sync component of ActivityWatch. It uses the `appdirs` crate to determine the user's config directory and creates the necessary subdirectory for aw-sync if it doesn't already exist.
+
+- The `get_server_config_path()` function determines the path to the configuration file for the server based on whether testing is enabled or not. It calls the `get_config_dir()` function to get the configuration directory and appends the appropriate filename ("config-testing.toml" for testing, "config.toml" for regular use).
+
+- The `get_sync_dir()` function gets the synchronization directory for ActivityWatchSync. It uses the `dirs` crate to get the user's home directory and appends the "ActivityWatchSync" subdirectory. 
+
+Overall, these functions help in determining the necessary directories for configuration and synchronization in the ActivityWatch server Rust project.

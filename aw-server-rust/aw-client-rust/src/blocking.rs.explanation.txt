@@ -1,0 +1,9 @@
+This code defines a synchronous wrapper `AwClient` around an asynchronous `AsyncAwClient` for interacting with an ActivityWatch server. The `AwClient` struct has fields for the baseurl, name, hostname, and the underlying `AsyncAwClient`.
+
+The `block_on` function is used to block the current thread and run the provided future, essentially converting async code into synchronous code by blocking the current thread until the future is resolved.
+
+The `proxy_method` macro is used to define proxy methods for the `AwClient` struct that will call the corresponding methods on the underlying `AsyncAwClient` using `block_on` to convert them from async to sync.
+
+The `AwClient` struct has methods for performing various operations like getting buckets, creating buckets, getting events, inserting events, handling heartbeats, deleting events, getting event count, and getting server information. Each of these methods uses the `proxy_method` macro to call the corresponding async method on the `AsyncAwClient` and blocks until completion.
+
+Overall, this code provides a synchronous interface for interacting with the ActivityWatch server using the asynchronous `AsyncAwClient` under the hood.

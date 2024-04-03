@@ -1,0 +1,11 @@
+This code includes functions to filter and exclude events based on keys and values. 
+
+1. `filter_keyvals`: This function takes a vector of events, a key, and a list of values. It filters out events that do not have the specified key-value pairs.
+
+2. `filter_keyvals_regex`: This function is similar to `filter_keyvals` but uses a regex pattern to filter events based on the value of a specified key. It only matches if the value is a string.
+
+3. `exclude_keyvals`: This function is the opposite of `filter_keyvals`. It excludes events that match the specified key-value pairs.
+
+The `tests` module includes unit tests to ensure the correctness of these filtering functions. It creates sample events with specific key-value pairs and validates the output of the filtering functions against the expected results.
+
+Overall, these functions provide a way to filter and exclude events based on key-value pairs or regex patterns, helping to manipulate and process event data efficiently.

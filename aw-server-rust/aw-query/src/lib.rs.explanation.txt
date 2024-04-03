@@ -1,0 +1,26 @@
+This code is a Rust module that provides functionality for parsing and executing queries written in a custom query language. Here is a breakdown of the key components:
+
+1. External Dependencies:
+- `log`: External crate for logging.
+- `serde` and `serde_json`: External crates for serialization and deserialization.
+
+2. Internal Dependencies:
+- `aw_models::TimeInterval`: Used for defining time intervals.
+- `aw_datastore::Datastore`: Used for interacting with a data store.
+
+3. Modules:
+- `datatype`: Contains data types used in the query language.
+- `ast`: Abstract Syntax Tree module for representing the parsed query.
+- `functions`: Module for defining functions used in query execution.
+- `interpret`: Module for interpreting and executing the parsed query.
+- `lexer`: Lexer module for tokenizing the input query.
+- `parser`: Parser module for parsing the tokenized query.
+
+4. Error Handling:
+- `QueryError` enum: Defines different types of errors that can occur during query execution.
+- Implementation of `Display` for `QueryError` to format error messages.
+
+5. Public Interface:
+- `query` function: Takes a query string, a time interval, and a data store as input. It tokenizes and parses the query using the lexer and parser, then interprets and executes the query using the interpreter. It returns a result containing the result of the query execution or an error.
+
+Overall, this code provides a structured way to process queries in a custom query language, handle errors, and interact with a data store to retrieve and manipulate data based on the queries.

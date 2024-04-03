@@ -1,0 +1,11 @@
+This code defines a function `filter_period_intersect` that removes events that do not intersect with the provided filter events. The function takes in two vectors of `Event` objects and returns a new vector with filtered events.
+
+The function first checks if either of the input event vectors is empty, in which case an empty vector is returned. It then sorts both input vectors by timestamp using the `sort_by_timestamp` function. It initializes iterators for both input vectors and sets the current event and filter event to the first elements of each vector.
+
+The function then iterates over the events and filter events, comparing their timestamps and durations to determine if there is any intersection. It calculates the intersection period by finding the maximum of the timestamps and the minimum of the end times of the events and filter events. It creates a new event with the intersection period and updates the current event's timestamp and duration accordingly. The new event is added to the filtered events vector.
+
+The function continues this process until all events and filter events have been processed. In the end, it returns the filtered events vector.
+
+The code includes a test module with a test case for the `filter_period_intersect` function, where it creates a few events and a filter event and asserts the expected output after filtering by the filter event.
+
+Overall, this code provides a way to filter events based on their intersection with filter events, allowing for more refined event processing based on intersection periods.

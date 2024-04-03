@@ -1,0 +1,7 @@
+This code is a Rust library that defines the module structure for the `aw-models` crate. It includes several modules such as `bucket`, `duration`, `event`, `info`, `query`, `timeinterval`, and `tryvec`. 
+
+The `json_map!` macro is defined using `macro_rules!` for creating a JSON object from key-value pairs. This macro is used for testing purposes only and is conditionally compiled using `#[cfg(test)]`.
+
+The `pub use` statements at the end of the file export specific types from the internal modules so that they can be accessed from outside the crate.
+
+Overall, this file serves as the entry point for the `aw-models` crate and organizes the various modules that make up the functionality of the crate.

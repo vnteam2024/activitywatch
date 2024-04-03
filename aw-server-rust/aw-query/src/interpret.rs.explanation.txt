@@ -1,0 +1,9 @@
+This code is a Rust implementation of an interpreter for a simple query language. The interpreter takes a parsed program (represented as an abstract syntax tree), a time interval, and a datastore as input, and interprets the program by evaluating each expression in the program.
+
+The interpreter uses a variable environment (VarEnv) to keep track of variable assignments and function definitions. It initializes the environment with the TIMEINTERVAL variable set to the provided time interval and fills it with predefined functions.
+
+The interpret_prog function interprets the entire program by iterating over each statement in the program and calling interpret_expr to evaluate each expression in the statement. It captures the result of the last expression in the "RETURN" variable and returns it as the result of the program.
+
+The interpret_expr function recursively evaluates each expression based on its type. It handles arithmetic operations (addition, subtraction, multiplication, division, modulus), comparison operations (equality), variable assignment, variable retrieval, boolean literals, number literals, string literals, return statements, if statements, function calls, list creation, and dictionary creation.
+
+Overall, this code provides a framework for interpreting a query language program and evaluating expressions based on the provided time interval and datastore.

@@ -1,0 +1,11 @@
+This code defines a Rocket endpoint function called `buckets_export` that is responsible for exporting data about buckets and events. 
+
+- It takes a `ServerState` as a parameter, which contains the datastore.
+- It initializes an empty `BucketsExport` struct, which will hold information about the exported buckets.
+- It retrieves a lock on the datastore to access bucket and event data.
+- It retrieves all buckets from the datastore and iterates over them.
+- For each bucket, it retrieves events associated with that bucket from the datastore.
+- It inserts the bucket data along with the associated events into the `BucketsExport` struct's `buckets` HashMap.
+- Finally, it returns the filled `BucketsExport` struct as a response.
+
+Overall, this function retrieves data about buckets and events from the datastore and structures it into a `BucketsExport` object to be returned as a response when the '/buckets_export' endpoint is accessed.

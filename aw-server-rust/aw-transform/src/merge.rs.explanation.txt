@@ -1,0 +1,16 @@
+This code provides a function `merge_events_by_keys` that takes a vector of events and a vector of keys as input. It merges events that have the same values at the specified keys. The function combines the durations of events with the same key values and keeps the timestamp of the first event with those key values.
+
+Here is a breakdown of the code:
+
+1. The function `merge_events_by_keys` first checks if the `keys` vector is empty and returns an empty vector if it is.
+2. It initializes a HashMap called `merged_events_map` to store merged events based on their key values.
+3. It loops through each event in the input events vector and extracts the values at the specified keys.
+4. It concatenates the key values with a dot to create a unique identifier for the merged event.
+5. If the merged events map already contains an event with the same key values, it updates the duration of that event.
+6. If the merged events map does not contain an event with the same key values, it creates a new event by extracting the data at the specified keys and inserts it into the map.
+7. After processing all events, it converts the merged_events_map into a vector called `merged_events_list`.
+8. Finally, it returns the merged_events_list.
+
+The code also includes a test function `test_merge_events_by_key` that tests the `merge_events_by_keys` function with sample input events and verifies that the output matches the expected result.
+
+Overall, the `merge_events_by_keys` function efficiently merges events based on specified keys and combines their durations while maintaining the timestamp of the first event with the same key values.

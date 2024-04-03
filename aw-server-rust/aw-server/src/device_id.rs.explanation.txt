@@ -1,0 +1,8 @@
+This code snippet defines a function `get_device_id()` that is used to retrieve the device ID. 
+
+1. It first gets the data directory using the `dirs::get_data_dir()` function provided by the `dirs` module.
+2. It then appends the file name `"device_id"` to the data directory path.
+3. If a file with the name `"device_id"` exists in the data directory, it reads the content of that file and returns it as the device ID.
+4. If the file does not exist, it generates a new UUID (Universally Unique Identifier) version 4 using `Uuid::new_v4()`, formats it with hyphens using `as_hyphenated()`, converts it to a string, writes it to the file, and returns it as the device ID.
+
+In summary, this code snippet ensures that a unique device ID is retrieved or generated and saved in a file named `"device_id"` in the data directory.

@@ -1,0 +1,16 @@
+This file contains unit tests for the `aw-sync` crate, which is responsible for syncing data between datastores in the ActivityWatch project. 
+
+Here is a brief explanation of the important parts of the code:
+
+1. `init_teststate`: Function that initializes a `TestState` struct containing two in-memory datastores (`ds_src` and `ds_dest`).
+2. `create_bucket`: Function that creates a bucket in a given datastore with a specified ID.
+3. `create_event`: Function that creates an event with a timestamp and data.
+4. `create_events`: Function that creates multiple events in a given bucket in a datastore.
+5. `get_all_buckets` and `get_all_buckets_map`: Functions to get all buckets from a list of datastores and convert them into a map for easy access.
+6. `test_buckets_created`: Test function to check if buckets are created in both source and destination datastores.
+7. `check_synced_buckets_equal_to_src`: Function to check if synced buckets in destination are equal to source buckets in terms of events.
+8. `test_one_updated_event`: Test function that syncs a single event between datastores and checks if it is updated correctly.
+9. `test_events`: Test function that syncs multiple events between datastores and checks if they are synced correctly.
+10. `setup_test`: Function to set up the test by creating datastores, buckets, and events.
+
+Overall, these test functions cover scenarios related to syncing buckets and events between datastores and ensure that the data is transferred correctly during synchronization.

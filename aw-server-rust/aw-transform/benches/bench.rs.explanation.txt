@@ -1,0 +1,13 @@
+This code is a benchmarking test for the `filter_period_intersect` function in the `aw_transform` crate. 
+
+1. The `create_events` function is defined to generate a list of `Event` objects with random data. Each event has a timestamp, duration, and data field.
+
+2. The `json_map` macro is defined to simplify the creation of JSON maps using a key-value list.
+
+3. The `bench_filter_period_intersect` function sets up the benchmark test by creating two sets of 1000 events each and then running the `filter_period_intersect` function with these two sets of events as input.
+
+4. The `criterion_group` macro groups the benchmark functions together.
+
+5. The `criterion_main` macro runs the benchmarking tests defined in the `benches` group.
+
+Overall, this code sets up a benchmarking test for the `filter_period_intersect` function with a set of 1000 events, allowing for performance measurement of this function.

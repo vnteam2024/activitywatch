@@ -1,0 +1,11 @@
+The code above defines a struct `TimeInterval` and an associated enum `TimeIntervalError` in Rust. The `TimeInterval` struct represents a time interval with a start and end timestamp, both of type `DateTime<Utc>` from the `chrono` crate. 
+
+The `TimeInterval` struct has methods to create a new time interval, get the start and end timestamps, calculate the duration, find the gap between two time intervals, join two intervals together if they don't have a gap, find the intersection of two intervals, and check if two intervals intersect.
+
+The struct also implements conversion from an `Event` struct to a `TimeInterval` using the `From` trait, and implements the `Display` trait to format the time interval as a string in ISO format.
+
+It also includes implementation for deserialization from a string in ISO time interval format using the `Deserialize` trait and a custom `Visitor` implementation.
+
+There are unit tests included for creating a time interval, calculating duration, and checking for intersection between two time intervals.
+
+Overall, this code provides functionality to work with time intervals and perform various operations on them in a Rust application.

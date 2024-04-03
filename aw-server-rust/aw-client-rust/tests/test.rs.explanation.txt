@@ -1,0 +1,12 @@
+This code is a test file for the `aw-client-rust` crate, which is a client library for the ActivityWatch project. The test file contains a `test_full` test function that tests various functionalities of the `AwClient` by interacting with a locally setup test server.
+
+Here's a breakdown of the important parts of the code:
+
+1. The `wait_for_server` function is used to wait for the server to start by repeatedly trying to retrieve server information until successful or a timeout occurs.
+2. The `setup_testserver` function sets up a test server using the `build_rocket` function from `aw_server` crate and launches it in a separate thread. It returns a `rocket::Shutdown` handler for shutting down the server.
+3. The `test_full` test function creates an instance of `AwClient` and sets up a bucket for testing purposes.
+4. Various operations are performed using the client such as inserting events, getting events from a bucket, deleting events, getting event count, and deleting a bucket.
+5. Assertions are made to verify the functionality of the client.
+6. Finally, the test function notifies the shutdown handler to shut down the test server.
+
+This test file ensures that the `AwClient` functions as expected by testing its interactions with a test server. The test covers basic operations such as creating buckets, inserting and manipulating events, and managing buckets. By running this test, developers can verify the correctness of the `AwClient` implementation.

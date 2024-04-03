@@ -1,0 +1,15 @@
+This code is a utility module in the `aw-sync` crate of the ActivityWatch project written in Rust. It provides various utility functions for interacting with the filesystem and retrieving information related to the aw-server and remote databases.
+
+1. `get_server_port`: This function returns the port number of the local aw-server instance by reading the port configuration from the aw-server config file. If the config file does not exist, it falls back to a default port based on whether testing mode is enabled or not.
+
+2. `contains_db_file`: This function checks if a given directory contains a `.db` file by listing the directory contents and checking if any file has the extension `.db`.
+
+3. `contains_subdir_with_db_file`: This function checks if a directory contains a subdirectory that contains a `.db` file by listing the directory contents, filtering out subdirectories, and checking if any subdirectory contains a `.db` file.
+
+4. `get_remotes`: This function returns a list of all remote database folders in the sync directory. It searches for folders that contain subdirectories with `.db` files and extracts the hostnames from those folders.
+
+5. `find_remotes`: This function returns a list of all remote database paths by recursively searching for directories with `.db` files.
+
+6. `find_remotes_nonlocal`: This function returns a list of all remote database paths excluding the local database path. It also optionally filters out remote databases based on a specific sync database path.
+
+Overall, these utility functions provide functionality to retrieve information about the aw-server configuration, check for `.db` files in directories, and identify remote database paths in the sync directory.

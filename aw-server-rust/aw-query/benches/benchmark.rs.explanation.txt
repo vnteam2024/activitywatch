@@ -1,0 +1,9 @@
+This code is a benchmarking code for the `aw-query` library in the ActivityWatch project. It uses the `criterion` crate for benchmarking.
+
+- The `json_map!` macro is defined to create JSON objects using a syntax similar to Rust `HashMap` initialization.
+- Inside the `query_benchmarks` module, there are functions for setting up a datastore, creating a bucket, inserting events into the datastore, and defining benchmarking functions.
+- The `bench_assign` function benchmarks the assignment operation with a simple code snippet.
+- The `bench_many_events` function creates a bucket, inserts a large number of events into it, and benchmarks querying all events from that bucket.
+- Finally, the `criterion_group!` macro groups the benchmark functions, and the `criterion_main!` macro runs the benchmarking group.
+
+Overall, this code sets up benchmarking scenarios for the `aw-query` library functions related to querying data from the datastore and measures their performance using the `criterion` crate.

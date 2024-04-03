@@ -1,0 +1,19 @@
+This code defines the `DatastoreInstance` struct and implements methods for interacting with a SQLite database to store and retrieve data related to buckets and events in an ActivityWatch server. Here is an explanation of the key components of the code:
+
+1. The `_get_db_version` function retrieves the current database version by querying the user_version pragma of the SQLite connection.
+
+2. The `_create_tables` function creates or migrates tables in the SQLite database based on the current database version. It calls migration functions from previous versions to update the database schema.
+
+3. Migration functions like `_migrate_v0_to_v1`, `_migrate_v1_to_v2`, etc., are used to update the database schema from one version to another.
+
+4. The `DatastoreInstance` struct contains a HashMap to cache buckets, information about database initialization, and the current database version.
+
+5. The `new` method for `DatastoreInstance` initializes a new instance of the datastore, handling migrations if enabled.
+
+6. Methods like `create_bucket`, `delete_bucket`, `get_bucket`, `insert_events`, `delete_events_by_id`, and others interact with the database to perform operations on buckets and events.
+
+7. The `get_event`, `get_events`, and `get_event_count` methods retrieve event data from the database based on specified criteria.
+
+8. Methods like `insert_key_value`, `delete_key_value`, `get_key_value`, and `get_key_values` manage key-value pairs in a separate table in the database.
+
+Overall, the code provides an interface for interacting with the SQLite database to store and retrieve data related to buckets, events, and key-value pairs within the context of the ActivityWatch server. It handles database migrations and ensures data consistency for the application.

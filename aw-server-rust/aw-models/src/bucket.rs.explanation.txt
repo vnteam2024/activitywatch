@@ -1,0 +1,21 @@
+This code defines the data structures for representing a Bucket in the ActivityWatch system. 
+
+1. `Bucket`: This struct represents a bucket with the following fields:
+   - `bid`: An optional field for the bucket ID.
+   - `id`: The ID of the bucket.
+   - `_type`: The type of the bucket.
+   - `client`: The client of the bucket.
+   - `hostname`: The hostname of the bucket.
+   - `created`: The created timestamp of the bucket.
+   - `data`: A map of string keys to values for storing additional data.
+   - `metadata`: Additional metadata for the bucket, such as start and end timestamps.
+   - `events`: Optional field for storing events related to the bucket.
+   - `last_updated`: The timestamp of the last update to the bucket.
+
+2. `BucketMetadata`: This struct represents metadata for a bucket, including start and end timestamps.
+
+3. `BucketsExport`: This struct is used for exporting buckets and contains a hashmap of bucket IDs to Bucket objects.
+
+4. `test_bucket()`: A test function that creates a Bucket object with dummy values for testing purposes.
+
+Overall, this code sets up the data structures needed to represent and work with buckets in the ActivityWatch system.

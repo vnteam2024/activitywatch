@@ -1,0 +1,7 @@
+This Rust build script (`build.rs`) is responsible for checking if a specific environment variable (`AW_WEBUI_DIR`) is set. If it is set, the script uses the value of the environment variable as the path to the web user interface directory. If the environment variable is not set, the script defaults to a relative path "../aw-webui/dist".
+
+If the web user interface directory does not exist at the provided path, the script creates the directory. It then sets the `AW_WEBUI_DIR` environment variable to the path of the web user interface directory.
+
+Finally, the script checks if the "index.html" file exists in the web user interface directory. If it does not exist, a warning is printed indicating that the web user interface is not built and the application will be compiled without it.
+
+Overall, this build script is used to set up and configure the web user interface directory for the server application during the build process.

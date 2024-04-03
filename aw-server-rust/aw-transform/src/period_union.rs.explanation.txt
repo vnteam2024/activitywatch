@@ -1,0 +1,14 @@
+This code defines a function `period_union` that takes two lists of `Event` objects and combines them to find the union of the time periods covered by the events, ensuring that there are no overlapping events.
+
+Here's a breakdown of the code:
+
+1. Import necessary modules and libraries.
+2. Define the `period_union` function that takes two lists of `Event` objects as input and returns a new list of `Event` objects representing the union of the time periods covered by the input events.
+3. Sort the input events by timestamp and store them in a deque.
+4. Initialize an empty list `events_union` to store the events representing the union of time periods.
+5. Pop the first event from the sorted events list and add it to the `events_union`.
+6. Iterate through the remaining events and check if the time periods can be unioned. If they can be unioned without a gap, modify the last event in the `events_union`. If there is a gap, add the event to the `events_union`.
+7. Finally, remove all data from the events in the `events_union` list to keep them consistent.
+8. Run some tests using the `test_period_union` function to ensure the correctness of the `period_union` function. Tests include checking for empty inputs, merging events with overlapping time periods, and handling cases with gaps between events.
+
+Overall, the `period_union` function effectively combines two lists of events into a new list with non-overlapping time periods and no gaps. The code is well-documented with test cases to verify its functionality.
